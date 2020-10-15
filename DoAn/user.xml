@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<profile>
+  <users>
+    <username>admin</username>
+    <pwd>123456</pwd>
+    <type>Admin</type>
+    <owner>Dung</owner>
+  </users>
+</profile>

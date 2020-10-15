@@ -16,5 +16,17 @@ namespace DoAn
         {
             InitializeComponent();
         }
+
+        private void btnQuanly_Click(object sender, EventArgs e)
+        {
+            QuanLyTK ql = new QuanLyTK();
+            ql.ShowDialog();
+        }
+
+        private void Main_Load(object sender, EventArgs e)
+        {
+            Login lg = new Login();
+            lg.Close();
+        }
     }
 }

@@ -8,6 +8,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml;
+using System.Xml.Linq;
+
 
 namespace DoAn
 {
@@ -17,29 +20,74 @@ namespace DoAn
         {
             InitializeComponent();
         }
-        List<string> users = new List<string>();
-        List<string> pass = new List<string>();
+        public string users = "";
+        public string pass = "";
+
+        public static bool hasSpecialChar(string input)
+        {
+            string[] specialChar = {"@", "|", "!", "#", "$", "%", "&", "/", "(", ")", "=", "?", "»", "«", "@", "£", "§", "€", "{", "}", ".", "-", ";", "'", "<", ">", "_", "," };
+            foreach (var item in specialChar)
+            {
+                if (input.Contains(item))
+                {
+                    MessageBox.Show("Tài khoản không được sử dụng ký tự đặc biệt","Cảnh báo");
+                    return false;
+                }
+            }
+
+            return true;
+        }
+
+        public bool checkEmty()
+        {
+            if (string.IsNullOrWhiteSpace(txtID.Text))
+            {
+                MessageBox.Show("Bạn chưa nhập tài khoản", "Cảnh báo");
+                txtID.Focus();
+                return false;
+            }
+            if (string.IsNullOrWhiteSpace(txtPass.Text))
+            {
+                MessageBox.Show("Bạn chưa nhập mật khẩu", "Cảnh báo");
+                txtPass.Focus();
+                return false;
+            }
+            return true;
+        }
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            if (txtID.Text == "admin" && txtPass.Text == "123")
+            XDocument doc = XDocument.Load(Application.StartupPath.ToString() + @"\login.xml");
+            var selected_user = from x in doc.Descendants("users").Where
+                                (x => (String)x.Element("username") == txtID.Text)
+                                select new
+                                {
+                                    XMLuser = x.Element("username").Value,
+                                    XMLpwd = x.Element("pwd").Value,
+                                };
+            foreach (var x in selected_user)
             {
-                this.Hide();
-                Main main = new Main();
-                main.Show();
+                users = x.XMLuser;
+                pass = x.XMLpwd;
             }
-            else if (users.Contains(txtID.Text) && pass.Contains(txtPass.Text))
+            if (checkEmty())
             {
-                this.Hide();
-                Main main = new Main();
-                main.Show();
-            }
-            else
-            {
-                MessageBox.Show("Sai tài khoản hoặc mật khẩu");
-                txtID.ResetText();
-                txtPass.ResetText();
-                txtID.Focus();
+                if (hasSpecialChar(txtID.Text))
+                {
+                    if (users.Contains(txtID.Text) && pass.Contains(txtPass.Text) && Array.IndexOf(users.ToArray(), txtID.Text) == Array.IndexOf(pass.ToArray(), txtPass.Text))
+                    {
+                        this.Hide();
+                        Main main = new Main();
+                        main.ShowDialog();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Sai tài khoản hoặc mật khẩu","Cảnh báo");
+                        txtID.ResetText();
+                        txtPass.ResetText();
+                        txtID.Focus();
+                    }
+                }
             }
 
         }
@@ -62,15 +110,34 @@ namespace DoAn
 
         private void Login_Load(object sender, EventArgs e)
         {
-            StreamReader sr = new StreamReader("login.txt");
-            string line = "";
-            while ((line = sr.ReadLine()) != null)
+        }
+
+        private void txtID_TextChanged(object sender, EventArgs e)
+        {
+            hasSpecialChar(txtID.Text);
+        }
+
+        private void btnShowpass_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cbShowpass.Checked)
             {
-                string[] components = line.Split(" ".ToCharArray() , StringSplitOptions.RemoveEmptyEntries);
-                users.Add(components[0]);
-                pass.Add(components[1]);
+                txtPass.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                txtPass.UseSystemPasswordChar = true;
             }
         }
 
+        private void btnFogotpass_Click(object sender, EventArgs e)
+        {
+            Forgotpass forgot = new Forgotpass();
+            forgot.Show();
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
