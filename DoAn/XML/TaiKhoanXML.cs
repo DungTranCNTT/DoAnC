@@ -12,7 +12,7 @@ namespace DoAn.XML
     {
         XmlDocument doc = new XmlDocument();
         XmlElement goc;
-        string fileName = @"C:\Users\user\Source\Repos\DoAnC-\DoAn\user.xml";
+        string fileName = @"C:\Users\user\Source\Repos\setokid\DoAnC\DoAn\user.xml";
 
         public TaiKhoanXML()
         {

@@ -6,4 +6,10 @@
     <type>Admin</type>
     <owner>Dung</owner>
   </users>
+  <users>
+    <username>test</username>
+    <pwd>123456</pwd>
+    <type>Giáo Viên</type>
+    <owner>asd</owner>
+  </users>
 </profile>
