@@ -72,9 +72,7 @@
     <Compile Include="QuanLyTK.Designer.cs">
       <DependentUpon>QuanLyTK.cs</DependentUpon>
     </Compile>
-    <Compile Include="TK\login.cs" />
     <Compile Include="TK\TaiKhoan.cs" />
-    <Compile Include="XML\LoginXML.cs" />
     <Compile Include="XML\TaiKhoanXML.cs" />
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -90,6 +88,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="QuanLyTK.resx">
       <DependentUpon>QuanLyTK.cs</DependentUpon>
@@ -108,6 +107,11 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\icons8-cloud-account-login-male-100.png" />
+    <None Include="Resources\Ellipsis-1s-200px.gif" />
+    <None Include="Resources\Dual Ball-1s-200px.gif" />
+    <None Include="Resources\icons8-user-male-3-80.png" />
+    <None Include="Resources\icons8-unlock-80.png" />
     <Content Include="user.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -42,13 +42,15 @@ namespace DoAn
         {
             if (string.IsNullOrWhiteSpace(txtID.Text))
             {
-                MessageBox.Show("Bạn chưa nhập tài khoản", "Cảnh báo");
+                lblThongBao.Visible = true;
+                lblThongBao.Text = "Bạn chưa nhập Username";
                 txtID.Focus();
                 return false;
             }
             if (string.IsNullOrWhiteSpace(txtPass.Text))
             {
-                MessageBox.Show("Bạn chưa nhập mật khẩu", "Cảnh báo");
+                lblThongBao.Visible = true;
+                lblThongBao.Text = "Bạn chưa nhập Password";
                 txtPass.Focus();
                 return false;
             }
@@ -65,6 +67,7 @@ namespace DoAn
                                 {
                                     XMLuser = x.Element("username").Value,
                                     XMLpwd = x.Element("pwd").Value,
+                                    XMLtype = x.Element("type").Value,
                                 };
             foreach (var x in selected_user)
             {
@@ -75,7 +78,7 @@ namespace DoAn
             {
                 if (hasSpecialChar(txtID.Text))
                 {
-                    if (users.Contains(txtID.Text) && pass.Contains(txtPass.Text) && Array.IndexOf(users.ToArray(), txtID.Text) == Array.IndexOf(pass.ToArray(), txtPass.Text))
+                    if (users.Contains(txtID.Text) && pass.Contains(txtPass.Text))
                     {
                         this.Hide();
                         Main main = new Main();
@@ -83,7 +86,8 @@ namespace DoAn
                     }
                     else
                     {
-                        MessageBox.Show("Sai tài khoản hoặc mật khẩu","Cảnh báo");
+                        lblThongBao.Visible = true;
+                        lblThongBao.Text = "Sai Tài khoản hoặc Mật khẩu";
                         txtID.ResetText();
                         txtPass.ResetText();
                         txtID.Focus();
@@ -140,5 +144,20 @@ namespace DoAn
         {
             this.Close();
         }
+
+        private void txtID_MouseEnter(object sender, EventArgs e)
+        {
+            if (txtID.Text == "Username")
+                txtID.Clear();
+        }
+        private void txtPass_MouseEnter(object sender, EventArgs e)
+        {
+            if (txtPass.Text == "Password")
+            {
+                txtPass.Clear();
+                txtPass.UseSystemPasswordChar = true;
+            }
+        }
+
     }
 }
