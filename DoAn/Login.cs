@@ -56,47 +56,6 @@ namespace DoAn
             }
             return true;
         }
-
-        private void btnLogin_Click(object sender, EventArgs e)
-        {
-            string fileName = @"C:\Users\user\Source\Repos\setokid\DoAnC\DoAn\user.xml";
-            XDocument doc = XDocument.Load(fileName);
-            var selected_user = from x in doc.Descendants("users").Where
-                                (x => (String)x.Element("username") == txtID.Text)
-                                select new
-                                {
-                                    XMLuser = x.Element("username").Value,
-                                    XMLpwd = x.Element("pwd").Value,
-                                    XMLtype = x.Element("type").Value,
-                                };
-            foreach (var x in selected_user)
-            {
-                users = x.XMLuser;
-                pass = x.XMLpwd;
-            }
-            if (checkEmty())
-            {
-                if (hasSpecialChar(txtID.Text))
-                {
-                    if (users.Contains(txtID.Text) && pass.Contains(txtPass.Text))
-                    {
-                        this.Hide();
-                        Main main = new Main();
-                        main.ShowDialog();
-                    }
-                    else
-                    {
-                        lblThongBao.Visible = true;
-                        lblThongBao.Text = "Sai Tài khoản hoặc Mật khẩu";
-                        txtID.ResetText();
-                        txtPass.ResetText();
-                        txtID.Focus();
-                    }
-                }
-            }
-
-        }
-
         private void txtID_KeyDown(object sender, KeyEventArgs e)
         {
             if(e.KeyCode == Keys.Enter)
@@ -139,12 +98,6 @@ namespace DoAn
             Forgotpass forgot = new Forgotpass();
             forgot.Show();
         }
-
-        private void btnExit_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
         private void txtID_MouseEnter(object sender, EventArgs e)
         {
             if (txtID.Text == "Username")
@@ -159,5 +112,49 @@ namespace DoAn
             }
         }
 
+        private void btnLogin_Click_1(object sender, EventArgs e)
+        {
+            string fileName = @"C:\Users\user\Source\Repos\setokid\DoAnC\DoAn\user.xml";
+            XDocument doc = XDocument.Load(fileName);
+            var selected_user = from x in doc.Descendants("users").Where
+                                (x => (String)x.Element("username") == txtID.Text)
+                                select new
+                                {
+                                    XMLuser = x.Element("username").Value,
+                                    XMLpwd = x.Element("pwd").Value,
+                                    XMLtype = x.Element("type").Value,
+                                };
+            foreach (var x in selected_user)
+            {
+                users = x.XMLuser;
+                pass = x.XMLpwd;
+            }
+            if (checkEmty())
+            {
+                if (hasSpecialChar(txtID.Text))
+                {
+                    if (users.Contains(txtID.Text) && pass.Contains(txtPass.Text))
+                    {
+                        this.Hide();
+                        Main main = new Main();
+                        main.ShowDialog();
+                    }
+                    else
+                    {
+                        lblThongBao.Visible = true;
+                        lblThongBao.Text = "Sai Tài khoản hoặc Mật khẩu";
+                        txtID.ResetText();
+                        txtPass.ResetText();
+                        txtID.Focus();
+                    }
+                }
+            }
+
+        }
+
+        private void btnExit_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
