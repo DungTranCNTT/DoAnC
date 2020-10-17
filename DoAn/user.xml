@@ -15,4 +15,11 @@
     <owner>test</owner>
     <day>17 04 20</day>
   </users>
+  <users>
+    <username>giaovien</username>
+    <pwd>123456</pwd>
+    <type>Giáo Viên</type>
+    <owner>test</owner>
+    <day>07:53:54 17/53/20</day>
+  </users>
 </profile>

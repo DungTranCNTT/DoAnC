@@ -22,6 +22,7 @@ namespace DoAn
         }
         public string users = "";
         public string pass = "";
+        public string type = "";
 
         public static bool hasSpecialChar(string input)
         {
@@ -134,16 +135,29 @@ namespace DoAn
             {
                 users = x.XMLuser;
                 pass = x.XMLpwd;
+                type = x.XMLtype;
             }
             if (checkEmty())
             {
                 if (hasSpecialChar(txtID.Text))
                 {
-                    if (users.Contains(txtID.Text) && pass.Contains(txtPass.Text))
+                    if (users.Contains(txtID.Text) && pass.Contains(txtPass.Text) && type.Contains("Admin"))
                     {
                         this.Hide();
                         Main main = new Main();
                         main.ShowDialog();
+                    }
+                    else if (users.Contains(txtID.Text) && pass.Contains(txtPass.Text) && type.Contains("Giáo Viên"))
+                    {
+                        this.Hide();
+                        GiaoVien giaovien = new GiaoVien();
+                        giaovien.ShowDialog();
+                    }
+                    else if (users.Contains(txtID.Text) && pass.Contains(txtPass.Text) && type.Contains("Sinh Viên"))
+                    {
+                        this.Hide();
+                        SinhVien sinhvien = new SinhVien();
+                        sinhvien.ShowDialog();
                     }
                     else
                     {

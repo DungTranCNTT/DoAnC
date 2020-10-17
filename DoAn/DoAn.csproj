@@ -55,6 +55,12 @@
     <Compile Include="Forgotpass.Designer.cs">
       <DependentUpon>Forgotpass.cs</DependentUpon>
     </Compile>
+    <Compile Include="GiaoVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GiaoVien.Designer.cs">
+      <DependentUpon>GiaoVien.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -74,6 +80,12 @@
     </Compile>
     <Compile Include="QuanLyTK.Designer.cs">
       <DependentUpon>QuanLyTK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SinhVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SinhVien.Designer.cs">
+      <DependentUpon>SinhVien.cs</DependentUpon>
     </Compile>
     <Compile Include="TK\TaiKhoan.cs" />
     <Compile Include="XML\TaiKhoanXML.cs" />

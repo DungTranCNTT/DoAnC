@@ -38,14 +38,9 @@
             this.txtOwer = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.dgvUser = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.backgroundWorker2 = new System.ComponentModel.BackgroundWorker();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -60,6 +55,11 @@
             this.btnFix = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btnDelete = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btnLoad = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUser)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -71,7 +71,7 @@
             this.lblID.AutoSize = true;
             this.lblID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblID.ForeColor = System.Drawing.Color.White;
-            this.lblID.Location = new System.Drawing.Point(197, 83);
+            this.lblID.Location = new System.Drawing.Point(245, 84);
             this.lblID.Name = "lblID";
             this.lblID.Size = new System.Drawing.Size(99, 17);
             this.lblID.TabIndex = 0;
@@ -82,7 +82,7 @@
             this.lblPass.AutoSize = true;
             this.lblPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPass.ForeColor = System.Drawing.Color.White;
-            this.lblPass.Location = new System.Drawing.Point(197, 122);
+            this.lblPass.Location = new System.Drawing.Point(245, 123);
             this.lblPass.Name = "lblPass";
             this.lblPass.Size = new System.Drawing.Size(70, 17);
             this.lblPass.TabIndex = 1;
@@ -95,7 +95,7 @@
             this.txtTK.Enabled = false;
             this.txtTK.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTK.ForeColor = System.Drawing.Color.Black;
-            this.txtTK.Location = new System.Drawing.Point(303, 81);
+            this.txtTK.Location = new System.Drawing.Point(351, 82);
             this.txtTK.Name = "txtTK";
             this.txtTK.Size = new System.Drawing.Size(119, 20);
             this.txtTK.TabIndex = 2;
@@ -107,7 +107,7 @@
             this.txtMK.Enabled = false;
             this.txtMK.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMK.ForeColor = System.Drawing.Color.Black;
-            this.txtMK.Location = new System.Drawing.Point(303, 120);
+            this.txtMK.Location = new System.Drawing.Point(351, 121);
             this.txtMK.Name = "txtMK";
             this.txtMK.Size = new System.Drawing.Size(119, 20);
             this.txtMK.TabIndex = 3;
@@ -117,7 +117,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(197, 167);
+            this.label1.Location = new System.Drawing.Point(245, 168);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(101, 17);
             this.label1.TabIndex = 4;
@@ -133,7 +133,7 @@
             this.cbType.Items.AddRange(new object[] {
             "Admin",
             "Giáo Viên"});
-            this.cbType.Location = new System.Drawing.Point(303, 162);
+            this.cbType.Location = new System.Drawing.Point(351, 163);
             this.cbType.Name = "cbType";
             this.cbType.Size = new System.Drawing.Size(119, 27);
             this.cbType.TabIndex = 5;
@@ -145,7 +145,7 @@
             this.txtOwer.Enabled = false;
             this.txtOwer.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtOwer.ForeColor = System.Drawing.Color.Black;
-            this.txtOwer.Location = new System.Drawing.Point(303, 208);
+            this.txtOwer.Location = new System.Drawing.Point(351, 209);
             this.txtOwer.Name = "txtOwer";
             this.txtOwer.Size = new System.Drawing.Size(119, 20);
             this.txtOwer.TabIndex = 7;
@@ -156,7 +156,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(197, 210);
+            this.label2.Location = new System.Drawing.Point(245, 211);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(84, 17);
             this.label2.TabIndex = 6;
@@ -168,37 +168,14 @@
             this.dgvUser.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvUser.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
+            this.Column5,
             this.Column3,
             this.Column4,
             this.Column2});
             this.dgvUser.Location = new System.Drawing.Point(184, 262);
             this.dgvUser.Name = "dgvUser";
-            this.dgvUser.Size = new System.Drawing.Size(445, 143);
+            this.dgvUser.Size = new System.Drawing.Size(535, 143);
             this.dgvUser.TabIndex = 13;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Tài Khoản";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Loại TK";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Người Thêm";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Ngày Thêm";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
             // 
             // guna2BorderlessForm1
             // 
@@ -207,27 +184,18 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Location = new System.Drawing.Point(184, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(450, 53);
+            this.panel1.Size = new System.Drawing.Size(539, 53);
             this.panel1.TabIndex = 14;
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.panel4.Location = new System.Drawing.Point(501, 0);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(5, 412);
-            this.panel4.TabIndex = 22;
             // 
             // label3
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(114, 9);
+            this.label3.Location = new System.Drawing.Point(162, 9);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(194, 29);
             this.label3.TabIndex = 0;
@@ -236,9 +204,9 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.panel3.Location = new System.Drawing.Point(0, 407);
+            this.panel3.Location = new System.Drawing.Point(0, 408);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(506, 5);
+            this.panel3.Size = new System.Drawing.Size(726, 5);
             this.panel3.TabIndex = 20;
             // 
             // panel2
@@ -252,7 +220,7 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.panel5.Location = new System.Drawing.Point(629, 0);
+            this.panel5.Location = new System.Drawing.Point(721, 1);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(5, 412);
             this.panel5.TabIndex = 21;
@@ -268,7 +236,7 @@
             this.btnOk.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOk.ForeColor = System.Drawing.Color.Black;
             this.btnOk.HoverState.Parent = this.btnOk;
-            this.btnOk.Location = new System.Drawing.Point(451, 80);
+            this.btnOk.Location = new System.Drawing.Point(501, 70);
             this.btnOk.Name = "btnOk";
             this.btnOk.ShadowDecoration.BorderRadius = 20;
             this.btnOk.ShadowDecoration.Color = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
@@ -289,7 +257,7 @@
             this.btnHuy.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHuy.ForeColor = System.Drawing.Color.Black;
             this.btnHuy.HoverState.Parent = this.btnHuy;
-            this.btnHuy.Location = new System.Drawing.Point(451, 142);
+            this.btnHuy.Location = new System.Drawing.Point(501, 132);
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.ShadowDecoration.BorderRadius = 20;
             this.btnHuy.ShadowDecoration.Color = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
@@ -425,7 +393,7 @@
             this.btnLoad.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLoad.ForeColor = System.Drawing.Color.Black;
             this.btnLoad.HoverState.Parent = this.btnLoad;
-            this.btnLoad.Location = new System.Drawing.Point(451, 199);
+            this.btnLoad.Location = new System.Drawing.Point(501, 189);
             this.btnLoad.Name = "btnLoad";
             this.btnLoad.ShadowDecoration.BorderRadius = 20;
             this.btnLoad.ShadowDecoration.Color = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
@@ -436,12 +404,42 @@
             this.btnLoad.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
             this.btnLoad.Click += new System.EventHandler(this.btnLoad_Click);
             // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Tài Khoản";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "Mật Khẩu";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Loại TK";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Người Thêm";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Ngày Thêm";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
             // QuanLyTK
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(36)))), ((int)(((byte)(55)))));
-            this.ClientSize = new System.Drawing.Size(635, 412);
+            this.ClientSize = new System.Drawing.Size(726, 413);
             this.Controls.Add(this.btnLoad);
             this.Controls.Add(this.btnHuy);
             this.Controls.Add(this.btnOk);
@@ -497,16 +495,16 @@
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Panel panel4;
         private Guna.UI2.WinForms.Guna2GradientButton btnHuy;
         private Guna.UI2.WinForms.Guna2GradientButton btnOk;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.PictureBox pictureBox1;
         private Guna.UI2.WinForms.Guna2GradientButton btnExit;
+        private Guna.UI2.WinForms.Guna2GradientButton btnLoad;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private Guna.UI2.WinForms.Guna2GradientButton btnLoad;
     }
 }
