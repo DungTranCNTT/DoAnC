@@ -61,7 +61,13 @@ namespace DoAn
             if(e.KeyCode == Keys.Enter)
             {
                 txtPass.Focus();
+                if (txtPass.Focus())
+                {
+                    txtPass.Clear();
+                    txtPass.UseSystemPasswordChar = true;
+                }
             }
+
         }
 
         private void txtPass_KeyDown(object sender, KeyEventArgs e)

@@ -75,7 +75,7 @@
             this.txtPass.Name = "txtPass";
             this.txtPass.Size = new System.Drawing.Size(183, 20);
             this.txtPass.TabIndex = 3;
-            this.txtPass.Text = "Password";
+            this.txtPass.UseSystemPasswordChar = true;
             this.txtPass.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPass_KeyDown);
             this.txtPass.MouseEnter += new System.EventHandler(this.txtPass_MouseEnter);
             // 

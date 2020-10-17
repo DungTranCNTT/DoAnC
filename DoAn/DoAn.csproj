@@ -117,6 +117,11 @@
     <None Include="Resources\icons8-user-male-3-80.png" />
     <None Include="Resources\icons8-unlock-80.png" />
     <None Include="Resources\returning-right-arrow.png" />
+    <None Include="Resources\add-user.png" />
+    <None Include="Resources\edit.png" />
+    <None Include="Resources\delete-user.png" />
+    <None Include="Resources\manager.png" />
+    <None Include="Resources\icons8-exit-sign-50.png" />
     <Content Include="user.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

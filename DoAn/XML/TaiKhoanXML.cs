@@ -41,6 +41,10 @@ namespace DoAn.XML
             owner.InnerText = themTaiKhoan.owner;
             users.AppendChild(owner);
 
+            XmlElement day = doc.CreateElement("day");
+            day.InnerText = themTaiKhoan.Day;
+            users.AppendChild(day);
+
             //tạo xong nút user thêm vào gốc
             goc.AppendChild(users);
             doc.Save(fileName);
@@ -109,9 +113,9 @@ namespace DoAn.XML
             {
                 dgv.Rows.Add();
                 dgv.Rows[dong].Cells[0].Value = item.SelectSingleNode("username").InnerText;
-                dgv.Rows[dong].Cells[1].Value = item.SelectSingleNode("pwd").InnerText;
-                dgv.Rows[dong].Cells[2].Value = item.SelectSingleNode("type").InnerText;
-                dgv.Rows[dong].Cells[3].Value = item.SelectSingleNode("owner").InnerText;
+                dgv.Rows[dong].Cells[1].Value = item.SelectSingleNode("type").InnerText;
+                dgv.Rows[dong].Cells[2].Value = item.SelectSingleNode("owner").InnerText;
+                dgv.Rows[dong].Cells[3].Value = item.SelectSingleNode("day").InnerText;
                 dong++;
             }
         }

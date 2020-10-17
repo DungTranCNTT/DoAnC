@@ -5,11 +5,14 @@
     <pwd>123456</pwd>
     <type>Admin</type>
     <owner>Dung</owner>
+    <day>
+    </day>
   </users>
   <users>
-    <username>test</username>
+    <username>test1</username>
     <pwd>123456</pwd>
-    <type>Giáo Viên</type>
-    <owner>asd</owner>
+    <type>Admin</type>
+    <owner>test</owner>
+    <day>17 04 20</day>
   </users>
 </profile>

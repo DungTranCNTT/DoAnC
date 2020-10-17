@@ -12,5 +12,7 @@ namespace DoAn.TK
         public string MatKhau { get; set; }
         public string TrangThai { get; set; }
         public string owner { get; set; }
+
+        public string Day { get; set; }
     }
 }
