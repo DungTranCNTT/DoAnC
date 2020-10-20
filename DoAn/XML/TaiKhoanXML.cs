@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using System.Windows.Forms;
 using System.Xml;
 using DoAn.TK;
 namespace DoAn.XML
@@ -103,7 +98,7 @@ namespace DoAn.XML
 
         public void HienThi(DataGridView dgv)
         {
-            dgv.ColumnCount = 5;
+            dgv.ColumnCount = 6;
             //lay toan bo nut trong user
             XmlNodeList ds = goc.SelectNodes("users");
 
@@ -112,11 +107,11 @@ namespace DoAn.XML
             foreach(XmlNode item in ds)
             {
                 dgv.Rows.Add();
-                dgv.Rows[dong].Cells[0].Value = item.SelectSingleNode("username").InnerText;
-                dgv.Rows[dong].Cells[1].Value = item.SelectSingleNode("pwd").InnerText;
-                dgv.Rows[dong].Cells[2].Value = item.SelectSingleNode("type").InnerText;
-                dgv.Rows[dong].Cells[3].Value = item.SelectSingleNode("owner").InnerText;
-                dgv.Rows[dong].Cells[4].Value = item.SelectSingleNode("day").InnerText;
+                dgv.Rows[dong].Cells[1].Value = item.SelectSingleNode("username").InnerText;
+                dgv.Rows[dong].Cells[2].Value = item.SelectSingleNode("pwd").InnerText;
+                dgv.Rows[dong].Cells[3].Value = item.SelectSingleNode("type").InnerText;
+                dgv.Rows[dong].Cells[4].Value = item.SelectSingleNode("owner").InnerText;
+                dgv.Rows[dong].Cells[5].Value = item.SelectSingleNode("day").InnerText;
                 dong++;
             }
         }

@@ -5,21 +5,20 @@
     <pwd>123456</pwd>
     <type>Admin</type>
     <owner>Dung</owner>
-    <day>
-    </day>
-  </users>
-  <users>
-    <username>test1</username>
-    <pwd>123456</pwd>
-    <type>Admin</type>
-    <owner>test</owner>
-    <day>17 04 20</day>
+    <day></day>
   </users>
   <users>
     <username>giaovien</username>
     <pwd>123456</pwd>
     <type>Giáo Viên</type>
-    <owner>test</owner>
-    <day>07:53:54 17/53/20</day>
+    <owner>Dung</owner>
+    <day></day>
+  </users>
+  <users>
+    <username>Sinh Viên</username>
+    <pwd>123456</pwd>
+    <type>Sinh Viên</type>
+    <owner>Dung</owner>
+    <day></day>
   </users>
 </profile>

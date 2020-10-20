@@ -28,7 +28,7 @@ namespace DoAn
 
         bool check1, check2, check3;
 
-        public void check()
+        public void Check()
         {
             check1 = false;
             check2 = false;
@@ -85,21 +85,33 @@ namespace DoAn
 
         }
 
+        private void dgvUser_RowPostPaint(object sender, DataGridViewRowPostPaintEventArgs e)
+        {
+            dgvUser.Rows[e.RowIndex].Cells[0].Value = (e.RowIndex + 1).ToString();
+        }
+
         private void btnOk_Click(object sender, EventArgs e)
         {
             if (check1 == true)
             {
                 if (txtTK.Text.Trim() != "")
                 {
-                    // gán dữ liệu
-                    taiKhoan.TenDangNhap = txtTK.Text;
-                    taiKhoan.MatKhau = txtMK.Text;
-                    taiKhoan.TrangThai = cbType.Text;
-                    taiKhoan.owner = txtOwer.Text;
-                    taiKhoan.Day = DateTime.Now.ToString("hh:mm:ss dd/mm/yy");
-                    //gọi hàm thực hiện thêm tài khoản
-                    taiKhoanXml.Them(taiKhoan);
-                    taiKhoanXml.HienThi(dgvUser);//load lại bảng 
+                    if(txtTK.MaxLength < 10)
+                    {
+                        // gán dữ liệu
+                        taiKhoan.TenDangNhap = txtTK.Text;
+                        taiKhoan.MatKhau = txtMK.Text;
+                        taiKhoan.TrangThai = cbType.Text;
+                        taiKhoan.owner = txtOwer.Text;
+                        taiKhoan.Day = DateTime.Now.ToString("dd/mm/yy");
+                        //gọi hàm thực hiện thêm tài khoản
+                        taiKhoanXml.Them(taiKhoan);
+                        taiKhoanXml.HienThi(dgvUser);//load lại bảng 
+                    }
+                    else
+                    {
+                        MessageBox.Show("Tài khoản không được quá 10 kí tự", "Lỗi");
+                    }
                 }
             }
             if (check2 == true)

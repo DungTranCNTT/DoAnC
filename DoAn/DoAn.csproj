@@ -87,8 +87,11 @@
     <Compile Include="SinhVien.Designer.cs">
       <DependentUpon>SinhVien.cs</DependentUpon>
     </Compile>
-    <Compile Include="TK\TaiKhoan.cs" />
+    <Compile Include="Service\TaiKhoan.cs" />
     <Compile Include="XML\TaiKhoanXML.cs" />
+    <EmbeddedResource Include="GiaoVien.resx">
+      <DependentUpon>GiaoVien.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>

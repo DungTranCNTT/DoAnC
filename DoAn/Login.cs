@@ -24,7 +24,7 @@ namespace DoAn
         public string pass = "";
         public string type = "";
 
-        public static bool hasSpecialChar(string input)
+        public static bool HasSpecialChar(string input)
         {
             string[] specialChar = {"@", "|", "!", "#", "$", "%", "&", "/", "(", ")", "=", "?", "»", "«", "@", "£", "§", "€", "{", "}", ".", "-", ";", "'", "<", ">", "_", "," };
             foreach (var item in specialChar)
@@ -39,7 +39,7 @@ namespace DoAn
             return true;
         }
 
-        public bool checkEmty()
+        public bool CheckEmty()
         {
             if (string.IsNullOrWhiteSpace(txtID.Text))
             {
@@ -85,7 +85,7 @@ namespace DoAn
 
         private void txtID_TextChanged(object sender, EventArgs e)
         {
-            hasSpecialChar(txtID.Text);
+            HasSpecialChar(txtID.Text);
         }
 
         private void btnShowpass_CheckedChanged(object sender, EventArgs e)
@@ -121,6 +121,10 @@ namespace DoAn
 
         private void btnLogin_Click_1(object sender, EventArgs e)
         {
+            DangNhap();
+        }
+        public void DangNhap()
+        {
             string fileName = @"C:\Users\user\Source\Repos\setokid\DoAnC\DoAn\user.xml";
             XDocument doc = XDocument.Load(fileName);
             var selected_user = from x in doc.Descendants("users").Where
@@ -137,9 +141,9 @@ namespace DoAn
                 pass = x.XMLpwd;
                 type = x.XMLtype;
             }
-            if (checkEmty())
+            if (CheckEmty())
             {
-                if (hasSpecialChar(txtID.Text))
+                if (HasSpecialChar(txtID.Text))
                 {
                     if (users.Contains(txtID.Text) && pass.Contains(txtPass.Text) && type.Contains("Admin"))
                     {
@@ -169,9 +173,7 @@ namespace DoAn
                     }
                 }
             }
-
         }
-
         private void btnExit_Click_1(object sender, EventArgs e)
         {
             this.Close();
