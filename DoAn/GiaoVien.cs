@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DoAn.Service;
+using DoAn.XML;
 
 namespace DoAn
 {
@@ -15,6 +17,23 @@ namespace DoAn
         public GiaoVien()
         {
             InitializeComponent();
+        }
+        SinhVienXML sinhVienxml = new SinhVienXML();
+
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+            frmThemSinhVien frmThemSinhvien = new frmThemSinhVien();
+            frmThemSinhvien.Show();
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void GiaoVien_Load(object sender, EventArgs e)
+        {
+            sinhVienxml.HienThi(dgvSinhVien);
         }
     }
 }

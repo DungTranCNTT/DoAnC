@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DoAn.TK
+namespace DoAn.Service
 {
     public class TaiKhoan
     {

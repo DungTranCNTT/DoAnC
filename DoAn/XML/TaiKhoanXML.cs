@@ -1,10 +1,11 @@
 ﻿using System.Windows.Forms;
 using System.Xml;
-using DoAn.TK;
+using DoAn.Service;
 namespace DoAn.XML
 {
     public class TaiKhoanXML
     {
+        GiaoVien gv;
         XmlDocument doc = new XmlDocument();
         XmlElement goc;
         string fileName = @"C:\Users\user\Source\Repos\setokid\DoAnC\DoAn\user.xml";

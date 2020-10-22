@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using DoAn.TK;
+using DoAn.Service;
 using DoAn.XML;
 
 namespace DoAn

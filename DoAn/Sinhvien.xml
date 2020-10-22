@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<profile>
+  <student>
+    <MSV>12321asd</MSV>
+    <Ten>test</Ten>
+    <NgaySinh>20/10/2000</NgaySinh>
+    <GioiTinh>Nam</GioiTinh>
+    <Que>asdasd</Que>
+    <DiaChi>asdasd</DiaChi>
+    <Email>asdasdas</Email>
+    <SDT>021313</SDT>
+  </student>
+</profile>

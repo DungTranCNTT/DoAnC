@@ -160,8 +160,6 @@ namespace DoAn
                     else if (users.Contains(txtID.Text) && pass.Contains(txtPass.Text) && type.Contains("Sinh Viên"))
                     {
                         this.Hide();
-                        SinhVien sinhvien = new SinhVien();
-                        sinhvien.ShowDialog();
                     }
                     else
                     {
