@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <profile>
   <student>
-    <MSV>12321asd</MSV>
-    <Ten>test</Ten>
-    <NgaySinh>20/10/2000</NgaySinh>
+    <MSV>20000001</MSV>
+    <Ten>1111111</Ten>
+    <NgaySinh>11/11/1111</NgaySinh>
     <GioiTinh>Nam</GioiTinh>
-    <Que>asdasd</Que>
-    <DiaChi>asdasd</DiaChi>
-    <Email>asdasdas</Email>
-    <SDT>021313</SDT>
+    <Que>sdasd</Que>
+    <DiaChi>asd1</DiaChi>
+    <Email>3123</Email>
+    <SDT>111111111</SDT>
   </student>
 </profile>

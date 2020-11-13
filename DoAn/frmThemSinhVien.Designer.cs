@@ -264,6 +264,7 @@
             this.btnRs.Size = new System.Drawing.Size(90, 30);
             this.btnRs.TabIndex = 10;
             this.btnRs.Text = "Hủy";
+            this.btnRs.Click += new System.EventHandler(this.btnRs_Click);
             // 
             // btnExit
             // 
@@ -351,6 +352,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmThemSinhVien";
             this.Text = "frmThemSinhVien";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmThemSinhVien_FormClosed);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

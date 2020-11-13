@@ -14,9 +14,9 @@ using System.Xml.Linq;
 
 namespace DoAn
 {
-    public partial class Login : Form
+    public partial class frmLogin : Form
     {
-        public Login()
+        public frmLogin()
         {
             InitializeComponent();
         }
@@ -148,13 +148,13 @@ namespace DoAn
                     if (users.Contains(txtID.Text) && pass.Contains(txtPass.Text) && type.Contains("Admin"))
                     {
                         this.Hide();
-                        Main main = new Main();
+                        frmMain main = new frmMain();
                         main.ShowDialog();
                     }
                     else if (users.Contains(txtID.Text) && pass.Contains(txtPass.Text) && type.Contains("Giáo Viên"))
                     {
                         this.Hide();
-                        GiaoVien giaovien = new GiaoVien();
+                        frmGiaoVien giaovien = new frmGiaoVien();
                         giaovien.ShowDialog();
                     }
                     else if (users.Contains(txtID.Text) && pass.Contains(txtPass.Text) && type.Contains("Sinh Viên"))

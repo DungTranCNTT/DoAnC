@@ -12,18 +12,19 @@ using DoAn.XML;
 
 namespace DoAn
 {
-    public partial class GiaoVien : Form
+    public partial class frmXoaSinhVien : Form
     {
-        public GiaoVien()
+        public frmXoaSinhVien()
         {
             InitializeComponent();
         }
-        SinhVienXML sinhVienxml = new SinhVienXML();
 
-        private void btnThem_Click(object sender, EventArgs e)
+        SinhVien sv = new SinhVien();
+        SinhVienXML svXML = new SinhVienXML();
+
+        private void label1_Click(object sender, EventArgs e)
         {
-            frmThemSinhVien frmThemSinhvien = new frmThemSinhVien();
-            frmThemSinhvien.Show();
+
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -31,9 +32,11 @@ namespace DoAn
             this.Close();
         }
 
-        private void GiaoVien_Load(object sender, EventArgs e)
+        private void btnDelete1_Click(object sender, EventArgs e)
         {
-            sinhVienxml.HienThi(dgvSinhVien);
+            sv.Msv = int.Parse(txtMsv.Text);
+
+            svXML.Xoa(sv);
         }
     }
 }

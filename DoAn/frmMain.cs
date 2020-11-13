@@ -10,22 +10,22 @@ using System.Windows.Forms;
 
 namespace DoAn
 {
-    public partial class Main : Form
+    public partial class frmMain : Form
     {
-        public Main()
+        public frmMain()
         {
             InitializeComponent();
         }
 
         private void btnQuanly_Click(object sender, EventArgs e)
         {
-            QuanLyTK ql = new QuanLyTK();
+            frmQLTK ql = new frmQLTK();
             ql.ShowDialog();
         }
 
         private void Main_Load(object sender, EventArgs e)
         {
-            Login lg = new Login();
+            frmLogin lg = new frmLogin();
             lg.Close();
         }
     }

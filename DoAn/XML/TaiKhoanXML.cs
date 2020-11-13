@@ -1,11 +1,12 @@
-﻿using System.Windows.Forms;
+﻿using System.Data;
+using System.Windows.Forms;
 using System.Xml;
 using DoAn.Service;
 namespace DoAn.XML
 {
     public class TaiKhoanXML
     {
-        GiaoVien gv;
+        frmGiaoVien gv;
         XmlDocument doc = new XmlDocument();
         XmlElement goc;
         string fileName = @"C:\Users\user\Source\Repos\setokid\DoAnC\DoAn\user.xml";
@@ -113,7 +114,21 @@ namespace DoAn.XML
                 dgv.Rows[dong].Cells[3].Value = item.SelectSingleNode("type").InnerText;
                 dgv.Rows[dong].Cells[4].Value = item.SelectSingleNode("owner").InnerText;
                 dgv.Rows[dong].Cells[5].Value = item.SelectSingleNode("day").InnerText;
-                dong++;
+            }
+        }
+        public void Reload(DataGridView dgv)
+        {
+            DataSet ds = new DataSet();
+            ds.ReadXml(fileName);
+            int dong = 0;
+            foreach (DataRow item in ds.Tables["users"].Rows)
+            {
+                dgv.Rows.Add();
+                dgv.Rows[dong].Cells[1].Value = item["username"].ToString();
+                dgv.Rows[dong].Cells[2].Value = item["pwd"].ToString();
+                dgv.Rows[dong].Cells[3].Value = item["type"].ToString();
+                dgv.Rows[dong].Cells[4].Value = item["owner"].ToString();
+                dgv.Rows[dong].Cells[5].Value = item["day"].ToString();
             }
         }
     }

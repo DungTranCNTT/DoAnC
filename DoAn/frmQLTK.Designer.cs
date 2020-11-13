@@ -1,6 +1,6 @@
 ﻿namespace DoAn
 {
-    partial class QuanLyTK
+    partial class frmQLTK
     {
         /// <summary>
         /// Required designer variable.

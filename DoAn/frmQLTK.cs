@@ -12,9 +12,9 @@ using DoAn.XML;
 
 namespace DoAn
 {
-    public partial class QuanLyTK : Form
+    public partial class frmQLTK : Form
     {
-        public QuanLyTK()
+        public frmQLTK()
         {
             InitializeComponent();
         }
@@ -96,8 +96,7 @@ namespace DoAn
             {
                 if (txtTK.Text.Trim() != "")
                 {
-                    if(txtTK.MaxLength < 10)
-                    {
+                    
                         // gán dữ liệu
                         taiKhoan.TenDangNhap = txtTK.Text;
                         taiKhoan.MatKhau = txtMK.Text;
@@ -107,11 +106,6 @@ namespace DoAn
                         //gọi hàm thực hiện thêm tài khoản
                         taiKhoanXml.Them(taiKhoan);
                         taiKhoanXml.HienThi(dgvUser);//load lại bảng 
-                    }
-                    else
-                    {
-                        MessageBox.Show("Tài khoản không được quá 10 kí tự", "Lỗi");
-                    }
                 }
             }
             if (check2 == true)
@@ -126,6 +120,7 @@ namespace DoAn
                     taiKhoan.owner = txtOwer.Text;
                     //gọi hàm thực hiện thêm tài khoản
                     taiKhoanXml.Sua(taiKhoan);
+                    dgvUser.Rows.Clear();
                     taiKhoanXml.HienThi(dgvUser);//load lại bảng 
                 }
             }

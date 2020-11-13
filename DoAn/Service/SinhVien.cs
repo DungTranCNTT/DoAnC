@@ -8,7 +8,7 @@ namespace DoAn.Service
 {
     public class SinhVien
     {
-        public string Msv { get; set; }
+        public int Msv { get; set; }
         public string Hoten { get; set; }
         public string Ngaysinh { get; set; }
         public string Gioitinh { get; set; }
