@@ -25,17 +25,19 @@ namespace DoAn.XML
 
         public int createMSV()
         {
+            XmlNode msvgoc = goc.SelectSingleNode("student[MSV ='" + "']");
             var nodeCount = 0;
             using( var reader = XmlReader.Create(fileName))
             {
                 while (reader.Read())
                 {
-                    if(reader.NodeType == XmlNodeType.Element && reader.Name == "student")
+                    if(reader.NodeType == XmlNodeType.Element && reader.Name == "MSV")
                     {
                         nodeCount++;
                     }
                 }
             }
+
             int msv = 0;
             DateTime date = DateTime.Now;
             string s = date.Year.ToString().Substring(date.Year.ToString().Length - 2);
@@ -55,7 +57,21 @@ namespace DoAn.XML
             {
                 msv = int.Parse(s + 00 + nodeCount ++);
             }
+
+            XmlNodeList list = goc.SelectNodes("student");
+            foreach (XmlNode item in list)
+            {
+                if (msv.ToString() == item.SelectSingleNode("MSV").InnerText)
+                {
+                    msv = msv + 1;
+                }
+                else
+                {
+                    msv = msv;
+                }
+            }
             return msv;
+            
         }
         public void Them(SinhVien themSinhVien)
         {
@@ -148,15 +164,7 @@ namespace DoAn.XML
             if(sinhVienXoa != null)
             {
                 goc.RemoveChild(sinhVienXoa);
-
                 doc.Save(fileName);
-
-                if (MessageBox.Show("Xóa thành công bạn muốn thoát?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                {
-                    frmXoaSinhVien frmXoa = new frmXoaSinhVien();
-
-                    frmXoa.Close();
-                }
             }
             else
             {

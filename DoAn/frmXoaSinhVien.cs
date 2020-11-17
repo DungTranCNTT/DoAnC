@@ -37,6 +37,11 @@ namespace DoAn
             sv.Msv = int.Parse(txtMsv.Text);
 
             svXML.Xoa(sv);
+            if (MessageBox.Show("Xóa thành công bạn muốn thoát?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                frmXoaSinhVien xoa = new frmXoaSinhVien();
+                this.Close();
+            }
         }
     }
 }
