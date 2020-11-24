@@ -45,6 +45,8 @@ namespace DoAn
             cbType.Enabled = true;
             cbType.BackColor = Color.White;
             check1 = true;
+            check2 = false;
+            check3 = false;
         }
 
         private void btnFix_Click(object sender, EventArgs e)
@@ -58,6 +60,8 @@ namespace DoAn
             cbType.Enabled = true;
             cbType.BackColor = Color.White;
             check2 = true;
+            check1 = false;
+            check3 = false;
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
@@ -65,12 +69,17 @@ namespace DoAn
             txtTK.Enabled = true;
             txtTK.BackColor = Color.White;
             txtMK.Enabled = false;
+            txtMK.Clear();
             txtMK.BackColor = Color.Silver;
             txtOwer.Enabled = false;
+            txtOwer.Clear();
             txtOwer.BackColor = Color.Silver;
             cbType.Enabled = false;
+            cbType.Items.Clear();
             cbType.BackColor = Color.Silver;
             check3 = true;
+            check2 = false;
+            check1 = false;
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -80,15 +89,20 @@ namespace DoAn
 
         private void btnLoad_Click(object sender, EventArgs e)
         {
-
-                taiKhoanXml.HienThi(dgvUser);
+            Reload();
 
         }
 
+        private void Reload()
+        {
+            dgvUser.Rows.Clear();
+            taiKhoanXml.Reload(dgvUser);
+        }
         private void dgvUser_RowPostPaint(object sender, DataGridViewRowPostPaintEventArgs e)
         {
             dgvUser.Rows[e.RowIndex].Cells[0].Value = (e.RowIndex + 1).ToString();
         }
+
 
         private void btnOk_Click(object sender, EventArgs e)
         {
@@ -105,7 +119,7 @@ namespace DoAn
                         taiKhoan.Day = DateTime.Now.ToString("dd/mm/yy");
                         //gọi hàm thực hiện thêm tài khoản
                         taiKhoanXml.Them(taiKhoan);
-                        taiKhoanXml.HienThi(dgvUser);//load lại bảng 
+                        Reload() ;//load lại bảng 
                 }
             }
             if (check2 == true)
@@ -120,8 +134,7 @@ namespace DoAn
                     taiKhoan.owner = txtOwer.Text;
                     //gọi hàm thực hiện thêm tài khoản
                     taiKhoanXml.Sua(taiKhoan);
-                    dgvUser.Rows.Clear();
-                    taiKhoanXml.HienThi(dgvUser);//load lại bảng 
+                    Reload();//load lại bảng 
                 }
             }
             if (check3 == true)
@@ -130,9 +143,8 @@ namespace DoAn
                 {
 
                     taiKhoan.TenDangNhap = txtTK.Text;
-
                     taiKhoanXml.Xoa(taiKhoan);
-                    taiKhoanXml.HienThi(dgvUser);
+                    Reload();
                 }
             }
         }

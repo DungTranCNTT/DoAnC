@@ -58,6 +58,12 @@
     <Compile Include="Forgotpass.Designer.cs">
       <DependentUpon>Forgotpass.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmQLLop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmQLLop.Designer.cs">
+      <DependentUpon>frmQLLop.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmThemSinhVien.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -102,10 +108,15 @@
     <Compile Include="frmQLTK.Designer.cs">
       <DependentUpon>frmQLTK.cs</DependentUpon>
     </Compile>
+    <Compile Include="Service\Class.cs" />
     <Compile Include="Service\SinhVien.cs" />
     <Compile Include="Service\TaiKhoan.cs" />
+    <Compile Include="XML\ClassXML.cs" />
     <Compile Include="XML\SinhVienXML.cs" />
     <Compile Include="XML\TaiKhoanXML.cs" />
+    <EmbeddedResource Include="frmQLLop.resx">
+      <DependentUpon>frmQLLop.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmThemSinhVien.resx">
       <DependentUpon>frmThemSinhVien.cs</DependentUpon>
     </EmbeddedResource>
@@ -154,6 +165,8 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\icons8-books-50.png" />
+    <None Include="Resources\add book.gif" />
     <None Include="Resources\icons8-cloud-account-login-male-100.png" />
     <None Include="Resources\Ellipsis-1s-200px.gif" />
     <None Include="Resources\Dual Ball-1s-200px.gif" />
@@ -174,8 +187,9 @@
     <None Include="Resources\refresh.png" />
     <None Include="Resources\edit1.png" />
     <None Include="Resources\icons8-add-user-male-50.png" />
-    <Content Include="Sinhvien.xml" />
-    <Content Include="user.xml" />
+    <Content Include="Data\Class.xml" />
+    <Content Include="Data\Sinhvien.xml" />
+    <Content Include="Data\user.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

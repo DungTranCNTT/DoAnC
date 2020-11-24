@@ -63,6 +63,16 @@ namespace DoAn.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap add_book {
+            get {
+                object obj = ResourceManager.GetObject("add book", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap add_user {
             get {
                 object obj = ResourceManager.GetObject("add-user", resourceCulture);
@@ -136,6 +146,16 @@ namespace DoAn.Properties {
         internal static System.Drawing.Bitmap icons8_add_user_male_50 {
             get {
                 object obj = ResourceManager.GetObject("icons8-add-user-male-50", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_books_50 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-books-50", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

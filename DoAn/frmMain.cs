@@ -28,5 +28,11 @@ namespace DoAn
             frmLogin lg = new frmLogin();
             lg.Close();
         }
+
+        private void btnQLLop_Click(object sender, EventArgs e)
+        {
+            frmQLLop lop = new frmQLLop();
+            lop.ShowDialog();
+        }
     }
 }

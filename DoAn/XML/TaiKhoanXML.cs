@@ -9,7 +9,7 @@ namespace DoAn.XML
         frmGiaoVien gv;
         XmlDocument doc = new XmlDocument();
         XmlElement goc;
-        string fileName = @"C:\Users\user\Source\Repos\setokid\DoAnC\DoAn\user.xml";
+        string fileName = @"C:\Users\user\Source\Repos\setokid\DoAnC\DoAn\Data\user.xml";
 
         public TaiKhoanXML()
         {
@@ -114,6 +114,7 @@ namespace DoAn.XML
                 dgv.Rows[dong].Cells[3].Value = item.SelectSingleNode("type").InnerText;
                 dgv.Rows[dong].Cells[4].Value = item.SelectSingleNode("owner").InnerText;
                 dgv.Rows[dong].Cells[5].Value = item.SelectSingleNode("day").InnerText;
+                dong++;
             }
         }
         public void Reload(DataGridView dgv)
@@ -129,6 +130,7 @@ namespace DoAn.XML
                 dgv.Rows[dong].Cells[3].Value = item["type"].ToString();
                 dgv.Rows[dong].Cells[4].Value = item["owner"].ToString();
                 dgv.Rows[dong].Cells[5].Value = item["day"].ToString();
+                dong++;
             }
         }
     }

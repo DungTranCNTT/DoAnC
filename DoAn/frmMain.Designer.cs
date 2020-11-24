@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.btnQuanly = new System.Windows.Forms.Button();
+            this.btnQLLop = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnQuanly
@@ -41,13 +42,24 @@
             this.btnQuanly.UseVisualStyleBackColor = true;
             this.btnQuanly.Click += new System.EventHandler(this.btnQuanly_Click);
             // 
-            // Main
+            // btnQLLop
+            // 
+            this.btnQLLop.Location = new System.Drawing.Point(143, 13);
+            this.btnQLLop.Name = "btnQLLop";
+            this.btnQLLop.Size = new System.Drawing.Size(92, 46);
+            this.btnQLLop.TabIndex = 1;
+            this.btnQLLop.Text = "Quản Lý Lớp";
+            this.btnQLLop.UseVisualStyleBackColor = true;
+            this.btnQLLop.Click += new System.EventHandler(this.btnQLLop_Click);
+            // 
+            // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnQLLop);
             this.Controls.Add(this.btnQuanly);
-            this.Name = "Main";
+            this.Name = "frmMain";
             this.Text = "Main";
             this.Load += new System.EventHandler(this.Main_Load);
             this.ResumeLayout(false);
@@ -57,5 +69,6 @@
         #endregion
 
         private System.Windows.Forms.Button btnQuanly;
+        private System.Windows.Forms.Button btnQLLop;
     }
 }

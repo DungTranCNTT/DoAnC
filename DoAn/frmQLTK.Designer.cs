@@ -136,8 +136,7 @@
             this.cbType.FormattingEnabled = true;
             this.cbType.Items.AddRange(new object[] {
             "Admin",
-            "Giáo Viên",
-            "Sinh Viên"});
+            "Giáo Viên"});
             this.cbType.Location = new System.Drawing.Point(351, 163);
             this.cbType.Name = "cbType";
             this.cbType.Size = new System.Drawing.Size(119, 27);
@@ -486,7 +485,7 @@
             this.btnLoad.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
             this.btnLoad.Click += new System.EventHandler(this.btnLoad_Click);
             // 
-            // QuanLyTK
+            // frmQLTK
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -511,7 +510,7 @@
             this.Controls.Add(this.panel6);
             this.ForeColor = System.Drawing.Color.Black;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "QuanLyTK";
+            this.Name = "frmQLTK";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "QuanLyTK";
             this.Load += new System.EventHandler(this.QuanLyTK_Load);
