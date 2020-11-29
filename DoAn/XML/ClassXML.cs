@@ -25,8 +25,9 @@ namespace DoAn.XML
         public void Them(Class themClass)
         {
             XmlNode lop = doc.CreateElement("class");
+
             XmlElement tenlop = doc.CreateElement("TenLop");
-            lop.InnerText = themClass.TenLop.ToString();
+            tenlop.InnerText = themClass.TenLop.ToString();
             lop.AppendChild(tenlop);
 
             XmlElement malop = doc.CreateElement("MaLop");
@@ -51,7 +52,7 @@ namespace DoAn.XML
             {
                 XmlNode lopmoi = doc.CreateElement("class");
                 XmlElement tenlop = doc.CreateElement("TenLop");
-                lopmoi.InnerText = suaClass.TenLop.ToString();
+                tenlop.InnerText = suaClass.TenLop.ToString();
                 lopmoi.AppendChild(tenlop);
 
                 XmlElement malop = doc.CreateElement("MaLop");
@@ -81,7 +82,7 @@ namespace DoAn.XML
             }
             else
             {
-                if (MessageBox.Show("Mã Sinh viên không tồn tại tạo mới?", "Lỗi", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                if (MessageBox.Show("Mã Lớp không tồn tại tạo mới?", "Lỗi", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                 }
             }
@@ -96,10 +97,10 @@ namespace DoAn.XML
             foreach (XmlNode item in ds)
             {
                 dgv.Rows.Add();
-                dgv.Rows[dong].Cells[0].Value = item.SelectSingleNode("TenLop").InnerText;
+                dgv.Rows[dong].Cells[0].Value = item.SelectSingleNode("Khoa").InnerText;
                 dgv.Rows[dong].Cells[1].Value = item.SelectSingleNode("MaLop").InnerText;
-                dgv.Rows[dong].Cells[2].Value = item.SelectSingleNode("GVChuNhiem").InnerText;
-                dgv.Rows[dong].Cells[3].Value = item.SelectSingleNode("Khoa").InnerText;
+                dgv.Rows[dong].Cells[2].Value = item.SelectSingleNode("TenLop").InnerText;
+                dgv.Rows[dong].Cells[3].Value = item.SelectSingleNode("GVChuNhiem").InnerText;
                 dong++;
 
             }
@@ -109,20 +110,20 @@ namespace DoAn.XML
             dgv.ColumnCount = 8;
             DataSet ds = new DataSet();
             ds.ReadXml(fileName);
-            foreach (DataRow item in ds.Tables["student"].Rows)
+            foreach (DataRow item in ds.Tables["class"].Rows)
             {
                 int dong = dgv.Rows.Add();
-                dgv.Rows[dong].Cells[0].Value = item["TenLop"].ToString();
+                dgv.Rows[dong].Cells[0].Value = item["Khoa"].ToString();
                 dgv.Rows[dong].Cells[1].Value = item["MaLop"].ToString();
-                dgv.Rows[dong].Cells[2].Value = item["GVChuNhiem"].ToString();
-                dgv.Rows[dong].Cells[3].Value = item["Khoa"].ToString();
+                dgv.Rows[dong].Cells[2].Value = item["TenLop"].ToString();
+                dgv.Rows[dong].Cells[3].Value = item["GVChuNhiem"].ToString();
             }
         }
 
         public void TimKiem(Class timClass, DataGridView dgv)
         {
             dgv.Rows.Clear();
-            XmlNode lopCanTim = goc.SelectSingleNode("class[TenLop = '" + timClass.TenLop + "']");
+            XmlNode lopCanTim = goc.SelectSingleNode("class[TenLop= '" + timClass.TenLop + "']");
             if (lopCanTim != null)
             {
                 dgv.ColumnCount =4;

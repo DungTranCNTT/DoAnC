@@ -154,6 +154,7 @@ namespace DoAn
             txtTK.Clear();
             txtOwer.Clear();
             txtMK.Clear();
+            cbType.SelectedIndex = -1;
         }
     }
 }
