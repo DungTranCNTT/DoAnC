@@ -15,7 +15,7 @@ namespace DoAn.XML
     {
         XmlDocument doc = new XmlDocument();
         XmlElement goc;
-        string fileName = @"C:\Users\user\Source\Repos\setokid\DoAnC\DoAn\Data\SinhVien.xml";
+        string fileName = @"..\..Data\SinhVien.xml";
 
         public SinhVienXML()
         {
