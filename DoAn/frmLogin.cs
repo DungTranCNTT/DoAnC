@@ -125,7 +125,7 @@ namespace DoAn
         }
         public void DangNhap()
         {
-            string fileName = @"C:\Users\user\Source\Repos\setokid\DoAnC\DoAn\Data\user.xml";
+            string fileName = @"..\..\Data\user.xml";
             XDocument doc = XDocument.Load(fileName);
             var selected_user = from x in doc.Descendants("users").Where
                                 (x => (String)x.Element("username") == txtID.Text)

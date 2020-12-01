@@ -103,7 +103,7 @@ namespace DoAn
         {
             if (txtTim.Text.Trim() != "")
             {
-                sinhVien.Msv = int.Parse(txtTim.Text);
+                sinhVien.Msv = txtTim.Text;
 
                 sinhVienxml.TimKiem(sinhVien, dgvSinhVien);
             }

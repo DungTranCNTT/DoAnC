@@ -34,5 +34,11 @@ namespace DoAn
             frmQLLop lop = new frmQLLop();
             lop.ShowDialog();
         }
+
+        private void btnPhanLop_Click(object sender, EventArgs e)
+        {
+            frmPhanLop phanlop = new frmPhanLop();
+            phanlop.ShowDialog();
+        }
     }
 }

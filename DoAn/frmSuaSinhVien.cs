@@ -40,7 +40,7 @@ namespace DoAn
         {
             if (txtMsv.Text.Trim() != "" && txtTen.Text != null && txtDiachi.Text != null && txtSdt.Text != null && txtQue.Text != null && txtEmail.Text != null && mtbNgaysinh.Text != null)
             {
-                sv1.Msv = int.Parse(txtMsv.Text);
+                sv1.Msv = txtMsv.Text;
                 sv1.Hoten = txtTen.Text;
                 sv1.Ngaysinh = mtbNgaysinh.Text;
                 sv1.Que = txtQue.Text;

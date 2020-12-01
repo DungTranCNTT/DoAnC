@@ -34,7 +34,7 @@ namespace DoAn
 
         private void btnDelete1_Click(object sender, EventArgs e)
         {
-            sv.Msv = int.Parse(txtMsv.Text);
+            sv.Msv = txtMsv.Text;
 
             svXML.Xoa(sv);
             if (MessageBox.Show("Xóa thành công bạn muốn thoát?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)

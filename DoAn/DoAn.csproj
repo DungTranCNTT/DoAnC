@@ -58,6 +58,12 @@
     <Compile Include="Forgotpass.Designer.cs">
       <DependentUpon>Forgotpass.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmPhanLop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPhanLop.Designer.cs">
+      <DependentUpon>frmPhanLop.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmQLLop.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -108,12 +114,24 @@
     <Compile Include="frmQLTK.Designer.cs">
       <DependentUpon>frmQLTK.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmQLKhoa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmQLKhoa.Designer.cs">
+      <DependentUpon>frmQLKhoa.cs</DependentUpon>
+    </Compile>
     <Compile Include="Service\Class.cs" />
     <Compile Include="Service\SinhVien.cs" />
     <Compile Include="Service\TaiKhoan.cs" />
     <Compile Include="XML\ClassXML.cs" />
     <Compile Include="XML\SinhVienXML.cs" />
     <Compile Include="XML\TaiKhoanXML.cs" />
+    <EmbeddedResource Include="frmPhanLop.resx">
+      <DependentUpon>frmPhanLop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmQLKhoa.resx">
+      <DependentUpon>frmQLKhoa.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmQLLop.resx">
       <DependentUpon>frmQLLop.cs</DependentUpon>
     </EmbeddedResource>
@@ -165,6 +183,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\returning-right-arrow1.png" />
     <None Include="Resources\icons8-books-50.png" />
     <None Include="Resources\add book.gif" />
     <None Include="Resources\icons8-cloud-account-login-male-100.png" />

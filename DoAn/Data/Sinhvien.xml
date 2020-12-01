@@ -1,13 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <profile>
   <student>
-    <MSV>20000004</MSV>
-    <Ten>111111</Ten>
+    <MSV>20000001</MSV>
+    <Ten>test</Ten>
     <NgaySinh>11/11/1111</NgaySinh>
     <GioiTinh>Nam</GioiTinh>
-    <Que>1</Que>
-    <DiaChi>11</DiaChi>
-    <Email>111</Email>
-    <SDT>123123</SDT>
+    <DiaChi>1111111111111111</DiaChi>
+    <Que>1111111111</Que>
+    <Email>1111111111111</Email>
+    <SDT>1111111111</SDT>
+    <Lop>2</Lop>
+    <Khoa>1</Khoa>
   </student>
 </profile>

@@ -30,7 +30,7 @@ namespace DoAn
         {
             if (txtTen.Text.Trim() != "" && txtTen.Text != null && txtDiachi.Text != null && txtSdt.Text !=null && txtQue.Text != null && txtEmail.Text != null && mtbNgaysinh.Text != null)
             {
-                sv.Msv = svXML.createMSV();
+                sv.Msv = svXML.createMSV().ToString();
                 sv.Hoten = txtTen.Text;
                 sv.Ngaysinh = mtbNgaysinh.Text;
                 sv.Que = txtQue.Text;

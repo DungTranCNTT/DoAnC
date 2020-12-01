@@ -28,7 +28,7 @@ namespace DoAn
         private void Reload()
         {
             dgvClass.Rows.Clear();
-            lopXML.Reload(dgvClass);
+            lopXML.ReloadLop(dgvClass);
         }
 
         bool check1, check2, check3;
@@ -71,7 +71,7 @@ namespace DoAn
                 lop.TenLop = txtTen.Text;
                 lop.Khoa = cboKhoa.Text;
                 lop.GVChuNhiem = txtGV.Text;
-                lopXML.Them(lop);
+                lopXML.TaoLop(lop);
                 Reload();
             }
             if(check2 == true && txtTen.Text.Trim() != "")
@@ -80,13 +80,13 @@ namespace DoAn
                 lop.TenLop = txtTen.Text;
                 lop.Khoa = cboKhoa.Text;
                 lop.GVChuNhiem = txtGV.Text;
-                lopXML.Sua(lop);
+                lopXML.SuaLop(lop);
                 Reload();
             }
             if(check3 == true && txtTen.Text.Trim() != "")
             {
                 lop.TenLop = txtTen.Text;
-                lopXML.Xoa(lop);
+                lopXML.XoaLop(lop);
                 Reload();
             }
             txtGV.Clear();
@@ -131,7 +131,7 @@ namespace DoAn
 
         private void frmQLLop_Load(object sender, EventArgs e)
         {
-            lopXML.HienThi(dgvClass);
+            lopXML.HienThiLopDS(dgvClass);
         }
     }
 }

@@ -15,7 +15,7 @@ namespace DoAn.XML
     {
         XmlDocument doc = new XmlDocument();
         XmlElement goc;
-        string fileName = @"..\..Data\SinhVien.xml";
+        string fileName = @"..\..\Data\SinhVien.xml";
 
         public SinhVienXML()
         {
@@ -73,6 +73,7 @@ namespace DoAn.XML
             return msv;
             
         }
+
         public void Them(SinhVien themSinhVien)
         {
             XmlNode student = doc.CreateElement("student");
@@ -107,6 +108,14 @@ namespace DoAn.XML
             XmlElement sdt = doc.CreateElement("SDT");
             sdt.InnerText = themSinhVien.Sdt;
             student.AppendChild(sdt);
+
+            XmlElement lop = doc.CreateElement("Lop");
+            lop.InnerText = themSinhVien.Lop;
+            student.AppendChild(lop);
+
+            XmlElement khoa = doc.CreateElement("Khoa");
+            khoa.InnerText = themSinhVien.Khoa;
+            student.AppendChild(khoa);
 
             //tạo xong nút user thêm vào gốc
             goc.AppendChild(student);
@@ -151,6 +160,14 @@ namespace DoAn.XML
                 XmlElement sdt = doc.CreateElement("SDT");
                 sdt.InnerText = suaSinhVien.Sdt;
                 sinhvienmoi.AppendChild(sdt);
+
+                XmlElement lop = doc.CreateElement("Lop");
+                lop.InnerText = suaSinhVien.Lop;
+                sinhvienmoi.AppendChild(lop);
+
+                XmlElement khoa = doc.CreateElement("Khoa");
+                khoa.InnerText = suaSinhVien.Khoa;
+                sinhvienmoi.AppendChild(khoa);
 
                 //tạo xong nút user thêm vào gốc
                 goc.ReplaceChild(sinhvienmoi,sinhVienCu);

@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml;
+using System.Xml.Linq;
 using DoAn.Service;
 
 namespace DoAn.XML
@@ -14,38 +15,42 @@ namespace DoAn.XML
     {
         XmlDocument doc = new XmlDocument();
         XmlElement goc;
+        XmlElement goc1;
         string fileName = @"..\..\Data\Class.xml";
-
+        string fileName1 = @"..\..\Data\SinhVien.xml";
         public ClassXML()
         {
             doc.Load(fileName);
             goc = doc.DocumentElement;
+
+            doc.Load(fileName1);
+            goc1 = doc.DocumentElement;
         }
 
-        public void Them(Class themClass)
+        public void TaoLop(Class taoClass)
         {
             XmlNode lop = doc.CreateElement("class");
 
             XmlElement tenlop = doc.CreateElement("TenLop");
-            tenlop.InnerText = themClass.TenLop.ToString();
+            tenlop.InnerText = taoClass.TenLop.ToString();
             lop.AppendChild(tenlop);
 
             XmlElement malop = doc.CreateElement("MaLop");
-            malop.InnerText = themClass.MaLop.ToString();
+            malop.InnerText = taoClass.MaLop.ToString();
             lop.AppendChild(malop);
 
             XmlElement gvchunhiem = doc.CreateElement("GVChuNhiem");
-            gvchunhiem.InnerText = themClass.GVChuNhiem.ToString();
+            gvchunhiem.InnerText = taoClass.GVChuNhiem.ToString();
             lop.AppendChild(gvchunhiem);
 
             XmlElement khoa = doc.CreateElement("Khoa");
-            khoa.InnerText = themClass.Khoa.ToString();
+            khoa.InnerText = taoClass.Khoa.ToString();
             lop.AppendChild(khoa);
             goc.AppendChild(lop);
             doc.Save(fileName);
         }
 
-        public void Sua(Class suaClass)
+        public void SuaLop(Class suaClass)
         {
             XmlNode lopCu = goc.SelectSingleNode("class[TenLop ='" + suaClass.TenLop + "']");
             if (suaClass != null)
@@ -72,7 +77,7 @@ namespace DoAn.XML
             }
         }
 
-        public void Xoa(Class xoaClass)
+        public void XoaLop(Class xoaClass)
         {
             XmlNode lopXoa = goc.SelectSingleNode("class[TenLop = '" + xoaClass.TenLop + "']");
             if (lopXoa != null)
@@ -88,7 +93,7 @@ namespace DoAn.XML
             }
         }
 
-        public void HienThi(DataGridView dgv)
+        public void HienThiLopDS(DataGridView dgv)
         {
             dgv.ColumnCount = 4;
             XmlNodeList ds = goc.SelectNodes("class");
@@ -105,7 +110,7 @@ namespace DoAn.XML
 
             }
         }
-        public void Reload(DataGridView dgv)
+        public void ReloadLop(DataGridView dgv)
         {
             dgv.ColumnCount = 8;
             DataSet ds = new DataSet();
@@ -120,13 +125,13 @@ namespace DoAn.XML
             }
         }
 
-        public void TimKiem(Class timClass, DataGridView dgv)
+        public void TimKiemLop(Class timClass, DataGridView dgv)
         {
             dgv.Rows.Clear();
             XmlNode lopCanTim = goc.SelectSingleNode("class[TenLop= '" + timClass.TenLop + "']");
             if (lopCanTim != null)
             {
-                dgv.ColumnCount =4;
+                dgv.ColumnCount = 4;
                 dgv.Rows.Add();
 
                 XmlNode tenlop = lopCanTim.SelectSingleNode("TenLop");
@@ -141,6 +146,185 @@ namespace DoAn.XML
             else
             {
                 MessageBox.Show("Mã lớp hoặc tên lớp không tồn tại", "Thông báo");
+            }
+        }
+
+        public void ThemLop(SinhVien themLop)
+        {
+            XmlNode oldChild = goc1.SelectSingleNode("student[MSV ='" + themLop.Msv + "']");
+            doc.DocumentElement.RemoveChild(oldChild);
+            XmlNode student = doc.CreateElement("student");
+            XmlElement msv = doc.CreateElement("MSV");
+            msv.InnerText = themLop.Msv.ToString();
+            student.AppendChild(msv);
+
+            XmlElement ten = doc.CreateElement("Ten");
+            ten.InnerText = themLop.Hoten;
+            student.AppendChild(ten);
+
+            XmlElement ngaysinh = doc.CreateElement("NgaySinh");
+            ngaysinh.InnerText = themLop.Ngaysinh;
+            student.AppendChild(ngaysinh);
+
+            XmlElement gioitinh = doc.CreateElement("GioiTinh");
+            gioitinh.InnerText = themLop.Gioitinh;
+            student.AppendChild(gioitinh);
+
+            XmlElement diachi = doc.CreateElement("DiaChi");
+            diachi.InnerText = themLop.Diachi;
+            student.AppendChild(diachi);
+
+            XmlElement que = doc.CreateElement("Que");
+            que.InnerText = themLop.Que;
+            student.AppendChild(que);
+
+            XmlElement email = doc.CreateElement("Email");
+            email.InnerText = themLop.Email;
+            student.AppendChild(email);
+
+            XmlElement sdt = doc.CreateElement("SDT");
+            sdt.InnerText = themLop.Sdt;
+            student.AppendChild(sdt);
+
+            XmlElement lop = doc.CreateElement("Lop");
+            lop.InnerText = themLop.Lop;
+            student.AppendChild(lop);
+
+            XmlElement khoa = doc.CreateElement("Khoa");
+            khoa.InnerText = themLop.Khoa;
+            student.AppendChild(khoa);
+
+            goc1.AppendChild(student);
+            doc.Save(fileName1);
+        }
+        public void ChuyenLop(SinhVien chuyenLop)
+        {
+            XmlNode lopCu = goc1.SelectSingleNode("student[MSV ='" + chuyenLop.Msv + "']");
+            if (lopCu != null)
+            {
+                XmlNode lopMoi = doc.CreateElement("student");
+
+                XmlElement msv = doc.CreateElement("MSV");
+                msv.InnerText = chuyenLop.Msv.ToString();
+                lopMoi.AppendChild(msv);
+
+                XmlElement ten = doc.CreateElement("Ten");
+                ten.InnerText = chuyenLop.Hoten;
+                lopMoi.AppendChild(ten);
+
+                XmlElement ngaysinh = doc.CreateElement("NgaySinh");
+                ngaysinh.InnerText = chuyenLop.Ngaysinh;
+                lopMoi.AppendChild(ngaysinh);
+
+                XmlElement gioitinh = doc.CreateElement("GioiTinh");
+                gioitinh.InnerText = chuyenLop.Gioitinh;
+                lopMoi.AppendChild(gioitinh);
+
+                XmlElement diachi = doc.CreateElement("DiaChi");
+                diachi.InnerText = chuyenLop.Diachi;
+                lopMoi.AppendChild(diachi);
+
+                XmlElement que = doc.CreateElement("Que");
+                que.InnerText = chuyenLop.Que;
+                lopMoi.AppendChild(que);
+
+                XmlElement email = doc.CreateElement("Email");
+                email.InnerText = chuyenLop.Email;
+                lopMoi.AppendChild(email);
+
+                XmlElement sdt = doc.CreateElement("SDT");
+                sdt.InnerText = chuyenLop.Sdt;
+                lopMoi.AppendChild(sdt);
+
+                XmlElement lop = doc.CreateElement("Lop");
+                lop.InnerText = chuyenLop.Lop;
+                lopMoi.AppendChild(lop);
+
+                XmlElement khoa = doc.CreateElement("Khoa");
+                khoa.InnerText = chuyenLop.Khoa;
+                lopMoi.AppendChild(khoa);
+
+                //tạo xong nút user thêm vào gốc
+                goc1.ReplaceChild(lopMoi, lopCu);
+                doc.Save(fileName1);
+            }
+        }
+
+        public void HienThiLop(DataGridView dgv)
+        {
+            dgv.ColumnCount = 10;
+            XmlNodeList ds = goc1.SelectNodes("student");
+
+            int dong = 0;
+            foreach (XmlNode item in ds)
+            {
+                dgv.Rows.Add();
+                dgv.Rows[dong].Cells[0].Value = item.SelectSingleNode("MSV").InnerText;
+                dgv.Rows[dong].Cells[1].Value = item.SelectSingleNode("Ten").InnerText;
+                dgv.Rows[dong].Cells[2].Value = item.SelectSingleNode("NgaySinh").InnerText;
+                dgv.Rows[dong].Cells[3].Value = item.SelectSingleNode("GioiTinh").InnerText;
+                dgv.Rows[dong].Cells[4].Value = item.SelectSingleNode("Lop").InnerText;
+                dgv.Rows[dong].Cells[5].Value = item.SelectSingleNode("Khoa").InnerText;
+                dgv.Rows[dong].Cells[6].Value = item.SelectSingleNode("DiaChi").InnerText;
+                dgv.Rows[dong].Cells[7].Value = item.SelectSingleNode("Que").InnerText;
+                dgv.Rows[dong].Cells[8].Value = item.SelectSingleNode("Email").InnerText;
+                dgv.Rows[dong].Cells[9].Value = item.SelectSingleNode("SDT").InnerText;
+                dong++;
+
+            }
+        }
+
+        public static List<SinhVien> lstSinhVien;
+        public void TimKiemDSSV(SinhVien timSinhVien, DataGridView dgv)
+        {
+            XmlNode lopCanTim = goc.SelectSingleNode("student[Lop ='" + timSinhVien.Lop + "']");
+            lstSinhVien = new List<SinhVien>();
+            SinhVien sv = new SinhVien();
+            DataSet ds = new DataSet();
+            ds.ReadXml(fileName1);
+            foreach (DataRow item in ds.Tables["student"].Rows)
+            {
+                sv.Msv = item["MSV"].ToString();
+                sv.Hoten = item["Ten"].ToString();
+                sv.Ngaysinh = item["NgaySinh"].ToString();
+                sv.Gioitinh = item["GioiTinh"].ToString();
+                sv.Que = item["Que"].ToString();
+                sv.Diachi = item["DiaChi"].ToString();
+                sv.Email = item["Email"].ToString();
+                sv.Sdt = item["SDT"].ToString();
+                sv.Lop = item["Lop"].ToString();
+                sv.Khoa = item["Khoa"].ToString();
+                lstSinhVien.Add(sv);
+                foreach (SinhVien data in lstSinhVien)
+                {
+                    if (data.Lop.Equals(lopCanTim))
+                    {
+                        dgv.ColumnCount = 8;
+                        int dong = dgv.Rows.Add();
+                        XmlNode masv = lopCanTim.SelectSingleNode("MSV");
+                        dgv.Rows[dong].Cells[0].Value = masv.InnerText;
+                        XmlNode ten = lopCanTim.SelectSingleNode("Ten");
+                        dgv.Rows[dong].Cells[1].Value = ten.InnerText;
+                        XmlNode ngaysinh = lopCanTim.SelectSingleNode("NgaySinh");
+                        dgv.Rows[dong].Cells[2].Value = ngaysinh.InnerText;
+                        XmlNode gioitinh = lopCanTim.SelectSingleNode("GioiTinh");
+                        dgv.Rows[dong].Cells[3].Value = gioitinh.InnerText;
+                        XmlNode lop = lopCanTim.SelectSingleNode("Lop");
+                        dgv.Rows[dong].Cells[4].Value = lop.InnerText;
+                        XmlNode khoa = lopCanTim.SelectSingleNode("Khoa");
+                        dgv.Rows[dong].Cells[5].Value = khoa.InnerText;
+                        XmlNode email = lopCanTim.SelectSingleNode("Email");
+                        dgv.Rows[dong].Cells[6].Value = email.InnerText;
+                        XmlNode sdt = lopCanTim.SelectSingleNode("SDT");
+                        dgv.Rows[dong].Cells[7].Value = sdt.InnerText;
+                        dong++;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Deo TOn Tai name");
+                        break;
+                    }
+                }
             }
         }
     }

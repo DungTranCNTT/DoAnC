@@ -30,6 +30,7 @@
         {
             this.btnQuanly = new System.Windows.Forms.Button();
             this.btnQLLop = new System.Windows.Forms.Button();
+            this.btnPhanLop = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnQuanly
@@ -52,11 +53,22 @@
             this.btnQLLop.UseVisualStyleBackColor = true;
             this.btnQLLop.Click += new System.EventHandler(this.btnQLLop_Click);
             // 
+            // btnPhanLop
+            // 
+            this.btnPhanLop.Location = new System.Drawing.Point(250, 13);
+            this.btnPhanLop.Name = "btnPhanLop";
+            this.btnPhanLop.Size = new System.Drawing.Size(92, 46);
+            this.btnPhanLop.TabIndex = 2;
+            this.btnPhanLop.Text = "Phân Lớp";
+            this.btnPhanLop.UseVisualStyleBackColor = true;
+            this.btnPhanLop.Click += new System.EventHandler(this.btnPhanLop_Click);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnPhanLop);
             this.Controls.Add(this.btnQLLop);
             this.Controls.Add(this.btnQuanly);
             this.Name = "frmMain";
@@ -70,5 +82,6 @@
 
         private System.Windows.Forms.Button btnQuanly;
         private System.Windows.Forms.Button btnQLLop;
+        private System.Windows.Forms.Button btnPhanLop;
     }
 }
