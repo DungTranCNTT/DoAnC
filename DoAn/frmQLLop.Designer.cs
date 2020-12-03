@@ -31,6 +31,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmQLLop));
             this.panel1 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
@@ -40,6 +41,7 @@
             this.btnSuaLop = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btnXoaLop = new Guna.UI2.WinForms.Guna2GradientButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cboGv = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.btnHuyAdd = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btnAddLop = new Guna.UI2.WinForms.Guna2GradientButton();
@@ -56,7 +58,6 @@
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cboGv = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -220,6 +221,15 @@
             this.groupBox1.TabIndex = 20;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông Tin";
+            // 
+            // cboGv
+            // 
+            this.cboGv.Enabled = false;
+            this.cboGv.FormattingEnabled = true;
+            this.cboGv.Location = new System.Drawing.Point(192, 241);
+            this.cboGv.Name = "cboGv";
+            this.cboGv.Size = new System.Drawing.Size(165, 21);
+            this.cboGv.TabIndex = 23;
             // 
             // label6
             // 
@@ -427,15 +437,6 @@
             this.Column4.ReadOnly = true;
             this.Column4.Width = 109;
             // 
-            // cboGv
-            // 
-            this.cboGv.Enabled = false;
-            this.cboGv.FormattingEnabled = true;
-            this.cboGv.Location = new System.Drawing.Point(192, 241);
-            this.cboGv.Name = "cboGv";
-            this.cboGv.Size = new System.Drawing.Size(165, 21);
-            this.cboGv.TabIndex = 23;
-            // 
             // frmQLLop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -448,6 +449,7 @@
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmQLLop";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Lop";

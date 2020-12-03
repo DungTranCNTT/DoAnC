@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSuaSinhVien));
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.mtbNgaysinh = new System.Windows.Forms.MaskedTextBox();
@@ -372,6 +373,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmSuaSinhVien";
             this.Text = "frmXoaSinhVien";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmSuaSinhVien_FormClosed);

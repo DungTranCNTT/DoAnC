@@ -31,6 +31,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPhanLop));
             this.panel1 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -39,6 +40,18 @@
             this.btnSearch = new Guna.UI2.WinForms.Guna2GradientButton();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.cboKhoa = new System.Windows.Forms.ComboBox();
+            this.cboLop = new System.Windows.Forms.ComboBox();
+            this.lblSdt = new System.Windows.Forms.Label();
+            this.lblEmail = new System.Windows.Forms.Label();
+            this.lblQue = new System.Windows.Forms.Label();
+            this.lblDiaChi = new System.Windows.Forms.Label();
+            this.lblGioiTinh = new System.Windows.Forms.Label();
+            this.lblNgaySinh = new System.Windows.Forms.Label();
+            this.lblTen = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.lblMsv = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.guna2GradientButton3 = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btnSua = new Guna.UI2.WinForms.Guna2GradientButton();
@@ -62,18 +75,6 @@
             this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lblMsv = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.lblTen = new System.Windows.Forms.Label();
-            this.lblGioiTinh = new System.Windows.Forms.Label();
-            this.lblNgaySinh = new System.Windows.Forms.Label();
-            this.lblQue = new System.Windows.Forms.Label();
-            this.lblDiaChi = new System.Windows.Forms.Label();
-            this.lblSdt = new System.Windows.Forms.Label();
-            this.lblEmail = new System.Windows.Forms.Label();
-            this.cboLop = new System.Windows.Forms.ComboBox();
-            this.cboKhoa = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -214,6 +215,132 @@
             this.groupBox2.TabIndex = 18;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thông Tin Sinh Viên";
+            // 
+            // cboKhoa
+            // 
+            this.cboKhoa.FormattingEnabled = true;
+            this.cboKhoa.Location = new System.Drawing.Point(88, 165);
+            this.cboKhoa.Name = "cboKhoa";
+            this.cboKhoa.Size = new System.Drawing.Size(121, 21);
+            this.cboKhoa.TabIndex = 48;
+            // 
+            // cboLop
+            // 
+            this.cboLop.FormattingEnabled = true;
+            this.cboLop.Location = new System.Drawing.Point(88, 135);
+            this.cboLop.Name = "cboLop";
+            this.cboLop.Size = new System.Drawing.Size(121, 21);
+            this.cboLop.TabIndex = 47;
+            // 
+            // lblSdt
+            // 
+            this.lblSdt.AutoSize = true;
+            this.lblSdt.ForeColor = System.Drawing.SystemColors.ButtonShadow;
+            this.lblSdt.Location = new System.Drawing.Point(85, 288);
+            this.lblSdt.Name = "lblSdt";
+            this.lblSdt.Size = new System.Drawing.Size(127, 13);
+            this.lblSdt.TabIndex = 46;
+            this.lblSdt.Tag = "";
+            this.lblSdt.Text = "----------------------------------------";
+            // 
+            // lblEmail
+            // 
+            this.lblEmail.AutoSize = true;
+            this.lblEmail.ForeColor = System.Drawing.SystemColors.ButtonShadow;
+            this.lblEmail.Location = new System.Drawing.Point(85, 258);
+            this.lblEmail.Name = "lblEmail";
+            this.lblEmail.Size = new System.Drawing.Size(127, 13);
+            this.lblEmail.TabIndex = 45;
+            this.lblEmail.Tag = "";
+            this.lblEmail.Text = "----------------------------------------";
+            // 
+            // lblQue
+            // 
+            this.lblQue.AutoSize = true;
+            this.lblQue.ForeColor = System.Drawing.SystemColors.ButtonShadow;
+            this.lblQue.Location = new System.Drawing.Point(85, 228);
+            this.lblQue.Name = "lblQue";
+            this.lblQue.Size = new System.Drawing.Size(127, 13);
+            this.lblQue.TabIndex = 44;
+            this.lblQue.Tag = "";
+            this.lblQue.Text = "----------------------------------------";
+            // 
+            // lblDiaChi
+            // 
+            this.lblDiaChi.AutoSize = true;
+            this.lblDiaChi.ForeColor = System.Drawing.SystemColors.ButtonShadow;
+            this.lblDiaChi.Location = new System.Drawing.Point(85, 198);
+            this.lblDiaChi.Name = "lblDiaChi";
+            this.lblDiaChi.Size = new System.Drawing.Size(127, 13);
+            this.lblDiaChi.TabIndex = 43;
+            this.lblDiaChi.Tag = "";
+            this.lblDiaChi.Text = "----------------------------------------";
+            // 
+            // lblGioiTinh
+            // 
+            this.lblGioiTinh.AutoSize = true;
+            this.lblGioiTinh.ForeColor = System.Drawing.SystemColors.ButtonShadow;
+            this.lblGioiTinh.Location = new System.Drawing.Point(85, 108);
+            this.lblGioiTinh.Name = "lblGioiTinh";
+            this.lblGioiTinh.Size = new System.Drawing.Size(127, 13);
+            this.lblGioiTinh.TabIndex = 40;
+            this.lblGioiTinh.Tag = "";
+            this.lblGioiTinh.Text = "----------------------------------------";
+            // 
+            // lblNgaySinh
+            // 
+            this.lblNgaySinh.AutoSize = true;
+            this.lblNgaySinh.ForeColor = System.Drawing.SystemColors.ButtonShadow;
+            this.lblNgaySinh.Location = new System.Drawing.Point(85, 78);
+            this.lblNgaySinh.Name = "lblNgaySinh";
+            this.lblNgaySinh.Size = new System.Drawing.Size(127, 13);
+            this.lblNgaySinh.TabIndex = 39;
+            this.lblNgaySinh.Tag = "";
+            this.lblNgaySinh.Text = "----------------------------------------";
+            // 
+            // lblTen
+            // 
+            this.lblTen.AutoSize = true;
+            this.lblTen.ForeColor = System.Drawing.SystemColors.ButtonShadow;
+            this.lblTen.Location = new System.Drawing.Point(85, 48);
+            this.lblTen.Name = "lblTen";
+            this.lblTen.Size = new System.Drawing.Size(127, 13);
+            this.lblTen.TabIndex = 38;
+            this.lblTen.Tag = "";
+            this.lblTen.Text = "----------------------------------------";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.Aqua;
+            this.label13.Location = new System.Drawing.Point(6, 224);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(75, 19);
+            this.label13.TabIndex = 37;
+            this.label13.Text = "Quê Quán";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.Aqua;
+            this.label12.Location = new System.Drawing.Point(6, 194);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(56, 19);
+            this.label12.TabIndex = 36;
+            this.label12.Text = "Địa Chỉ";
+            // 
+            // lblMsv
+            // 
+            this.lblMsv.AutoSize = true;
+            this.lblMsv.ForeColor = System.Drawing.SystemColors.ButtonShadow;
+            this.lblMsv.Location = new System.Drawing.Point(85, 18);
+            this.lblMsv.Name = "lblMsv";
+            this.lblMsv.Size = new System.Drawing.Size(127, 13);
+            this.lblMsv.TabIndex = 35;
+            this.lblMsv.Tag = "";
+            this.lblMsv.Text = "----------------------------------------";
             // 
             // label10
             // 
@@ -500,132 +627,6 @@
             this.Column8.ReadOnly = true;
             this.Column8.Width = 81;
             // 
-            // lblMsv
-            // 
-            this.lblMsv.AutoSize = true;
-            this.lblMsv.ForeColor = System.Drawing.SystemColors.ButtonShadow;
-            this.lblMsv.Location = new System.Drawing.Point(85, 18);
-            this.lblMsv.Name = "lblMsv";
-            this.lblMsv.Size = new System.Drawing.Size(127, 13);
-            this.lblMsv.TabIndex = 35;
-            this.lblMsv.Tag = "";
-            this.lblMsv.Text = "----------------------------------------";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.Aqua;
-            this.label12.Location = new System.Drawing.Point(6, 194);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(56, 19);
-            this.label12.TabIndex = 36;
-            this.label12.Text = "Địa Chỉ";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.Aqua;
-            this.label13.Location = new System.Drawing.Point(6, 224);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(75, 19);
-            this.label13.TabIndex = 37;
-            this.label13.Text = "Quê Quán";
-            // 
-            // lblTen
-            // 
-            this.lblTen.AutoSize = true;
-            this.lblTen.ForeColor = System.Drawing.SystemColors.ButtonShadow;
-            this.lblTen.Location = new System.Drawing.Point(85, 48);
-            this.lblTen.Name = "lblTen";
-            this.lblTen.Size = new System.Drawing.Size(127, 13);
-            this.lblTen.TabIndex = 38;
-            this.lblTen.Tag = "";
-            this.lblTen.Text = "----------------------------------------";
-            // 
-            // lblGioiTinh
-            // 
-            this.lblGioiTinh.AutoSize = true;
-            this.lblGioiTinh.ForeColor = System.Drawing.SystemColors.ButtonShadow;
-            this.lblGioiTinh.Location = new System.Drawing.Point(85, 108);
-            this.lblGioiTinh.Name = "lblGioiTinh";
-            this.lblGioiTinh.Size = new System.Drawing.Size(127, 13);
-            this.lblGioiTinh.TabIndex = 40;
-            this.lblGioiTinh.Tag = "";
-            this.lblGioiTinh.Text = "----------------------------------------";
-            // 
-            // lblNgaySinh
-            // 
-            this.lblNgaySinh.AutoSize = true;
-            this.lblNgaySinh.ForeColor = System.Drawing.SystemColors.ButtonShadow;
-            this.lblNgaySinh.Location = new System.Drawing.Point(85, 78);
-            this.lblNgaySinh.Name = "lblNgaySinh";
-            this.lblNgaySinh.Size = new System.Drawing.Size(127, 13);
-            this.lblNgaySinh.TabIndex = 39;
-            this.lblNgaySinh.Tag = "";
-            this.lblNgaySinh.Text = "----------------------------------------";
-            // 
-            // lblQue
-            // 
-            this.lblQue.AutoSize = true;
-            this.lblQue.ForeColor = System.Drawing.SystemColors.ButtonShadow;
-            this.lblQue.Location = new System.Drawing.Point(85, 228);
-            this.lblQue.Name = "lblQue";
-            this.lblQue.Size = new System.Drawing.Size(127, 13);
-            this.lblQue.TabIndex = 44;
-            this.lblQue.Tag = "";
-            this.lblQue.Text = "----------------------------------------";
-            // 
-            // lblDiaChi
-            // 
-            this.lblDiaChi.AutoSize = true;
-            this.lblDiaChi.ForeColor = System.Drawing.SystemColors.ButtonShadow;
-            this.lblDiaChi.Location = new System.Drawing.Point(85, 198);
-            this.lblDiaChi.Name = "lblDiaChi";
-            this.lblDiaChi.Size = new System.Drawing.Size(127, 13);
-            this.lblDiaChi.TabIndex = 43;
-            this.lblDiaChi.Tag = "";
-            this.lblDiaChi.Text = "----------------------------------------";
-            // 
-            // lblSdt
-            // 
-            this.lblSdt.AutoSize = true;
-            this.lblSdt.ForeColor = System.Drawing.SystemColors.ButtonShadow;
-            this.lblSdt.Location = new System.Drawing.Point(85, 288);
-            this.lblSdt.Name = "lblSdt";
-            this.lblSdt.Size = new System.Drawing.Size(127, 13);
-            this.lblSdt.TabIndex = 46;
-            this.lblSdt.Tag = "";
-            this.lblSdt.Text = "----------------------------------------";
-            // 
-            // lblEmail
-            // 
-            this.lblEmail.AutoSize = true;
-            this.lblEmail.ForeColor = System.Drawing.SystemColors.ButtonShadow;
-            this.lblEmail.Location = new System.Drawing.Point(85, 258);
-            this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(127, 13);
-            this.lblEmail.TabIndex = 45;
-            this.lblEmail.Tag = "";
-            this.lblEmail.Text = "----------------------------------------";
-            // 
-            // cboLop
-            // 
-            this.cboLop.FormattingEnabled = true;
-            this.cboLop.Location = new System.Drawing.Point(88, 135);
-            this.cboLop.Name = "cboLop";
-            this.cboLop.Size = new System.Drawing.Size(121, 21);
-            this.cboLop.TabIndex = 47;
-            // 
-            // cboKhoa
-            // 
-            this.cboKhoa.FormattingEnabled = true;
-            this.cboKhoa.Location = new System.Drawing.Point(88, 165);
-            this.cboKhoa.Name = "cboKhoa";
-            this.cboKhoa.Size = new System.Drawing.Size(121, 21);
-            this.cboKhoa.TabIndex = 48;
-            // 
             // frmPhanLop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -638,6 +639,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmPhanLop";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PhanLop";
