@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<information>
+<profile>
   <class>
-    <TenLop>18CT113</TenLop>
-    <MaLop>18CT3</MaLop>
-    <GVChuNhiem>Sơn ML</GVChuNhiem>
-    <Khoa>CNTT</Khoa>
+    <TenLop>asd</TenLop>
+    <MaLop>asd</MaLop>
+    <GVChuNhiem>sd</GVChuNhiem>
+    <Khoa>asd</Khoa>
   </class>
-</information>
+</profile>

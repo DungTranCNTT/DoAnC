@@ -121,9 +121,11 @@
       <DependentUpon>frmQLKhoa.cs</DependentUpon>
     </Compile>
     <Compile Include="Service\Class.cs" />
+    <Compile Include="Service\Khoa.cs" />
     <Compile Include="Service\SinhVien.cs" />
     <Compile Include="Service\TaiKhoan.cs" />
     <Compile Include="XML\ClassXML.cs" />
+    <Compile Include="XML\KhoaXML.cs" />
     <Compile Include="XML\SinhVienXML.cs" />
     <Compile Include="XML\TaiKhoanXML.cs" />
     <EmbeddedResource Include="frmPhanLop.resx">
@@ -207,8 +209,9 @@
     <None Include="Resources\edit1.png" />
     <None Include="Resources\icons8-add-user-male-50.png" />
     <Content Include="Data\Class.xml" />
+    <Content Include="Data\Khoa.xml" />
     <Content Include="Data\Sinhvien.xml" />
-    <Content Include="Data\user.xml" />
+    <Content Include="Data\User.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

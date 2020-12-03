@@ -79,9 +79,9 @@ namespace DoAn
 
         private void frmSuaSinhVien_Load(object sender, EventArgs e)
         {
-            txtMsv.Text = frmGiaoVien.SetValue1;
-            txtTen.Text = frmGiaoVien.SetValue2;
-            if (frmGiaoVien.SetValue4 == "Nam")
+            txtMsv.Text = frmQLSinhVien.SetValue1;
+            txtTen.Text = frmQLSinhVien.SetValue2;
+            if (frmQLSinhVien.SetValue4 == "Nam")
             {
                 rbtNam.Checked = true;
             }
@@ -89,11 +89,11 @@ namespace DoAn
             {
                 rbtNu.Checked = true;
             }
-            txtDiachi.Text = frmGiaoVien.SetValue5;
-            txtQue.Text = frmGiaoVien.SetValue6;
-            txtSdt.Text = frmGiaoVien.SetValue7;
-            txtEmail.Text = frmGiaoVien.SetValue8;
-            mtbNgaysinh.Text = frmGiaoVien.SetValue3;
+            txtDiachi.Text = frmQLSinhVien.SetValue5;
+            txtQue.Text = frmQLSinhVien.SetValue6;
+            txtSdt.Text = frmQLSinhVien.SetValue7;
+            txtEmail.Text = frmQLSinhVien.SetValue8;
+            mtbNgaysinh.Text = frmQLSinhVien.SetValue3;
 
         }
 

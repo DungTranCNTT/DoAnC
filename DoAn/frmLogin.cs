@@ -154,7 +154,7 @@ namespace DoAn
                     else if (users.Contains(txtID.Text) && pass.Contains(txtPass.Text) && type.Contains("Giáo Viên"))
                     {
                         this.Hide();
-                        frmGiaoVien giaovien = new frmGiaoVien();
+                        frmQLSinhVien giaovien = new frmQLSinhVien();
                         giaovien.ShowDialog();
                     }
                     else if (users.Contains(txtID.Text) && pass.Contains(txtPass.Text) && type.Contains("Sinh Viên"))

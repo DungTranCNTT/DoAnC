@@ -31,6 +31,8 @@
             this.btnQuanly = new System.Windows.Forms.Button();
             this.btnQLLop = new System.Windows.Forms.Button();
             this.btnPhanLop = new System.Windows.Forms.Button();
+            this.btnQLKhoa = new System.Windows.Forms.Button();
+            this.btnQLSV = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnQuanly
@@ -63,11 +65,33 @@
             this.btnPhanLop.UseVisualStyleBackColor = true;
             this.btnPhanLop.Click += new System.EventHandler(this.btnPhanLop_Click);
             // 
+            // btnQLKhoa
+            // 
+            this.btnQLKhoa.Location = new System.Drawing.Point(357, 13);
+            this.btnQLKhoa.Name = "btnQLKhoa";
+            this.btnQLKhoa.Size = new System.Drawing.Size(92, 46);
+            this.btnQLKhoa.TabIndex = 3;
+            this.btnQLKhoa.Text = "Quản Lý khoa";
+            this.btnQLKhoa.UseVisualStyleBackColor = true;
+            this.btnQLKhoa.Click += new System.EventHandler(this.btnQLKhoa_Click);
+            // 
+            // btnQLSV
+            // 
+            this.btnQLSV.Location = new System.Drawing.Point(455, 13);
+            this.btnQLSV.Name = "btnQLSV";
+            this.btnQLSV.Size = new System.Drawing.Size(92, 46);
+            this.btnQLSV.TabIndex = 4;
+            this.btnQLSV.Text = "Quản Lý sinh viên";
+            this.btnQLSV.UseVisualStyleBackColor = true;
+            this.btnQLSV.Click += new System.EventHandler(this.btnQLSV_Click);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnQLSV);
+            this.Controls.Add(this.btnQLKhoa);
             this.Controls.Add(this.btnPhanLop);
             this.Controls.Add(this.btnQLLop);
             this.Controls.Add(this.btnQuanly);
@@ -83,5 +107,7 @@
         private System.Windows.Forms.Button btnQuanly;
         private System.Windows.Forms.Button btnQLLop;
         private System.Windows.Forms.Button btnPhanLop;
+        private System.Windows.Forms.Button btnQLKhoa;
+        private System.Windows.Forms.Button btnQLSV;
     }
 }

@@ -6,7 +6,7 @@ namespace DoAn.XML
 {
     public class TaiKhoanXML
     {
-        frmGiaoVien gv;
+        frmQLSinhVien gv;
         XmlDocument doc = new XmlDocument();
         XmlElement goc;
         string fileName = @"..\..\Data\user.xml";

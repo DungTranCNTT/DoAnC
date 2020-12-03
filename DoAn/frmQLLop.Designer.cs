@@ -28,25 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.btnExit = new Guna.UI2.WinForms.Guna2GradientButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnThem = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.btnSua = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.btnXoa = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.btnThemLop = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.btnSuaLop = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.btnXoaLop = new Guna.UI2.WinForms.Guna2GradientButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.btnHuy = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.btnOK = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.btnHuyAdd = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.btnAddLop = new Guna.UI2.WinForms.Guna2GradientButton();
             this.cboKhoa = new System.Windows.Forms.ComboBox();
             this.txtGV = new System.Windows.Forms.TextBox();
-            this.txtMa = new System.Windows.Forms.TextBox();
-            this.txtTen = new System.Windows.Forms.TextBox();
+            this.txtMaLop = new System.Windows.Forms.TextBox();
+            this.txtTenLop = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -90,9 +90,9 @@
             this.panel6.BackColor = System.Drawing.Color.Teal;
             this.panel6.Controls.Add(this.btnExit);
             this.panel6.Controls.Add(this.pictureBox1);
-            this.panel6.Controls.Add(this.btnThem);
-            this.panel6.Controls.Add(this.btnSua);
-            this.panel6.Controls.Add(this.btnXoa);
+            this.panel6.Controls.Add(this.btnThemLop);
+            this.panel6.Controls.Add(this.btnSuaLop);
+            this.panel6.Controls.Add(this.btnXoaLop);
             this.panel6.Location = new System.Drawing.Point(-5, 1);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(184, 527);
@@ -130,84 +130,84 @@
             this.pictureBox1.TabIndex = 18;
             this.pictureBox1.TabStop = false;
             // 
-            // btnThem
+            // btnThemLop
             // 
-            this.btnThem.BorderRadius = 18;
-            this.btnThem.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.ToogleButton;
-            this.btnThem.CheckedState.Parent = this.btnThem;
-            this.btnThem.CustomImages.Parent = this.btnThem;
-            this.btnThem.FillColor = System.Drawing.Color.Fuchsia;
-            this.btnThem.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnThem.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
-            this.btnThem.ForeColor = System.Drawing.Color.Black;
-            this.btnThem.HoverState.Parent = this.btnThem;
-            this.btnThem.Image = global::DoAn.Properties.Resources.add_user;
-            this.btnThem.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnThem.Location = new System.Drawing.Point(21, 227);
-            this.btnThem.Name = "btnThem";
-            this.btnThem.ShadowDecoration.BorderRadius = 20;
-            this.btnThem.ShadowDecoration.Color = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.btnThem.ShadowDecoration.Parent = this.btnThem;
-            this.btnThem.Size = new System.Drawing.Size(149, 44);
-            this.btnThem.TabIndex = 15;
-            this.btnThem.Text = "Thêm";
-            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
+            this.btnThemLop.BorderRadius = 18;
+            this.btnThemLop.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.ToogleButton;
+            this.btnThemLop.CheckedState.Parent = this.btnThemLop;
+            this.btnThemLop.CustomImages.Parent = this.btnThemLop;
+            this.btnThemLop.FillColor = System.Drawing.Color.Fuchsia;
+            this.btnThemLop.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnThemLop.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
+            this.btnThemLop.ForeColor = System.Drawing.Color.Black;
+            this.btnThemLop.HoverState.Parent = this.btnThemLop;
+            this.btnThemLop.Image = global::DoAn.Properties.Resources.add_user;
+            this.btnThemLop.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnThemLop.Location = new System.Drawing.Point(21, 227);
+            this.btnThemLop.Name = "btnThemLop";
+            this.btnThemLop.ShadowDecoration.BorderRadius = 20;
+            this.btnThemLop.ShadowDecoration.Color = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.btnThemLop.ShadowDecoration.Parent = this.btnThemLop;
+            this.btnThemLop.Size = new System.Drawing.Size(149, 44);
+            this.btnThemLop.TabIndex = 15;
+            this.btnThemLop.Text = "Thêm";
+            this.btnThemLop.Click += new System.EventHandler(this.btnThemLop_Click);
             // 
-            // btnSua
+            // btnSuaLop
             // 
-            this.btnSua.BorderRadius = 18;
-            this.btnSua.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.ToogleButton;
-            this.btnSua.CheckedState.Parent = this.btnSua;
-            this.btnSua.CustomImages.Parent = this.btnSua;
-            this.btnSua.FillColor = System.Drawing.Color.Fuchsia;
-            this.btnSua.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnSua.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
-            this.btnSua.ForeColor = System.Drawing.Color.Black;
-            this.btnSua.HoverState.Parent = this.btnSua;
-            this.btnSua.Image = global::DoAn.Properties.Resources.edit;
-            this.btnSua.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnSua.Location = new System.Drawing.Point(21, 286);
-            this.btnSua.Name = "btnSua";
-            this.btnSua.ShadowDecoration.BorderRadius = 20;
-            this.btnSua.ShadowDecoration.Color = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.btnSua.ShadowDecoration.Parent = this.btnSua;
-            this.btnSua.Size = new System.Drawing.Size(149, 43);
-            this.btnSua.TabIndex = 16;
-            this.btnSua.Text = "Sửa";
-            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
+            this.btnSuaLop.BorderRadius = 18;
+            this.btnSuaLop.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.ToogleButton;
+            this.btnSuaLop.CheckedState.Parent = this.btnSuaLop;
+            this.btnSuaLop.CustomImages.Parent = this.btnSuaLop;
+            this.btnSuaLop.FillColor = System.Drawing.Color.Fuchsia;
+            this.btnSuaLop.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnSuaLop.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
+            this.btnSuaLop.ForeColor = System.Drawing.Color.Black;
+            this.btnSuaLop.HoverState.Parent = this.btnSuaLop;
+            this.btnSuaLop.Image = global::DoAn.Properties.Resources.edit;
+            this.btnSuaLop.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnSuaLop.Location = new System.Drawing.Point(21, 286);
+            this.btnSuaLop.Name = "btnSuaLop";
+            this.btnSuaLop.ShadowDecoration.BorderRadius = 20;
+            this.btnSuaLop.ShadowDecoration.Color = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.btnSuaLop.ShadowDecoration.Parent = this.btnSuaLop;
+            this.btnSuaLop.Size = new System.Drawing.Size(149, 43);
+            this.btnSuaLop.TabIndex = 16;
+            this.btnSuaLop.Text = "Sửa";
+            this.btnSuaLop.Click += new System.EventHandler(this.btnSuaLop_Click);
             // 
-            // btnXoa
+            // btnXoaLop
             // 
-            this.btnXoa.BorderRadius = 18;
-            this.btnXoa.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.ToogleButton;
-            this.btnXoa.CheckedState.Parent = this.btnXoa;
-            this.btnXoa.CustomImages.Parent = this.btnXoa;
-            this.btnXoa.FillColor = System.Drawing.Color.Fuchsia;
-            this.btnXoa.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnXoa.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
-            this.btnXoa.ForeColor = System.Drawing.Color.Black;
-            this.btnXoa.HoverState.Parent = this.btnXoa;
-            this.btnXoa.Image = global::DoAn.Properties.Resources.delete_user;
-            this.btnXoa.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnXoa.Location = new System.Drawing.Point(21, 346);
-            this.btnXoa.Name = "btnXoa";
-            this.btnXoa.ShadowDecoration.BorderRadius = 20;
-            this.btnXoa.ShadowDecoration.Color = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.btnXoa.ShadowDecoration.Parent = this.btnXoa;
-            this.btnXoa.Size = new System.Drawing.Size(149, 43);
-            this.btnXoa.TabIndex = 17;
-            this.btnXoa.Text = "Xóa";
-            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
+            this.btnXoaLop.BorderRadius = 18;
+            this.btnXoaLop.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.ToogleButton;
+            this.btnXoaLop.CheckedState.Parent = this.btnXoaLop;
+            this.btnXoaLop.CustomImages.Parent = this.btnXoaLop;
+            this.btnXoaLop.FillColor = System.Drawing.Color.Fuchsia;
+            this.btnXoaLop.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnXoaLop.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
+            this.btnXoaLop.ForeColor = System.Drawing.Color.Black;
+            this.btnXoaLop.HoverState.Parent = this.btnXoaLop;
+            this.btnXoaLop.Image = global::DoAn.Properties.Resources.delete_user;
+            this.btnXoaLop.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnXoaLop.Location = new System.Drawing.Point(21, 346);
+            this.btnXoaLop.Name = "btnXoaLop";
+            this.btnXoaLop.ShadowDecoration.BorderRadius = 20;
+            this.btnXoaLop.ShadowDecoration.Color = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.btnXoaLop.ShadowDecoration.Parent = this.btnXoaLop;
+            this.btnXoaLop.Size = new System.Drawing.Size(149, 43);
+            this.btnXoaLop.TabIndex = 17;
+            this.btnXoaLop.Text = "Xóa";
+            this.btnXoaLop.Click += new System.EventHandler(this.btnXoaLop_Click);
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.btnHuy);
-            this.groupBox1.Controls.Add(this.btnOK);
+            this.groupBox1.Controls.Add(this.btnHuyAdd);
+            this.groupBox1.Controls.Add(this.btnAddLop);
             this.groupBox1.Controls.Add(this.cboKhoa);
             this.groupBox1.Controls.Add(this.txtGV);
-            this.groupBox1.Controls.Add(this.txtMa);
-            this.groupBox1.Controls.Add(this.txtTen);
+            this.groupBox1.Controls.Add(this.txtMaLop);
+            this.groupBox1.Controls.Add(this.txtTenLop);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label2);
@@ -231,61 +231,54 @@
             this.label6.TabIndex = 22;
             this.label6.Text = "Nhập thông tin lớp";
             // 
-            // btnHuy
+            // btnHuyAdd
             // 
-            this.btnHuy.BorderRadius = 18;
-            this.btnHuy.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.ToogleButton;
-            this.btnHuy.CheckedState.Parent = this.btnHuy;
-            this.btnHuy.CustomImages.Parent = this.btnHuy;
-            this.btnHuy.FillColor = System.Drawing.Color.Fuchsia;
-            this.btnHuy.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnHuy.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
-            this.btnHuy.ForeColor = System.Drawing.Color.Black;
-            this.btnHuy.HoverState.Parent = this.btnHuy;
-            this.btnHuy.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnHuy.Location = new System.Drawing.Point(208, 341);
-            this.btnHuy.Name = "btnHuy";
-            this.btnHuy.ShadowDecoration.BorderRadius = 20;
-            this.btnHuy.ShadowDecoration.Color = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.btnHuy.ShadowDecoration.Parent = this.btnHuy;
-            this.btnHuy.Size = new System.Drawing.Size(149, 44);
-            this.btnHuy.TabIndex = 21;
-            this.btnHuy.Text = "Hủy";
-            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
+            this.btnHuyAdd.BorderRadius = 18;
+            this.btnHuyAdd.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.ToogleButton;
+            this.btnHuyAdd.CheckedState.Parent = this.btnHuyAdd;
+            this.btnHuyAdd.CustomImages.Parent = this.btnHuyAdd;
+            this.btnHuyAdd.FillColor = System.Drawing.Color.Fuchsia;
+            this.btnHuyAdd.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnHuyAdd.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
+            this.btnHuyAdd.ForeColor = System.Drawing.Color.Black;
+            this.btnHuyAdd.HoverState.Parent = this.btnHuyAdd;
+            this.btnHuyAdd.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnHuyAdd.Location = new System.Drawing.Point(208, 341);
+            this.btnHuyAdd.Name = "btnHuyAdd";
+            this.btnHuyAdd.ShadowDecoration.BorderRadius = 20;
+            this.btnHuyAdd.ShadowDecoration.Color = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.btnHuyAdd.ShadowDecoration.Parent = this.btnHuyAdd;
+            this.btnHuyAdd.Size = new System.Drawing.Size(149, 44);
+            this.btnHuyAdd.TabIndex = 21;
+            this.btnHuyAdd.Text = "Hủy";
+            this.btnHuyAdd.Click += new System.EventHandler(this.btnHuy_Click);
             // 
-            // btnOK
+            // btnAddLop
             // 
-            this.btnOK.BorderRadius = 18;
-            this.btnOK.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.ToogleButton;
-            this.btnOK.CheckedState.Parent = this.btnOK;
-            this.btnOK.CustomImages.Parent = this.btnOK;
-            this.btnOK.FillColor = System.Drawing.Color.Fuchsia;
-            this.btnOK.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnOK.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
-            this.btnOK.ForeColor = System.Drawing.Color.Black;
-            this.btnOK.HoverState.Parent = this.btnOK;
-            this.btnOK.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnOK.Location = new System.Drawing.Point(40, 341);
-            this.btnOK.Name = "btnOK";
-            this.btnOK.ShadowDecoration.BorderRadius = 20;
-            this.btnOK.ShadowDecoration.Color = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.btnOK.ShadowDecoration.Parent = this.btnOK;
-            this.btnOK.Size = new System.Drawing.Size(149, 44);
-            this.btnOK.TabIndex = 20;
-            this.btnOK.Text = "OK";
-            this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
+            this.btnAddLop.BorderRadius = 18;
+            this.btnAddLop.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.ToogleButton;
+            this.btnAddLop.CheckedState.Parent = this.btnAddLop;
+            this.btnAddLop.CustomImages.Parent = this.btnAddLop;
+            this.btnAddLop.FillColor = System.Drawing.Color.Fuchsia;
+            this.btnAddLop.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnAddLop.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
+            this.btnAddLop.ForeColor = System.Drawing.Color.Black;
+            this.btnAddLop.HoverState.Parent = this.btnAddLop;
+            this.btnAddLop.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnAddLop.Location = new System.Drawing.Point(40, 341);
+            this.btnAddLop.Name = "btnAddLop";
+            this.btnAddLop.ShadowDecoration.BorderRadius = 20;
+            this.btnAddLop.ShadowDecoration.Color = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.btnAddLop.ShadowDecoration.Parent = this.btnAddLop;
+            this.btnAddLop.Size = new System.Drawing.Size(149, 44);
+            this.btnAddLop.TabIndex = 20;
+            this.btnAddLop.Text = "OK";
+            this.btnAddLop.Click += new System.EventHandler(this.btnAddLop_Click);
             // 
             // cboKhoa
             // 
             this.cboKhoa.Enabled = false;
             this.cboKhoa.FormattingEnabled = true;
-            this.cboKhoa.Items.AddRange(new object[] {
-            "CNTT",
-            "Dược",
-            "Đông Phương",
-            "NNA",
-            "Cơ Khí",
-            "Kế Toán"});
             this.cboKhoa.Location = new System.Drawing.Point(192, 289);
             this.cboKhoa.Name = "cboKhoa";
             this.cboKhoa.Size = new System.Drawing.Size(165, 21);
@@ -299,21 +292,21 @@
             this.txtGV.Size = new System.Drawing.Size(165, 20);
             this.txtGV.TabIndex = 6;
             // 
-            // txtMa
+            // txtMaLop
             // 
-            this.txtMa.Enabled = false;
-            this.txtMa.Location = new System.Drawing.Point(192, 193);
-            this.txtMa.Name = "txtMa";
-            this.txtMa.Size = new System.Drawing.Size(165, 20);
-            this.txtMa.TabIndex = 5;
+            this.txtMaLop.Enabled = false;
+            this.txtMaLop.Location = new System.Drawing.Point(192, 193);
+            this.txtMaLop.Name = "txtMaLop";
+            this.txtMaLop.Size = new System.Drawing.Size(165, 20);
+            this.txtMaLop.TabIndex = 5;
             // 
-            // txtTen
+            // txtTenLop
             // 
-            this.txtTen.Enabled = false;
-            this.txtTen.Location = new System.Drawing.Point(192, 145);
-            this.txtTen.Name = "txtTen";
-            this.txtTen.Size = new System.Drawing.Size(165, 20);
-            this.txtTen.TabIndex = 4;
+            this.txtTenLop.Enabled = false;
+            this.txtTenLop.Location = new System.Drawing.Point(192, 145);
+            this.txtTenLop.Name = "txtTenLop";
+            this.txtTenLop.Size = new System.Drawing.Size(165, 20);
+            this.txtTenLop.TabIndex = 4;
             // 
             // label5
             // 
@@ -373,40 +366,40 @@
             this.dgvClass.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvClass.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dgvClass.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(122)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvClass.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(122)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvClass.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dgvClass.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvClass.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2,
             this.Column3,
             this.Column4});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(226)))), ((int)(((byte)(244)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvClass.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(226)))), ((int)(((byte)(244)))));
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvClass.DefaultCellStyle = dataGridViewCellStyle8;
             this.dgvClass.Location = new System.Drawing.Point(6, 14);
             this.dgvClass.Name = "dgvClass";
             this.dgvClass.ReadOnly = true;
             this.dgvClass.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Maroon;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvClass.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.Maroon;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvClass.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.dgvClass.RowHeadersVisible = false;
             this.dgvClass.RowHeadersWidth = 30;
             this.dgvClass.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -477,9 +470,9 @@
         private System.Windows.Forms.Panel panel6;
         private Guna.UI2.WinForms.Guna2GradientButton btnExit;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private Guna.UI2.WinForms.Guna2GradientButton btnThem;
-        private Guna.UI2.WinForms.Guna2GradientButton btnSua;
-        private Guna.UI2.WinForms.Guna2GradientButton btnXoa;
+        private Guna.UI2.WinForms.Guna2GradientButton btnThemLop;
+        private Guna.UI2.WinForms.Guna2GradientButton btnSuaLop;
+        private Guna.UI2.WinForms.Guna2GradientButton btnXoaLop;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.DataGridView dgvClass;
@@ -490,13 +483,13 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cboKhoa;
         private System.Windows.Forms.TextBox txtGV;
-        private System.Windows.Forms.TextBox txtMa;
-        private System.Windows.Forms.TextBox txtTen;
+        private System.Windows.Forms.TextBox txtMaLop;
+        private System.Windows.Forms.TextBox txtTenLop;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label2;
-        private Guna.UI2.WinForms.Guna2GradientButton btnHuy;
-        private Guna.UI2.WinForms.Guna2GradientButton btnOK;
+        private Guna.UI2.WinForms.Guna2GradientButton btnHuyAdd;
+        private Guna.UI2.WinForms.Guna2GradientButton btnAddLop;
         private System.Windows.Forms.Label label6;
     }
 }

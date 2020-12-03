@@ -40,5 +40,17 @@ namespace DoAn
             frmPhanLop phanlop = new frmPhanLop();
             phanlop.ShowDialog();
         }
+
+        private void btnQLKhoa_Click(object sender, EventArgs e)
+        {
+            frmQLKhoa khoa = new frmQLKhoa();
+            khoa.ShowDialog();
+        }
+
+        private void btnQLSV_Click(object sender, EventArgs e)
+        {
+            frmQLSinhVien qlsv = new frmQLSinhVien();
+            qlsv.ShowDialog();
+        }
     }
 }

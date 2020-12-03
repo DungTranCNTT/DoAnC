@@ -12,9 +12,9 @@ using DoAn.XML;
 
 namespace DoAn
 {
-    public partial class frmGiaoVien : Form
+    public partial class frmQLSinhVien : Form
     {
-        public frmGiaoVien()
+        public frmQLSinhVien()
         {
             InitializeComponent();
         }

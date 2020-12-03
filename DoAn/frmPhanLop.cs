@@ -24,6 +24,8 @@ namespace DoAn
         private void frmPhanLop_Load(object sender, EventArgs e)
         {
             classxml.HienThiLop(dgvSinhVien);
+            classxml.getDSLop(cboLop);
+            classxml.getDSKhoa(cboKhoa);
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
