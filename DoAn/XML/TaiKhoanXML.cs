@@ -9,7 +9,7 @@ namespace DoAn.XML
         frmQLSinhVien gv;
         XmlDocument doc = new XmlDocument();
         XmlElement goc;
-        string fileName = @"..\..\Data\user.xml";
+        string fileName = @"..\..\Data\User.xml";
 
         public TaiKhoanXML()
         {
@@ -42,6 +42,18 @@ namespace DoAn.XML
             day.InnerText = themTaiKhoan.Day;
             users.AppendChild(day);
 
+            XmlElement email = doc.CreateElement("Email");
+            email.InnerText = themTaiKhoan.Email;
+            users.AppendChild(email);
+
+            XmlElement sdt = doc.CreateElement("SDT");
+            sdt.InnerText = themTaiKhoan.Sdt;
+            users.AppendChild(sdt);
+
+            XmlElement sbm = doc.CreateElement("SBM");
+            sbm.InnerText = themTaiKhoan.Sobimat;
+            users.AppendChild(sbm);
+
             //tạo xong nút user thêm vào gốc
             goc.AppendChild(users);
             doc.Save(fileName);
@@ -72,6 +84,17 @@ namespace DoAn.XML
                 owner.InnerText = suaTaiKhoan.owner;
                 taiKhoanMoi.AppendChild(owner);
 
+                XmlElement email = doc.CreateElement("Email");
+                email.InnerText = suaTaiKhoan.Email;
+                taiKhoanMoi.AppendChild(email);
+
+                XmlElement sdt = doc.CreateElement("SDT");
+                sdt.InnerText = suaTaiKhoan.Sdt;
+                taiKhoanMoi.AppendChild(sdt);
+
+                XmlElement sbm = doc.CreateElement("SBM");
+                sbm.InnerText = suaTaiKhoan.Sobimat;
+                taiKhoanMoi.AppendChild(sbm);
                 //sửa user cũ bằng user mới
                 goc.ReplaceChild(taiKhoanMoi, userCu);
                 doc.Save(fileName);
@@ -131,6 +154,56 @@ namespace DoAn.XML
                 dgv.Rows[dong].Cells[4].Value = item["owner"].ToString();
                 dgv.Rows[dong].Cells[5].Value = item["day"].ToString();
                 dong++;
+            }
+        }
+
+        public void DoiMK(TaiKhoan doiMk)
+        {
+            XmlNode user = goc.SelectSingleNode("users[username ='" + doiMk.TenDangNhap + "']");
+            if (user != null)
+            {
+                XmlNode taiKhoanMoi = doc.CreateElement("users");
+
+                //tạo nút con của user là username
+                XmlElement username = doc.CreateElement("username");
+                username.InnerText = doiMk.TenDangNhap;//gán giá trị cho username
+                taiKhoanMoi.AppendChild(username);//thêm username thành con của user
+
+                XmlElement pwd = doc.CreateElement("pwd");
+                pwd.InnerText = doiMk.MatKhau;
+                taiKhoanMoi.AppendChild(pwd);
+
+                XmlElement type = doc.CreateElement("type");
+                type.InnerText = doiMk.TrangThai;
+                taiKhoanMoi.AppendChild(type);
+
+                XmlElement owner = doc.CreateElement("owner");
+                owner.InnerText = doiMk.owner;
+                taiKhoanMoi.AppendChild(owner);
+
+                XmlElement day = doc.CreateElement("day");
+                day.InnerText = doiMk.Day;
+                taiKhoanMoi.AppendChild(day);
+
+                XmlElement email = doc.CreateElement("Email");
+                email.InnerText = doiMk.Email;
+                taiKhoanMoi.AppendChild(email);
+
+                XmlElement sdt = doc.CreateElement("SDT");
+                sdt.InnerText = doiMk.Sdt;
+                taiKhoanMoi.AppendChild(sdt);
+
+                XmlElement sbm = doc.CreateElement("SBM");
+                sbm.InnerText = doiMk.Sobimat;
+                taiKhoanMoi.AppendChild(sbm);
+
+                //sửa user cũ bằng user mới
+                goc.ReplaceChild(taiKhoanMoi, user);
+                doc.Save(fileName);
+            }
+            else
+            {
+                MessageBox.Show("Tài khoản không tồn tại");
             }
         }
     }

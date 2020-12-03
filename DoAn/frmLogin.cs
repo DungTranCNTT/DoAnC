@@ -24,6 +24,8 @@ namespace DoAn
         public string pass = "";
         public string type = "";
 
+        public static string check1 = "";
+        public static string check2 = "";
         public static bool HasSpecialChar(string input)
         {
             string[] specialChar = {"@", "|", "!", "#", "$", "%", "&", "/", "(", ")", "=", "?", "»", "«", "@", "£", "§", "€", "{", "}", ".", "-", ";", "'", "<", ">", "_", "," };
@@ -102,21 +104,14 @@ namespace DoAn
 
         private void btnFogotpass_Click(object sender, EventArgs e)
         {
-            Forgotpass forgot = new Forgotpass();
+            frmForgotPass forgot = new frmForgotPass();
             forgot.Show();
         }
         private void txtID_MouseEnter(object sender, EventArgs e)
         {
-            if (txtID.Text == "Username")
-                txtID.Clear();
         }
         private void txtPass_MouseEnter(object sender, EventArgs e)
         {
-            if (txtPass.Text == "Password")
-            {
-                txtPass.Clear();
-                txtPass.UseSystemPasswordChar = true;
-            }
         }
 
         private void btnLogin_Click_1(object sender, EventArgs e)
@@ -125,7 +120,7 @@ namespace DoAn
         }
         public void DangNhap()
         {
-            string fileName = @"..\..\Data\user.xml";
+            string fileName = @"..\..\Data\User.xml";
             XDocument doc = XDocument.Load(fileName);
             var selected_user = from x in doc.Descendants("users").Where
                                 (x => (String)x.Element("username") == txtID.Text)
@@ -147,19 +142,18 @@ namespace DoAn
                 {
                     if (users.Contains(txtID.Text) && pass.Contains(txtPass.Text) && type.Contains("Admin"))
                     {
+                        check2 = users.ToString();
                         this.Hide();
                         frmMain main = new frmMain();
                         main.ShowDialog();
                     }
                     else if (users.Contains(txtID.Text) && pass.Contains(txtPass.Text) && type.Contains("Giáo Viên"))
                     {
+                        check2 = users.ToString();
+                        check1 = type.ToString();
                         this.Hide();
-                        frmQLSinhVien giaovien = new frmQLSinhVien();
-                        giaovien.ShowDialog();
-                    }
-                    else if (users.Contains(txtID.Text) && pass.Contains(txtPass.Text) && type.Contains("Sinh Viên"))
-                    {
-                        this.Hide();
+                        frmMain main = new frmMain();
+                        main.ShowDialog();
                     }
                     else
                     {
@@ -175,6 +169,12 @@ namespace DoAn
         private void btnExit_Click_1(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void lnkForgot_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            frmForgotPass fogotPass = new frmForgotPass();
+            fogotPass.ShowDialog();
         }
     }
 }

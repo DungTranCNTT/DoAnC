@@ -12,15 +12,15 @@ using DoAn.XML;
 
 namespace DoAn
 {
-    public partial class frmXoaSinhVien : Form
+    public partial class frmXoaGiaoVien : Form
     {
-        public frmXoaSinhVien()
+        public frmXoaGiaoVien()
         {
             InitializeComponent();
         }
 
-        SinhVien sv = new SinhVien();
-        SinhVienXML svXML = new SinhVienXML();
+        GiaoVien gv = new GiaoVien();
+        GiaoVienXML gvXML = new GiaoVienXML();
 
         private void label1_Click(object sender, EventArgs e)
         {
@@ -34,12 +34,12 @@ namespace DoAn
 
         private void btnDelete1_Click(object sender, EventArgs e)
         {
-            sv.Msv = txtMsv.Text;
+            gv.Mgv = txtMsv.Text;
 
-            svXML.Xoa(sv);
+            gvXML.Xoa(gv);
             if (MessageBox.Show("Xóa thành công bạn muốn thoát?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                frmXoaGiaoVien xoa = new frmXoaGiaoVien();
+                frmXoaSinhVien xoa = new frmXoaSinhVien();
                 this.Close();
             }
         }

@@ -61,23 +61,24 @@ namespace DoAn
         {
             if (check1 == true && txtMa.Text.Trim() != "")
             {
-                khoa.TenKhoa = txtMa.Text;
+                khoa.TenKhoa = txtTen.Text;
                 khoa.MaKhoa = txtMa.Text;
                 khoaXML.TaoKhoa(khoa);
                 Reload();
             }
             if (check2 == true && txtMa.Text.Trim() != "")
             {
-                khoa.TenKhoa = txtMa.Text;
+                khoa.TenKhoa = txtTen.Text;
                 khoa.MaKhoa = txtMa.Text;
                 khoaXML.SuaKhoa(khoa);
                 Reload();
             }
             if (check3 == true && txtMa.Text.Trim() != "")
             {
-                khoa.TenKhoa = txtMa.Text;
+                khoa.TenKhoa = txtTen.Text;
                 khoaXML.XoaKhoa(khoa);
-                Reload();
+                dgvKhoa.Rows.Clear();
+                khoaXML.HienThiDSKhoa(dgvKhoa);
             }
             txtMa.Clear();
             txtTen.Clear();

@@ -41,7 +41,7 @@ namespace DoAn
         }
         private void btnThemLop_Click(object sender, EventArgs e)
         {
-            txtGV.Enabled = true;
+            cboGv.Enabled = true;
             txtMaLop.Enabled = true;
             txtTenLop.Enabled = true;
             cboKhoa.Enabled = true;
@@ -53,7 +53,7 @@ namespace DoAn
 
         private void btnSuaLop_Click(object sender, EventArgs e)
         {
-            txtGV.Enabled = true;
+            cboGv.Enabled = true;
             txtMaLop.Enabled = true;
             txtTenLop.Enabled = true;
             cboKhoa.Enabled = true;
@@ -70,7 +70,7 @@ namespace DoAn
                 lop.MaLop = txtMaLop.Text;
                 lop.TenLop = txtTenLop.Text;
                 lop.Khoa = cboKhoa.Text;
-                lop.GVChuNhiem = txtGV.Text;
+                lop.GVChuNhiem = cboGv.Text;
                 lopXML.TaoLop(lop);
                 Reload();
             }
@@ -79,9 +79,10 @@ namespace DoAn
                 lop.MaLop = txtMaLop.Text;
                 lop.TenLop = txtTenLop.Text;
                 lop.Khoa = cboKhoa.Text;
-                lop.GVChuNhiem = txtGV.Text;
+                lop.GVChuNhiem = cboGv.Text;
                 lopXML.SuaLop(lop);
-                Reload();
+                dgvClass.Rows.Clear();
+                lopXML.HienThiLop(dgvClass);
             }
             if(check3 == true && txtTenLop.Text.Trim() != "")
             {
@@ -89,18 +90,18 @@ namespace DoAn
                 lopXML.XoaLop(lop);
                 Reload();
             }
-            txtGV.Clear();
             txtMaLop.Clear();
             txtTenLop.Clear();
             cboKhoa.SelectedIndex = -1;
+            cboGv.SelectedIndex = -1;
         }
 
         private void btnHuy_Click(object sender, EventArgs e)
         {
-            txtGV.Clear();
             txtMaLop.Clear();
             txtTenLop.Clear();
             cboKhoa.SelectedIndex = -1;
+            cboGv.SelectedIndex = -1;
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -112,14 +113,14 @@ namespace DoAn
         {
             txtTenLop.Text = dgvClass.CurrentRow.Cells[2].Value.ToString();
             txtMaLop.Text = dgvClass.CurrentRow.Cells[1].Value.ToString();
-            txtGV.Text = dgvClass.CurrentRow.Cells[3].Value.ToString();
+            cboGv.Text = dgvClass.CurrentRow.Cells[3].Value.ToString();
             cboKhoa.Text = dgvClass.CurrentRow.Cells[0].Value.ToString();
 
         }
 
         private void btnXoaLop_Click(object sender, EventArgs e)
         {
-            txtGV.Enabled = false;
+            cboGv.Enabled = false;
             txtMaLop.Enabled = false;
             txtTenLop.Enabled = true;
             cboKhoa.Enabled = false;
@@ -133,6 +134,7 @@ namespace DoAn
         {
             lopXML.HienThiLopDS(dgvClass);
             lopXML.getDSKhoa(cboKhoa);
+            lopXML.getDSGiaoVien(cboGv);
         }
     }
 }

@@ -6,12 +6,21 @@
     <type>Admin</type>
     <owner>dung</owner>
     <day>24/26/20</day>
+    <Email>asd</Email>
+    <SDT>asd</SDT>
+    <SBM>1234567</SBM>
   </users>
   <users>
     <username>giaovien</username>
     <pwd>123456</pwd>
     <type>Giáo Viên</type>
-    <owner>asd</owner>
-    <day>24/38/20</day>
+    <owner>Dung</owner>
+    <day>03/11/20</day>
+    <Email>
+    </Email>
+    <SDT>
+    </SDT>
+    <SBM>
+    </SBM>
   </users>
 </profile>

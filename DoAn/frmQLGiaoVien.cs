@@ -12,19 +12,19 @@ using DoAn.XML;
 
 namespace DoAn
 {
-    public partial class frmQLSinhVien : Form
+    public partial class frmQLGiaoVien : Form
     {
-        public frmQLSinhVien()
+        public frmQLGiaoVien()
         {
             InitializeComponent();
         }
-        SinhVienXML sinhVienxml = new SinhVienXML();
-        SinhVien sinhVien = new SinhVien();
+        GiaoVienXML giaoVienxml = new GiaoVienXML();
+        GiaoVien giaoVien = new GiaoVien();
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            frmThemSinhVien frmThem = new frmThemSinhVien();
-            frmThem.ShowDialog();
+            frmThemGiaoVien frmThemGiaovien = new frmThemGiaoVien();
+            frmThemGiaovien.ShowDialog();
             Reload();
         }
         private void btnExit_Click(object sender, EventArgs e)
@@ -34,12 +34,12 @@ namespace DoAn
 
         private void GiaoVien_Load(object sender, EventArgs e)
         {
-            sinhVienxml.HienThi(dgvSinhVien);
+            giaoVienxml.HienThi(dgvGiaoVien);
         }
 
         private void btnSua_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Kích đúp sinh viên muốn sửa", "Thông báo");
+            MessageBox.Show("Kích đúp giáo viên muốn sửa", "Thông báo");
         }
 
         private void btnReload_Click(object sender, EventArgs e)
@@ -49,8 +49,8 @@ namespace DoAn
 
         public void Reload()
         {
-            dgvSinhVien.Rows.Clear();
-            sinhVienxml.Reload(dgvSinhVien);
+            dgvGiaoVien.Rows.Clear();
+            giaoVienxml.HienThi(dgvGiaoVien);
         }
         public static string SetValue1 = "";
         public static string SetValue2 = "";
@@ -63,12 +63,12 @@ namespace DoAn
         private void dgvSinhVien_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             frmSuaSinhVien frmSuaSinhVien = new frmSuaSinhVien();
-            if (dgvSinhVien.CurrentRow.Cells[0].Value != null)
+            if (dgvGiaoVien.CurrentRow.Cells[0].Value != null)
             {
-                SetValue1 = dgvSinhVien.CurrentRow.Cells[0].Value.ToString();
-                SetValue2 = dgvSinhVien.CurrentRow.Cells[1].Value.ToString();
-                SetValue3 = dgvSinhVien.CurrentRow.Cells[2].Value.ToString();
-                if (dgvSinhVien.CurrentRow.Cells[3].Value.ToString() == "Nam")
+                SetValue1 = dgvGiaoVien.CurrentRow.Cells[0].Value.ToString();
+                SetValue2 = dgvGiaoVien.CurrentRow.Cells[1].Value.ToString();
+                SetValue3 = dgvGiaoVien.CurrentRow.Cells[2].Value.ToString();
+                if (dgvGiaoVien.CurrentRow.Cells[3].Value.ToString() == "Nam")
                 {
                     SetValue4 = "Nam";
                 }
@@ -76,16 +76,16 @@ namespace DoAn
                 {
                     SetValue4 = "Nu";
                 }
-                SetValue5 = dgvSinhVien.CurrentRow.Cells[4].Value.ToString();
-                SetValue6 = dgvSinhVien.CurrentRow.Cells[5].Value.ToString();
-                SetValue7 = dgvSinhVien.CurrentRow.Cells[6].Value.ToString();
-                SetValue8 = dgvSinhVien.CurrentRow.Cells[7].Value.ToString();
+                SetValue5 = dgvGiaoVien.CurrentRow.Cells[4].Value.ToString();
+                SetValue6 = dgvGiaoVien.CurrentRow.Cells[5].Value.ToString();
+                SetValue7 = dgvGiaoVien.CurrentRow.Cells[6].Value.ToString();
+                SetValue8 = dgvGiaoVien.CurrentRow.Cells[7].Value.ToString();
                 frmSuaSinhVien.ShowDialog();
                 Reload();
             }
             else
             {
-                frmThemSinhVien frmThem = new frmThemSinhVien();
+                frmThemGiaoVien frmThem = new frmThemGiaoVien();
                 frmThem.ShowDialog();
                 Reload();
             }
@@ -94,19 +94,19 @@ namespace DoAn
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            frmXoaSinhVien frmXoa = new frmXoaSinhVien();
+            frmXoaGiaoVien frmXoa = new frmXoaGiaoVien();
             frmXoa.ShowDialog();
-            dgvSinhVien.Rows.Clear();
-            sinhVienxml.HienThi(dgvSinhVien);
+            dgvGiaoVien.Rows.Clear();
+            giaoVienxml.HienThi(dgvGiaoVien);
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
             if (txtTim.Text.Trim() != "")
             {
-                sinhVien.Msv = txtTim.Text;
+                giaoVien.Mgv = txtTim.Text;
 
-                sinhVienxml.TimKiem(sinhVien, dgvSinhVien);
+                giaoVienxml.TimKiem(giaoVien, dgvGiaoVien);
             }
         }
         Bitmap bitmap;
@@ -124,17 +124,17 @@ namespace DoAn
             app.Visible = true;
             worksheet = workbook.Sheets["Sheet1"];
             worksheet = workbook.ActiveSheet;
-            worksheet.Name = "DanhSachSinhVien";
+            worksheet.Name = "DanhSachGiaoVien";
 
-            for (int i = 1; i < dgvSinhVien.Columns.Count + 1; i++)
+            for (int i = 1; i < dgvGiaoVien.Columns.Count + 1; i++)
             {
-                worksheet.Cells[1, i] = dgvSinhVien.Columns[i-1].HeaderText;
+                worksheet.Cells[1, i] = dgvGiaoVien.Columns[i - 1].HeaderText;
             }
-            for (int i = 0; i < dgvSinhVien.Rows.Count - 1; i++)
+            for (int i = 0; i < dgvGiaoVien.Rows.Count - 1; i++)
             {
-                for(int j = 0; j < dgvSinhVien.Columns.Count; j++)
+                for (int j = 0; j < dgvGiaoVien.Columns.Count; j++)
                 {
-                    worksheet.Cells[i + 2, j + 1] = dgvSinhVien.Rows[i].Cells[j].Value.ToString();
+                    worksheet.Cells[i + 2, j + 1] = dgvGiaoVien.Rows[i].Cells[j].Value.ToString();
                 }
             }
 
@@ -142,18 +142,19 @@ namespace DoAn
         }
         private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {
-            e.Graphics.DrawImage(bitmap, 0 , 0, 850, dgvSinhVien.Height);
+            e.Graphics.DrawImage(bitmap, 0, 0, 850, dgvGiaoVien.Height);
         }
 
         private void btnPrint_Click(object sender, EventArgs e)
         {
-            int height = dgvSinhVien.Height;
-            dgvSinhVien.Height = dgvSinhVien.RowCount * dgvSinhVien.RowTemplate.Height * 2;
-            bitmap = new Bitmap(dgvSinhVien.Width, dgvSinhVien.Height);
-            dgvSinhVien.DrawToBitmap(bitmap, new Rectangle(0, 0, dgvSinhVien.Width, dgvSinhVien.Height));
+            int height = dgvGiaoVien.Height;
+            dgvGiaoVien.Height = dgvGiaoVien.RowCount * dgvGiaoVien.RowTemplate.Height * 2;
+            bitmap = new Bitmap(dgvGiaoVien.Width, dgvGiaoVien.Height);
+            dgvGiaoVien.DrawToBitmap(bitmap, new Rectangle(0, 0, dgvGiaoVien.Width, dgvGiaoVien.Height));
             printPreviewDialog1.PrintPreviewControl.Zoom = 1;
             printPreviewDialog1.ShowDialog();
-            dgvSinhVien.Height = height;
+            dgvGiaoVien.Height = height;
         }
+
     }
 }

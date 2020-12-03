@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<profile>
+  <teacher>
+    <MGV>1</MGV>
+    <Ten>test</Ten>
+    <NgaySinh>11/11/1111</NgaySinh>
+    <GioiTinh>Nam</GioiTinh>
+    <DiaChi>1111111111111111</DiaChi>
+    <Que>1111111111</Que>
+    <Email>1111111111111</Email>
+    <SDT>1111111111</SDT>
+  </teacher>
+  <teacher>
+    <MGV>0</MGV>
+    <Ten>11111</Ten>
+    <NgaySinh> 1/11/1111</NgaySinh>
+    <GioiTinh>Nam</GioiTinh>
+    <Que>sd</Que>
+    <DiaChi>123</DiaChi>
+    <Email>123</Email>
+    <SDT>123</SDT>
+  </teacher>
+  <teacher>
+    <MGV>1</MGV>
+    <Ten>Son</Ten>
+    <NgaySinh>11/11/1111</NgaySinh>
+    <GioiTinh>Nam</GioiTinh>
+    <Que>test</Que>
+    <DiaChi>test</DiaChi>
+    <Email>test</Email>
+    <SDT>123123152</SDT>
+  </teacher>
+</profile>

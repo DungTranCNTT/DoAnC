@@ -14,5 +14,11 @@ namespace DoAn.Service
         public string owner { get; set; }
 
         public string Day { get; set; }
+
+        public string Email { get; set; }
+
+        public string Sdt { get; set; }
+
+        public string Sobimat { get; set; }
     }
 }

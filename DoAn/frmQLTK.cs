@@ -24,6 +24,8 @@ namespace DoAn
         private void QuanLyTK_Load(object sender, EventArgs e)
         {
             taiKhoanXml.HienThi(dgvUser);
+            cbType.Items.Add("Admin");
+            cbType.Items.Add("Giáo Viên");
         }
 
         bool check1, check2, check3;
@@ -58,6 +60,7 @@ namespace DoAn
             txtOwer.Enabled = true;
             txtOwer.BackColor = Color.White;
             cbType.Enabled = true;
+            cbType.SelectedIndex = -1;
             cbType.BackColor = Color.White;
             check2 = true;
             check1 = false;
@@ -75,7 +78,7 @@ namespace DoAn
             txtOwer.Clear();
             txtOwer.BackColor = Color.Silver;
             cbType.Enabled = false;
-            cbType.Items.Clear();
+            cbType.SelectedIndex = -1;
             cbType.BackColor = Color.Silver;
             check3 = true;
             check2 = false;
@@ -120,6 +123,10 @@ namespace DoAn
                         //gọi hàm thực hiện thêm tài khoản
                         taiKhoanXml.Them(taiKhoan);
                         Reload() ;//load lại bảng 
+                    txtTK.Clear();
+                    txtMK.Clear();
+                    txtOwer.Clear();
+                    cbType.SelectedIndex = -1;
                 }
             }
             if (check2 == true)
@@ -134,7 +141,8 @@ namespace DoAn
                     taiKhoan.owner = txtOwer.Text;
                     //gọi hàm thực hiện thêm tài khoản
                     taiKhoanXml.Sua(taiKhoan);
-                    Reload();//load lại bảng 
+                    dgvUser.Rows.Clear();
+                    taiKhoanXml.HienThi(dgvUser);//load lại bảng 
                 }
             }
             if (check3 == true)

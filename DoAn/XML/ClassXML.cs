@@ -16,12 +16,15 @@ namespace DoAn.XML
         XmlDocument doc = new XmlDocument();
         XmlDocument doc1 = new XmlDocument();
         XmlDocument doc2 = new XmlDocument();
+        XmlDocument doc3 = new XmlDocument();
         XmlElement goc;
         XmlElement goc1;
         XmlElement goc2;
+        XmlElement goc3;
         string fileName = @"..\..\Data\Class.xml";
         string fileName1 = @"..\..\Data\SinhVien.xml";
         string fileName2 = @"..\..\Data\Khoa.xml";
+        string fileName3 = @"..\..\Data\GiaoVien.xml";
         public ClassXML()
         {
             doc.Load(fileName);
@@ -32,6 +35,9 @@ namespace DoAn.XML
 
             doc2.Load(fileName2);
             goc2 = doc2.DocumentElement;
+
+            doc3.Load(fileName3);
+            goc3 = doc3.DocumentElement;
         }
 
         public void TaoLop(Class taoClass)
@@ -161,7 +167,7 @@ namespace DoAn.XML
         public void ThemLop(SinhVien themLop)
         {
             XmlNode oldChild = goc1.SelectSingleNode("student[MSV ='" + themLop.Msv + "']");
-            doc.DocumentElement.RemoveChild(oldChild);
+            doc1.DocumentElement.RemoveChild(oldChild);
             XmlNode student = doc1.CreateElement("student");
 
             XmlElement msv = doc1.CreateElement("MSV");
@@ -303,6 +309,15 @@ namespace DoAn.XML
             foreach(XmlNode item in ds)
             {
                 cbo.Items.Add(item.SelectSingleNode("TenKhoa").InnerText);
+            }
+        }
+
+        public void getDSGiaoVien(ComboBox cbo)
+        {
+            XmlNodeList ds = goc3.SelectNodes("teacher");
+            foreach(XmlNode item in ds)
+            {
+                cbo.Items.Add(item.SelectSingleNode("Ten").InnerText);
             }
         }
     }

@@ -134,9 +134,6 @@
             this.cbType.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbType.ForeColor = System.Drawing.Color.Black;
             this.cbType.FormattingEnabled = true;
-            this.cbType.Items.AddRange(new object[] {
-            "Admin",
-            "Giáo Viên"});
             this.cbType.Location = new System.Drawing.Point(351, 163);
             this.cbType.Name = "cbType";
             this.cbType.Size = new System.Drawing.Size(119, 27);

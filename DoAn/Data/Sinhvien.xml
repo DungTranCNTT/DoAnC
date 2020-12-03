@@ -1,15 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <profile>
   <student>
-    <MSV>20000001</MSV>
-    <Ten>test</Ten>
-    <NgaySinh>11/11/1111</NgaySinh>
+    <MSV>20000000</MSV>
+    <Ten>Trần Đức Dũng</Ten>
+    <NgaySinh>02/03/2000</NgaySinh>
     <GioiTinh>Nam</GioiTinh>
-    <DiaChi>1111111111111111</DiaChi>
-    <Que>1111111111</Que>
-    <Email>1111111111111</Email>
-    <SDT>1111111111</SDT>
-    <Lop>2</Lop>
-    <Khoa>1</Khoa>
+    <DiaChi>1/2g</DiaChi>
+    <Que>Đồng Nai</Que>
+    <Email>dungtran232000@gmail.com</Email>
+    <SDT>0911902265</SDT>
+    <Lop>18CT113</Lop>
+    <Khoa>18CT3</Khoa>
   </student>
 </profile>

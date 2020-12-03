@@ -52,11 +52,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Forgotpass.cs">
+    <Compile Include="frmForgotPass.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forgotpass.Designer.cs">
-      <DependentUpon>Forgotpass.cs</DependentUpon>
+    <Compile Include="frmForgotPass.Designer.cs">
+      <DependentUpon>frmForgotPass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCapNhapTT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCapNhapTT.Designer.cs">
+      <DependentUpon>frmCapNhapTT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDoiMk.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDoiMk.Designer.cs">
+      <DependentUpon>frmDoiMk.cs</DependentUpon>
     </Compile>
     <Compile Include="frmPhanLop.cs">
       <SubType>Form</SubType>
@@ -64,11 +76,29 @@
     <Compile Include="frmPhanLop.Designer.cs">
       <DependentUpon>frmPhanLop.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmQLGiaoVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmQLGiaoVien.Designer.cs">
+      <DependentUpon>frmQLGiaoVien.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmQLLop.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmQLLop.Designer.cs">
       <DependentUpon>frmQLLop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSuaGiaoVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSuaGiaoVien.Designer.cs">
+      <DependentUpon>frmSuaGiaoVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmThemGiaoVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmThemGiaoVien.Designer.cs">
+      <DependentUpon>frmThemGiaoVien.cs</DependentUpon>
     </Compile>
     <Compile Include="frmThemSinhVien.cs">
       <SubType>Form</SubType>
@@ -88,11 +118,11 @@
     <Compile Include="frmXoaSinhVien.Designer.cs">
       <DependentUpon>frmXoaSinhVien.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmGiaoVien.cs">
+    <Compile Include="frmQLSinhVien.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmGiaoVien.Designer.cs">
-      <DependentUpon>frmGiaoVien.cs</DependentUpon>
+    <Compile Include="frmQLSinhVien.Designer.cs">
+      <DependentUpon>frmQLSinhVien.cs</DependentUpon>
     </Compile>
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
@@ -121,15 +151,35 @@
       <DependentUpon>frmQLKhoa.cs</DependentUpon>
     </Compile>
     <Compile Include="Service\Class.cs" />
+    <Compile Include="Service\GiaoVien.cs" />
     <Compile Include="Service\Khoa.cs" />
     <Compile Include="Service\SinhVien.cs" />
     <Compile Include="Service\TaiKhoan.cs" />
     <Compile Include="XML\ClassXML.cs" />
+    <Compile Include="XML\GiaoVienXML.cs" />
     <Compile Include="XML\KhoaXML.cs" />
     <Compile Include="XML\SinhVienXML.cs" />
     <Compile Include="XML\TaiKhoanXML.cs" />
+    <Compile Include="frmXoaGiaoVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmXoaGiaoVien.Designer.cs">
+      <DependentUpon>frmXoaGiaoVien.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="frmCapNhapTT.resx">
+      <DependentUpon>frmCapNhapTT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDoiMk.resx">
+      <DependentUpon>frmDoiMk.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmForgotPass.resx">
+      <DependentUpon>frmForgotPass.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmPhanLop.resx">
       <DependentUpon>frmPhanLop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmQLGiaoVien.resx">
+      <DependentUpon>frmQLGiaoVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmQLKhoa.resx">
       <DependentUpon>frmQLKhoa.cs</DependentUpon>
@@ -137,20 +187,29 @@
     <EmbeddedResource Include="frmQLLop.resx">
       <DependentUpon>frmQLLop.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmSuaGiaoVien.resx">
+      <DependentUpon>frmSuaGiaoVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmThemGiaoVien.resx">
+      <DependentUpon>frmThemGiaoVien.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmThemSinhVien.resx">
       <DependentUpon>frmThemSinhVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmSuaSinhVien.resx">
       <DependentUpon>frmSuaSinhVien.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmGiaoVien.resx">
-      <DependentUpon>frmGiaoVien.cs</DependentUpon>
+    <EmbeddedResource Include="frmQLSinhVien.resx">
+      <DependentUpon>frmQLSinhVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmXoaGiaoVien.resx">
+      <DependentUpon>frmXoaGiaoVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmXoaSinhVien.resx">
       <DependentUpon>frmXoaSinhVien.cs</DependentUpon>
@@ -209,6 +268,7 @@
     <None Include="Resources\edit1.png" />
     <None Include="Resources\icons8-add-user-male-50.png" />
     <Content Include="Data\Class.xml" />
+    <Content Include="Data\GiaoVien.xml" />
     <Content Include="Data\Khoa.xml" />
     <Content Include="Data\Sinhvien.xml" />
     <Content Include="Data\User.xml" />

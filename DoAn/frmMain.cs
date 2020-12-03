@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 
 namespace DoAn
 {
@@ -17,18 +18,92 @@ namespace DoAn
             InitializeComponent();
         }
 
+        public string users = "";
+        public string day = "";
+        public string type = "";
         private void btnQuanly_Click(object sender, EventArgs e)
         {
             frmQLTK ql = new frmQLTK();
             ql.ShowDialog();
         }
-
         private void Main_Load(object sender, EventArgs e)
         {
-            frmLogin lg = new frmLogin();
-            lg.Close();
+            if (frmLogin.check1 == "Giáo Viên")
+            {
+                string fileName = @"..\..\Data\User.xml";
+                XDocument doc = XDocument.Load(fileName);
+                var selected_user = from x in doc.Descendants("users").Where
+                                    (x => (String)x.Element("username") == frmLogin.check2)
+                                    select new
+                                    {
+                                        XMLuser = x.Element("username").Value,
+                                        XMLday = x.Element("day").Value,
+                                        XMLtype = x.Element("type").Value,
+                                    };
+                foreach (var x in selected_user)
+                {
+                    users = x.XMLuser;
+                    type = x.XMLtype;
+                    day = x.XMLday;
+                }
+
+                lblTen.Text = users.ToString();
+                lblDate.Text = day.ToString();
+                lblLoai.Text = type.ToString();
+
+                btnQLGiaoVien.Enabled = false;
+                btnQLKhoa.Enabled = false;
+                btnQLLop.Enabled = false;
+                btnQuanly.Enabled = false;
+            }
+            else
+            {
+                string fileName = @"..\..\Data\User.xml";
+                XDocument doc = XDocument.Load(fileName);
+                var selected_user = from x in doc.Descendants("users").Where
+                                    (x => (String)x.Element("username") == frmLogin.check2)
+                                    select new
+                                    {
+                                        XMLuser = x.Element("username").Value,
+                                        XMLday = x.Element("day").Value,
+                                        XMLtype = x.Element("type").Value,
+                                    };
+                foreach (var x in selected_user)
+                {
+                    users = x.XMLuser;
+                    type = x.XMLtype;
+                    day = x.XMLday;
+                }
+
+                lblTen.Text = users.ToString();
+                lblDate.Text = day.ToString();
+                lblLoai.Text = type.ToString();
+            }
         }
 
+        public void checkInfo(string user)
+        {
+            string fileName = @"..\..\Data\User.xml";
+            XDocument doc = XDocument.Load(fileName);
+            var selected_user = from x in doc.Descendants("users").Where
+                                (x => (String)x.Element("username") == user)
+                                select new
+                                {
+                                    XMLuser = x.Element("username").Value,
+                                    XMLday = x.Element("day").Value,
+                                    XMLtype = x.Element("type").Value,
+                                };
+            foreach (var x in selected_user)
+            {
+                users = x.XMLuser;
+                type = x.XMLtype;
+                day = x.XMLday;
+            }
+
+            lblTen.Text = users.ToString();
+            lblDate.Text = day.ToString();
+            lblLoai.Text = type.ToString();
+        }
         private void btnQLLop_Click(object sender, EventArgs e)
         {
             frmQLLop lop = new frmQLLop();
@@ -51,6 +126,36 @@ namespace DoAn
         {
             frmQLSinhVien qlsv = new frmQLSinhVien();
             qlsv.ShowDialog();
+        }
+
+        private void btnQLGiaoVien_Click(object sender, EventArgs e)
+        {
+            frmQLGiaoVien qlgv = new frmQLGiaoVien();
+            qlgv.ShowDialog();
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            frmLogin login = new frmLogin();
+            login.Show();
+            this.Close();
+        }
+        private void btnDoiMK_Click(object sender, EventArgs e)
+        {
+            frmDoiMk doimk = new frmDoiMk();
+            doimk.ShowDialog();
+        }
+
+        private void btnQuanly_Click_1(object sender, EventArgs e)
+        {
+            frmQLTK qltk = new frmQLTK();
+            qltk.ShowDialog();
+        }
+
+        private void btnCapNhap_Click(object sender, EventArgs e)
+        {
+            frmCapNhapTT cntt = new frmCapNhapTT();
+            cntt.ShowDialog();
         }
     }
 }

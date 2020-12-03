@@ -1,11 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <profile>
   <faculty>
-    <TenKhoa>Test</TenKhoa>
-    <MaKhoa>Test</MaKhoa>
-  </faculty>
-  <faculty>
-    <TenKhoa>testt</TenKhoa>
-    <MaKhoa>testt</MaKhoa>
+    <TenKhoa>CNTT</TenKhoa>
+    <MaKhoa>CNTT</MaKhoa>
   </faculty>
 </profile>
