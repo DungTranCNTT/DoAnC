@@ -70,7 +70,7 @@
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(192, 17);
+            this.label3.Location = new System.Drawing.Point(121, 17);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(519, 39);
             this.label3.TabIndex = 0;
@@ -101,8 +101,8 @@
             this.btnCapNhap.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.ToogleButton;
             this.btnCapNhap.CheckedState.Parent = this.btnCapNhap;
             this.btnCapNhap.CustomImages.Parent = this.btnCapNhap;
-            this.btnCapNhap.FillColor = System.Drawing.Color.Fuchsia;
-            this.btnCapNhap.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnCapNhap.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnCapNhap.FillColor2 = System.Drawing.Color.Aqua;
             this.btnCapNhap.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
             this.btnCapNhap.ForeColor = System.Drawing.Color.Black;
             this.btnCapNhap.HoverState.Parent = this.btnCapNhap;
@@ -193,11 +193,11 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Teal;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Cyan;
-            this.label1.Location = new System.Drawing.Point(32, 158);
+            this.label1.Location = new System.Drawing.Point(12, 160);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(120, 16);
+            this.label1.Size = new System.Drawing.Size(163, 20);
             this.label1.TabIndex = 33;
             this.label1.Text = "Thông tin tài khoản";
             // 
@@ -207,8 +207,7 @@
             this.btnExit.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.ToogleButton;
             this.btnExit.CheckedState.Parent = this.btnExit;
             this.btnExit.CustomImages.Parent = this.btnExit;
-            this.btnExit.FillColor = System.Drawing.SystemColors.ActiveBorder;
-            this.btnExit.FillColor2 = System.Drawing.Color.Black;
+            this.btnExit.FillColor2 = System.Drawing.Color.Gray;
             this.btnExit.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
             this.btnExit.ForeColor = System.Drawing.Color.Black;
             this.btnExit.HoverState.Parent = this.btnExit;
@@ -239,8 +238,8 @@
             this.btnDoiMK.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.ToogleButton;
             this.btnDoiMK.CheckedState.Parent = this.btnDoiMK;
             this.btnDoiMK.CustomImages.Parent = this.btnDoiMK;
-            this.btnDoiMK.FillColor = System.Drawing.Color.Fuchsia;
-            this.btnDoiMK.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnDoiMK.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnDoiMK.FillColor2 = System.Drawing.Color.Aqua;
             this.btnDoiMK.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
             this.btnDoiMK.ForeColor = System.Drawing.Color.Black;
             this.btnDoiMK.HoverState.Parent = this.btnDoiMK;
@@ -277,8 +276,8 @@
             this.btnQuanly.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.ToogleButton;
             this.btnQuanly.CheckedState.Parent = this.btnQuanly;
             this.btnQuanly.CustomImages.Parent = this.btnQuanly;
-            this.btnQuanly.FillColor = System.Drawing.Color.Fuchsia;
-            this.btnQuanly.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnQuanly.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnQuanly.FillColor2 = System.Drawing.Color.Aqua;
             this.btnQuanly.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
             this.btnQuanly.ForeColor = System.Drawing.Color.Black;
             this.btnQuanly.HoverState.Parent = this.btnQuanly;
@@ -299,8 +298,8 @@
             this.btnQLGiaoVien.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.ToogleButton;
             this.btnQLGiaoVien.CheckedState.Parent = this.btnQLGiaoVien;
             this.btnQLGiaoVien.CustomImages.Parent = this.btnQLGiaoVien;
-            this.btnQLGiaoVien.FillColor = System.Drawing.Color.Fuchsia;
-            this.btnQLGiaoVien.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnQLGiaoVien.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnQLGiaoVien.FillColor2 = System.Drawing.Color.Aqua;
             this.btnQLGiaoVien.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
             this.btnQLGiaoVien.ForeColor = System.Drawing.Color.Black;
             this.btnQLGiaoVien.HoverState.Parent = this.btnQLGiaoVien;
@@ -321,8 +320,8 @@
             this.btnQLSV.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.ToogleButton;
             this.btnQLSV.CheckedState.Parent = this.btnQLSV;
             this.btnQLSV.CustomImages.Parent = this.btnQLSV;
-            this.btnQLSV.FillColor = System.Drawing.Color.Fuchsia;
-            this.btnQLSV.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnQLSV.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnQLSV.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btnQLSV.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
             this.btnQLSV.ForeColor = System.Drawing.Color.Black;
             this.btnQLSV.HoverState.Parent = this.btnQLSV;
@@ -343,8 +342,8 @@
             this.btnQLKhoa.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.ToogleButton;
             this.btnQLKhoa.CheckedState.Parent = this.btnQLKhoa;
             this.btnQLKhoa.CustomImages.Parent = this.btnQLKhoa;
-            this.btnQLKhoa.FillColor = System.Drawing.Color.Fuchsia;
-            this.btnQLKhoa.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnQLKhoa.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnQLKhoa.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btnQLKhoa.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
             this.btnQLKhoa.ForeColor = System.Drawing.Color.Black;
             this.btnQLKhoa.HoverState.Parent = this.btnQLKhoa;
@@ -365,8 +364,8 @@
             this.btnQLLop.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.ToogleButton;
             this.btnQLLop.CheckedState.Parent = this.btnQLLop;
             this.btnQLLop.CustomImages.Parent = this.btnQLLop;
-            this.btnQLLop.FillColor = System.Drawing.Color.Fuchsia;
-            this.btnQLLop.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnQLLop.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnQLLop.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btnQLLop.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
             this.btnQLLop.ForeColor = System.Drawing.Color.Black;
             this.btnQLLop.HoverState.Parent = this.btnQLLop;
@@ -387,8 +386,8 @@
             this.btnPhanLop.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.ToogleButton;
             this.btnPhanLop.CheckedState.Parent = this.btnPhanLop;
             this.btnPhanLop.CustomImages.Parent = this.btnPhanLop;
-            this.btnPhanLop.FillColor = System.Drawing.Color.Fuchsia;
-            this.btnPhanLop.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnPhanLop.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnPhanLop.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btnPhanLop.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
             this.btnPhanLop.ForeColor = System.Drawing.Color.Black;
             this.btnPhanLop.HoverState.Parent = this.btnPhanLop;

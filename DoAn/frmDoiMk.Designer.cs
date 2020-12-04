@@ -39,6 +39,9 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtNewPass = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -86,8 +89,7 @@
             this.btnExit.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.ToogleButton;
             this.btnExit.CheckedState.Parent = this.btnExit;
             this.btnExit.CustomImages.Parent = this.btnExit;
-            this.btnExit.FillColor = System.Drawing.SystemColors.ActiveBorder;
-            this.btnExit.FillColor2 = System.Drawing.Color.Black;
+            this.btnExit.FillColor2 = System.Drawing.Color.Gray;
             this.btnExit.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
             this.btnExit.ForeColor = System.Drawing.Color.Black;
             this.btnExit.HoverState.Parent = this.btnExit;
@@ -108,8 +110,8 @@
             this.btnOK.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.ToogleButton;
             this.btnOK.CheckedState.Parent = this.btnOK;
             this.btnOK.CustomImages.Parent = this.btnOK;
-            this.btnOK.FillColor = System.Drawing.Color.Fuchsia;
-            this.btnOK.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnOK.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnOK.FillColor2 = System.Drawing.Color.Aqua;
             this.btnOK.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
             this.btnOK.ForeColor = System.Drawing.Color.Black;
             this.btnOK.HoverState.Parent = this.btnOK;
@@ -162,12 +164,39 @@
             this.label4.TabIndex = 54;
             this.label4.Text = "New Pass";
             // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.panel3.Location = new System.Drawing.Point(5, 248);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(360, 5);
+            this.panel3.TabIndex = 60;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.panel1.Location = new System.Drawing.Point(0, 54);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(5, 199);
+            this.panel1.TabIndex = 59;
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.panel5.Location = new System.Drawing.Point(363, 55);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(5, 195);
+            this.panel5.TabIndex = 58;
+            // 
             // frmDoiMk
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(35)))), ((int)(((byte)(55)))));
             this.ClientSize = new System.Drawing.Size(367, 252);
+            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panel5);
             this.Controls.Add(this.txtNewPass);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtPass);
@@ -203,5 +232,8 @@
         private System.Windows.Forms.Label label3;
         public System.Windows.Forms.TextBox txtNewPass;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel5;
     }
 }

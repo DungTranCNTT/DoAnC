@@ -105,8 +105,7 @@
             this.btnExit.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.ToogleButton;
             this.btnExit.CheckedState.Parent = this.btnExit;
             this.btnExit.CustomImages.Parent = this.btnExit;
-            this.btnExit.FillColor = System.Drawing.SystemColors.ActiveBorder;
-            this.btnExit.FillColor2 = System.Drawing.Color.Black;
+            this.btnExit.FillColor2 = System.Drawing.Color.Gray;
             this.btnExit.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
             this.btnExit.ForeColor = System.Drawing.Color.Black;
             this.btnExit.HoverState.Parent = this.btnExit;
@@ -137,8 +136,8 @@
             this.btnThemLop.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.ToogleButton;
             this.btnThemLop.CheckedState.Parent = this.btnThemLop;
             this.btnThemLop.CustomImages.Parent = this.btnThemLop;
-            this.btnThemLop.FillColor = System.Drawing.Color.Fuchsia;
-            this.btnThemLop.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnThemLop.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnThemLop.FillColor2 = System.Drawing.Color.Aqua;
             this.btnThemLop.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
             this.btnThemLop.ForeColor = System.Drawing.Color.Black;
             this.btnThemLop.HoverState.Parent = this.btnThemLop;
@@ -160,8 +159,8 @@
             this.btnSuaLop.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.ToogleButton;
             this.btnSuaLop.CheckedState.Parent = this.btnSuaLop;
             this.btnSuaLop.CustomImages.Parent = this.btnSuaLop;
-            this.btnSuaLop.FillColor = System.Drawing.Color.Fuchsia;
-            this.btnSuaLop.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnSuaLop.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnSuaLop.FillColor2 = System.Drawing.Color.Aqua;
             this.btnSuaLop.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
             this.btnSuaLop.ForeColor = System.Drawing.Color.Black;
             this.btnSuaLop.HoverState.Parent = this.btnSuaLop;
@@ -183,8 +182,8 @@
             this.btnXoaLop.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.ToogleButton;
             this.btnXoaLop.CheckedState.Parent = this.btnXoaLop;
             this.btnXoaLop.CustomImages.Parent = this.btnXoaLop;
-            this.btnXoaLop.FillColor = System.Drawing.Color.Fuchsia;
-            this.btnXoaLop.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnXoaLop.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnXoaLop.FillColor2 = System.Drawing.Color.Aqua;
             this.btnXoaLop.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
             this.btnXoaLop.ForeColor = System.Drawing.Color.Black;
             this.btnXoaLop.HoverState.Parent = this.btnXoaLop;
@@ -247,8 +246,7 @@
             this.btnHuyAdd.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.ToogleButton;
             this.btnHuyAdd.CheckedState.Parent = this.btnHuyAdd;
             this.btnHuyAdd.CustomImages.Parent = this.btnHuyAdd;
-            this.btnHuyAdd.FillColor = System.Drawing.Color.Fuchsia;
-            this.btnHuyAdd.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnHuyAdd.FillColor2 = System.Drawing.Color.Silver;
             this.btnHuyAdd.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
             this.btnHuyAdd.ForeColor = System.Drawing.Color.Black;
             this.btnHuyAdd.HoverState.Parent = this.btnHuyAdd;
@@ -269,8 +267,8 @@
             this.btnAddLop.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.ToogleButton;
             this.btnAddLop.CheckedState.Parent = this.btnAddLop;
             this.btnAddLop.CustomImages.Parent = this.btnAddLop;
-            this.btnAddLop.FillColor = System.Drawing.Color.Fuchsia;
-            this.btnAddLop.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnAddLop.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnAddLop.FillColor2 = System.Drawing.Color.Aqua;
             this.btnAddLop.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
             this.btnAddLop.ForeColor = System.Drawing.Color.Black;
             this.btnAddLop.HoverState.Parent = this.btnAddLop;

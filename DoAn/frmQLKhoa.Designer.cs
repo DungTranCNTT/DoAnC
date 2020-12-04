@@ -88,7 +88,7 @@
             this.panel6.Controls.Add(this.btnXoa);
             this.panel6.Location = new System.Drawing.Point(-5, 1);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(184, 527);
+            this.panel6.Size = new System.Drawing.Size(184, 478);
             this.panel6.TabIndex = 26;
             // 
             // btnExit
@@ -97,13 +97,12 @@
             this.btnExit.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.ToogleButton;
             this.btnExit.CheckedState.Parent = this.btnExit;
             this.btnExit.CustomImages.Parent = this.btnExit;
-            this.btnExit.FillColor = System.Drawing.SystemColors.ActiveBorder;
-            this.btnExit.FillColor2 = System.Drawing.Color.Black;
+            this.btnExit.FillColor2 = System.Drawing.Color.Gray;
             this.btnExit.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
             this.btnExit.ForeColor = System.Drawing.Color.Black;
             this.btnExit.HoverState.Parent = this.btnExit;
             this.btnExit.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnExit.Location = new System.Drawing.Point(21, 470);
+            this.btnExit.Location = new System.Drawing.Point(21, 408);
             this.btnExit.Name = "btnExit";
             this.btnExit.ShadowDecoration.BorderRadius = 20;
             this.btnExit.ShadowDecoration.Color = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
@@ -129,8 +128,8 @@
             this.btnThem.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.ToogleButton;
             this.btnThem.CheckedState.Parent = this.btnThem;
             this.btnThem.CustomImages.Parent = this.btnThem;
-            this.btnThem.FillColor = System.Drawing.Color.Fuchsia;
-            this.btnThem.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnThem.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnThem.FillColor2 = System.Drawing.Color.Aqua;
             this.btnThem.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
             this.btnThem.ForeColor = System.Drawing.Color.Black;
             this.btnThem.HoverState.Parent = this.btnThem;
@@ -152,14 +151,14 @@
             this.btnXoa.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.ToogleButton;
             this.btnXoa.CheckedState.Parent = this.btnXoa;
             this.btnXoa.CustomImages.Parent = this.btnXoa;
-            this.btnXoa.FillColor = System.Drawing.Color.Fuchsia;
-            this.btnXoa.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnXoa.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnXoa.FillColor2 = System.Drawing.Color.Aqua;
             this.btnXoa.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
             this.btnXoa.ForeColor = System.Drawing.Color.Black;
             this.btnXoa.HoverState.Parent = this.btnXoa;
             this.btnXoa.Image = global::DoAn.Properties.Resources.delete_user;
             this.btnXoa.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnXoa.Location = new System.Drawing.Point(21, 286);
+            this.btnXoa.Location = new System.Drawing.Point(21, 314);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.ShadowDecoration.BorderRadius = 20;
             this.btnXoa.ShadowDecoration.Color = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
@@ -176,7 +175,7 @@
             this.groupBox2.ForeColor = System.Drawing.Color.Black;
             this.groupBox2.Location = new System.Drawing.Point(619, 69);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(450, 459);
+            this.groupBox2.Size = new System.Drawing.Size(450, 410);
             this.groupBox2.TabIndex = 21;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Danh Sách";
@@ -222,7 +221,7 @@
             this.dgvKhoa.RowHeadersVisible = false;
             this.dgvKhoa.RowHeadersWidth = 30;
             this.dgvKhoa.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.dgvKhoa.Size = new System.Drawing.Size(438, 434);
+            this.dgvKhoa.Size = new System.Drawing.Size(438, 385);
             this.dgvKhoa.TabIndex = 14;
             this.dgvKhoa.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvKhoa_CellClick);
             // 
@@ -244,7 +243,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(35, 187);
+            this.label1.Location = new System.Drawing.Point(57, 178);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(89, 26);
             this.label1.TabIndex = 0;
@@ -254,7 +253,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(35, 235);
+            this.label2.Location = new System.Drawing.Point(57, 226);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(88, 26);
             this.label2.TabIndex = 1;
@@ -263,7 +262,7 @@
             // txtTen
             // 
             this.txtTen.Enabled = false;
-            this.txtTen.Location = new System.Drawing.Point(192, 193);
+            this.txtTen.Location = new System.Drawing.Point(214, 184);
             this.txtTen.Name = "txtTen";
             this.txtTen.Size = new System.Drawing.Size(165, 20);
             this.txtTen.TabIndex = 4;
@@ -271,7 +270,7 @@
             // txtMa
             // 
             this.txtMa.Enabled = false;
-            this.txtMa.Location = new System.Drawing.Point(192, 241);
+            this.txtMa.Location = new System.Drawing.Point(214, 232);
             this.txtMa.Name = "txtMa";
             this.txtMa.Size = new System.Drawing.Size(165, 20);
             this.txtMa.TabIndex = 5;
@@ -282,13 +281,13 @@
             this.btnOK.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.ToogleButton;
             this.btnOK.CheckedState.Parent = this.btnOK;
             this.btnOK.CustomImages.Parent = this.btnOK;
-            this.btnOK.FillColor = System.Drawing.Color.Fuchsia;
-            this.btnOK.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnOK.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnOK.FillColor2 = System.Drawing.Color.Aqua;
             this.btnOK.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
             this.btnOK.ForeColor = System.Drawing.Color.Black;
             this.btnOK.HoverState.Parent = this.btnOK;
             this.btnOK.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnOK.Location = new System.Drawing.Point(40, 341);
+            this.btnOK.Location = new System.Drawing.Point(62, 319);
             this.btnOK.Name = "btnOK";
             this.btnOK.ShadowDecoration.BorderRadius = 20;
             this.btnOK.ShadowDecoration.Color = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
@@ -304,13 +303,12 @@
             this.btnHuy.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.ToogleButton;
             this.btnHuy.CheckedState.Parent = this.btnHuy;
             this.btnHuy.CustomImages.Parent = this.btnHuy;
-            this.btnHuy.FillColor = System.Drawing.Color.Fuchsia;
-            this.btnHuy.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnHuy.FillColor2 = System.Drawing.Color.Gray;
             this.btnHuy.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
             this.btnHuy.ForeColor = System.Drawing.Color.Black;
             this.btnHuy.HoverState.Parent = this.btnHuy;
             this.btnHuy.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnHuy.Location = new System.Drawing.Point(208, 341);
+            this.btnHuy.Location = new System.Drawing.Point(230, 319);
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.ShadowDecoration.BorderRadius = 20;
             this.btnHuy.ShadowDecoration.Color = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
@@ -343,7 +341,7 @@
             this.groupBox1.ForeColor = System.Drawing.Color.Cyan;
             this.groupBox1.Location = new System.Drawing.Point(180, 69);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(444, 459);
+            this.groupBox1.Size = new System.Drawing.Size(444, 410);
             this.groupBox1.TabIndex = 20;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông Tin";
@@ -353,7 +351,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(36)))), ((int)(((byte)(55)))));
-            this.ClientSize = new System.Drawing.Size(1070, 527);
+            this.ClientSize = new System.Drawing.Size(1070, 481);
             this.ControlBox = false;
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
