@@ -55,6 +55,7 @@ namespace DoAn
                 btnQLKhoa.Enabled = false;
                 btnQLLop.Enabled = false;
                 btnQuanly.Enabled = false;
+                frmLogin.check1 = "";
             }
             else
             {
@@ -78,6 +79,7 @@ namespace DoAn
                 lblTen.Text = users.ToString();
                 lblDate.Text = day.ToString();
                 lblLoai.Text = type.ToString();
+                frmLogin.check1 = "";
             }
         }
 
