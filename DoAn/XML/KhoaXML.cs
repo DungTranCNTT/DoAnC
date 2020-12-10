@@ -93,12 +93,16 @@ namespace DoAn.XML
             DataSet ds = new DataSet();
             ds.ReadXml(fileName);
             int dong = 0;
-            foreach (DataRow item in ds.Tables["faculty"].Rows)
+            if (ds.Tables["faculty"].Rows != null)
             {
-                dgv.Rows.Add();
-                dgv.Rows[dong].Cells[0].Value = item["TenKhoa"].ToString();
-                dgv.Rows[dong].Cells[1].Value = item["MaKhoa"].ToString();
-                dong++;
+                foreach (DataRow item in ds.Tables["faculty"].Rows)
+                {
+                    dgv.Rows.Add();
+                    dgv.Rows[dong].Cells[0].Value = item["TenKhoa"].ToString();
+                    dgv.Rows[dong].Cells[1].Value = item["MaKhoa"].ToString();
+                    dong++;
+                }
+
             }
         }
 

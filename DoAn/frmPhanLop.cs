@@ -20,7 +20,7 @@ namespace DoAn
         }
 
         ClassXML classxml = new ClassXML();
-        SinhVien sinhvien = new SinhVien();
+        SinhVien sinhvien1 = new SinhVien();
         private void frmPhanLop_Load(object sender, EventArgs e)
         {
             classxml.HienThiLop(dgvSinhVien);
@@ -66,33 +66,33 @@ namespace DoAn
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            sinhvien.Msv = lblMsv.Text;
-            sinhvien.Hoten = lblTen.Text;
-            sinhvien.Ngaysinh = lblNgaySinh.Text;
-            sinhvien.Gioitinh = lblGioiTinh.Text;
-            sinhvien.Lop = cboLop.Text;
-            sinhvien.Khoa = cboKhoa.Text;
-            sinhvien.Diachi = lblDiaChi.Text;
-            sinhvien.Que = lblQue.Text;
-            sinhvien.Email = lblEmail.Text;
-            sinhvien.Sdt = lblSdt.Text;
-            classxml.ThemLop(sinhvien);
+            sinhvien1.Msv = lblMsv.Text;
+            sinhvien1.Hoten = lblTen.Text;
+            sinhvien1.Ngaysinh = lblNgaySinh.Text;
+            sinhvien1.Gioitinh = lblGioiTinh.Text;
+            sinhvien1.Lop = cboLop.Text;
+            sinhvien1.Khoa = cboKhoa.Text;
+            sinhvien1.Diachi = lblDiaChi.Text;
+            sinhvien1.Que = lblQue.Text;
+            sinhvien1.Email = lblEmail.Text;
+            sinhvien1.Sdt = lblSdt.Text;
+            classxml.ThemLop(sinhvien1);
             Reload();
         }
 
         private void btnSua_Click(object sender, EventArgs e)
         {
-            sinhvien.Msv = lblMsv.Text;
-            sinhvien.Hoten = lblTen.Text;
-            sinhvien.Ngaysinh = lblNgaySinh.Text;
-            sinhvien.Gioitinh = lblGioiTinh.Text;
-            sinhvien.Lop = cboLop.Text;
-            sinhvien.Khoa = cboKhoa.Text;
-            sinhvien.Diachi = lblDiaChi.Text;
-            sinhvien.Que = lblQue.Text;
-            sinhvien.Email = lblEmail.Text;
-            sinhvien.Sdt = lblSdt.Text;
-            classxml.ChuyenLop(sinhvien);
+            sinhvien1.Msv = lblMsv.Text;
+            sinhvien1.Hoten = lblTen.Text;
+            sinhvien1.Ngaysinh = lblNgaySinh.Text;
+            sinhvien1.Gioitinh = lblGioiTinh.Text;
+            sinhvien1.Lop = cboLop.Text;
+            sinhvien1.Khoa = cboKhoa.Text;
+            sinhvien1.Diachi = lblDiaChi.Text;
+            sinhvien1.Que = lblQue.Text;
+            sinhvien1.Email = lblEmail.Text;
+            sinhvien1.Sdt = lblSdt.Text;
+            classxml.ChuyenLop(sinhvien1);
             Reload();
         }
     }

@@ -181,17 +181,22 @@ namespace DoAn.XML
             dgv.ColumnCount = 8;
             DataSet ds = new DataSet();
             ds.ReadXml(fileName);
-            foreach (DataRow item in ds.Tables["teacher"].Rows)
+            if (ds.Tables["teacher"] != null)
             {
-                int dong = dgv.Rows.Add();
-                dgv.Rows[dong].Cells[0].Value = item["MGV"].ToString();
-                dgv.Rows[dong].Cells[1].Value = item["Ten"].ToString();
-                dgv.Rows[dong].Cells[2].Value = item["NgaySinh"].ToString();
-                dgv.Rows[dong].Cells[3].Value = item["GioiTinh"].ToString();
-                dgv.Rows[dong].Cells[4].Value = item["Que"].ToString();
-                dgv.Rows[dong].Cells[5].Value = item["DiaChi"].ToString();
-                dgv.Rows[dong].Cells[6].Value = item["Email"].ToString();
-                dgv.Rows[dong].Cells[7].Value = item["SDT"].ToString();
+                foreach (DataRow item in ds.Tables["teacher"].Rows)
+                {
+                
+                    int dong = dgv.Rows.Add();
+                    dgv.Rows[dong].Cells[0].Value = item["MGV"].ToString();
+                    dgv.Rows[dong].Cells[1].Value = item["Ten"].ToString();
+                    dgv.Rows[dong].Cells[2].Value = item["NgaySinh"].ToString();
+                    dgv.Rows[dong].Cells[3].Value = item["GioiTinh"].ToString();
+                    dgv.Rows[dong].Cells[4].Value = item["Que"].ToString();
+                    dgv.Rows[dong].Cells[5].Value = item["DiaChi"].ToString();
+                    dgv.Rows[dong].Cells[6].Value = item["Email"].ToString();
+                    dgv.Rows[dong].Cells[7].Value = item["SDT"].ToString();
+                }
+
             }
         }
 

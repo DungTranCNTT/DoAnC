@@ -84,6 +84,10 @@ namespace DoAn.XML
                 owner.InnerText = suaTaiKhoan.owner;
                 taiKhoanMoi.AppendChild(owner);
 
+                XmlElement day = doc.CreateElement("day");
+                day.InnerText = suaTaiKhoan.Day;
+                taiKhoanMoi.AppendChild(day);
+
                 XmlElement email = doc.CreateElement("Email");
                 email.InnerText = suaTaiKhoan.Email;
                 taiKhoanMoi.AppendChild(email);
@@ -145,15 +149,18 @@ namespace DoAn.XML
             DataSet ds = new DataSet();
             ds.ReadXml(fileName);
             int dong = 0;
-            foreach (DataRow item in ds.Tables["users"].Rows)
+            if (ds.Tables["users"].Rows != null)
             {
-                dgv.Rows.Add();
-                dgv.Rows[dong].Cells[1].Value = item["username"].ToString();
-                dgv.Rows[dong].Cells[2].Value = item["pwd"].ToString();
-                dgv.Rows[dong].Cells[3].Value = item["type"].ToString();
-                dgv.Rows[dong].Cells[4].Value = item["owner"].ToString();
-                dgv.Rows[dong].Cells[5].Value = item["day"].ToString();
-                dong++;
+                foreach (DataRow item in ds.Tables["users"].Rows)
+                {
+                    dgv.Rows.Add();
+                    dgv.Rows[dong].Cells[1].Value = item["username"].ToString();
+                    dgv.Rows[dong].Cells[2].Value = item["pwd"].ToString();
+                    dgv.Rows[dong].Cells[3].Value = item["type"].ToString();
+                    dgv.Rows[dong].Cells[4].Value = item["owner"].ToString();
+                    dgv.Rows[dong].Cells[5].Value = item["day"].ToString();
+                    dong++;
+                }
             }
         }
 

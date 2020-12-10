@@ -129,14 +129,17 @@ namespace DoAn.XML
             DataSet ds = new DataSet();
             ds.ReadXml(fileName);
             int dong = 0;
-            foreach (DataRow item in ds.Tables["class"].Rows)
+            if (ds.Tables["class"].Rows!= null)
             {
-                dgv.Rows.Add();
-                dgv.Rows[dong].Cells[0].Value = item["Khoa"].ToString();
-                dgv.Rows[dong].Cells[1].Value = item["MaLop"].ToString();
-                dgv.Rows[dong].Cells[2].Value = item["TenLop"].ToString();
-                dgv.Rows[dong].Cells[3].Value = item["GVChuNhiem"].ToString();
-                dong++;
+                foreach (DataRow item in ds.Tables["class"].Rows)
+                {
+                    dgv.Rows.Add();
+                    dgv.Rows[dong].Cells[0].Value = item["Khoa"].ToString();
+                    dgv.Rows[dong].Cells[1].Value = item["MaLop"].ToString();
+                    dgv.Rows[dong].Cells[2].Value = item["TenLop"].ToString();
+                    dgv.Rows[dong].Cells[3].Value = item["GVChuNhiem"].ToString();
+                    dong++;
+                }
             }
         }
 
@@ -167,51 +170,54 @@ namespace DoAn.XML
         public void ThemLop(SinhVien themLop)
         {
             XmlNode oldChild = goc1.SelectSingleNode("student[MSV ='" + themLop.Msv + "']");
-            doc1.DocumentElement.RemoveChild(oldChild);
-            XmlNode student = doc1.CreateElement("student");
+            if (oldChild != null)
+            {
+                doc1.DocumentElement.RemoveChild(oldChild);
+                XmlNode student = doc1.CreateElement("student");
 
-            XmlElement msv = doc1.CreateElement("MSV");
-            msv.InnerText = themLop.Msv.ToString();
-            student.AppendChild(msv);
+                XmlElement msv = doc1.CreateElement("MSV");
+                msv.InnerText = themLop.Msv.ToString();
+                student.AppendChild(msv);
 
-            XmlElement ten = doc1.CreateElement("Ten");
-            ten.InnerText = themLop.Hoten;
-            student.AppendChild(ten);
+                XmlElement ten = doc1.CreateElement("Ten");
+                ten.InnerText = themLop.Hoten;
+                student.AppendChild(ten);
 
-            XmlElement ngaysinh = doc1.CreateElement("NgaySinh");
-            ngaysinh.InnerText = themLop.Ngaysinh;
-            student.AppendChild(ngaysinh);
+                XmlElement ngaysinh = doc1.CreateElement("NgaySinh");
+                ngaysinh.InnerText = themLop.Ngaysinh;
+                student.AppendChild(ngaysinh);
 
-            XmlElement gioitinh = doc1.CreateElement("GioiTinh");
-            gioitinh.InnerText = themLop.Gioitinh;
-            student.AppendChild(gioitinh);
+                XmlElement gioitinh = doc1.CreateElement("GioiTinh");
+                gioitinh.InnerText = themLop.Gioitinh;
+                student.AppendChild(gioitinh);
 
-            XmlElement diachi = doc1.CreateElement("DiaChi");
-            diachi.InnerText = themLop.Diachi;
-            student.AppendChild(diachi);
+                XmlElement diachi = doc1.CreateElement("DiaChi");
+                diachi.InnerText = themLop.Diachi;
+                student.AppendChild(diachi);
 
-            XmlElement que = doc1.CreateElement("Que");
-            que.InnerText = themLop.Que;
-            student.AppendChild(que);
+                XmlElement que = doc1.CreateElement("Que");
+                que.InnerText = themLop.Que;
+                student.AppendChild(que);
 
-            XmlElement email = doc1.CreateElement("Email");
-            email.InnerText = themLop.Email;
-            student.AppendChild(email);
+                XmlElement email = doc1.CreateElement("Email");
+                email.InnerText = themLop.Email;
+                student.AppendChild(email);
 
-            XmlElement sdt = doc1.CreateElement("SDT");
-            sdt.InnerText = themLop.Sdt;
-            student.AppendChild(sdt);
+                XmlElement sdt = doc1.CreateElement("SDT");
+                sdt.InnerText = themLop.Sdt;
+                student.AppendChild(sdt);
 
-            XmlElement lop = doc1.CreateElement("Lop");
-            lop.InnerText = themLop.Lop;
-            student.AppendChild(lop);
+                XmlElement lop = doc1.CreateElement("Lop");
+                lop.InnerText = themLop.Lop;
+                student.AppendChild(lop);
 
-            XmlElement khoa = doc1.CreateElement("Khoa");
-            khoa.InnerText = themLop.Khoa;
-            student.AppendChild(khoa);
+                XmlElement khoa = doc1.CreateElement("Khoa");
+                khoa.InnerText = themLop.Khoa;
+                student.AppendChild(khoa);
 
-            goc1.AppendChild(student);
-            doc1.Save(fileName1);
+                goc1.AppendChild(student);
+                doc1.Save(fileName1);
+            }
         }
         public void ChuyenLop(SinhVien chuyenLop)
         {

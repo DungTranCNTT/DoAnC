@@ -26,7 +26,8 @@ namespace DoAn
 
         private void frmQLKhoa_Load(object sender, EventArgs e)
         {
-            khoaXML.HienThiDSKhoa(dgvKhoa);
+            dgvKhoa.Rows.Clear();
+            khoaXML.ReloadKhoa(dgvKhoa);
         }
 
         private void Reload()
@@ -66,19 +67,11 @@ namespace DoAn
                 khoaXML.TaoKhoa(khoa);
                 Reload();
             }
-            if (check2 == true && txtMa.Text.Trim() != "")
-            {
-                khoa.TenKhoa = txtTen.Text;
-                khoa.MaKhoa = txtMa.Text;
-                khoaXML.SuaKhoa(khoa);
-                Reload();
-            }
             if (check3 == true && txtMa.Text.Trim() != "")
             {
                 khoa.TenKhoa = txtTen.Text;
                 khoaXML.XoaKhoa(khoa);
-                dgvKhoa.Rows.Clear();
-                khoaXML.HienThiDSKhoa(dgvKhoa);
+                Reload();
             }
             txtMa.Clear();
             txtTen.Clear();
@@ -100,7 +93,7 @@ namespace DoAn
         {
             txtMa.Enabled = true;
             txtTen.Enabled = true;
-            txtMa.Focus();
+            txtTen.Focus();
             check1 = true;
             check2 = false;
             check3 = false;

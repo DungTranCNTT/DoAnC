@@ -53,7 +53,7 @@ namespace DoAn
 
         private void btnFix_Click(object sender, EventArgs e)
         {
-            txtTK.Enabled = true;
+            txtTK.Enabled = false;
             txtTK.BackColor = Color.White;
             txtMK.Enabled = true;
             txtMK.BackColor = Color.White;
@@ -106,6 +106,13 @@ namespace DoAn
             dgvUser.Rows[e.RowIndex].Cells[0].Value = (e.RowIndex + 1).ToString();
         }
 
+        private void dgvUser_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtTK.Text = dgvUser.CurrentRow.Cells[1].Value.ToString();
+            txtMK.Text = dgvUser.CurrentRow.Cells[2].Value.ToString();
+            cbType.Text = dgvUser.CurrentRow.Cells[3].Value.ToString();
+            txtOwer.Text = dgvUser.CurrentRow.Cells[4].Value.ToString();
+        }
 
         private void btnOk_Click(object sender, EventArgs e)
         {
@@ -139,10 +146,11 @@ namespace DoAn
                     taiKhoan.MatKhau = txtMK.Text;
                     taiKhoan.TrangThai = cbType.Text;
                     taiKhoan.owner = txtOwer.Text;
+                    taiKhoan.Day = DateTime.Now.ToString("dd/mm/yy");
                     //gọi hàm thực hiện thêm tài khoản
                     taiKhoanXml.Sua(taiKhoan);
                     dgvUser.Rows.Clear();
-                    taiKhoanXml.HienThi(dgvUser);//load lại bảng 
+                    taiKhoanXml.Reload(dgvUser);//load lại bảng 
                 }
             }
             if (check3 == true)

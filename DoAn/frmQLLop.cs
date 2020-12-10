@@ -53,7 +53,7 @@ namespace DoAn
 
         private void btnSuaLop_Click(object sender, EventArgs e)
         {
-            cboGv.Enabled = true;
+            cboGv.Enabled = false;
             txtMaLop.Enabled = true;
             txtTenLop.Enabled = true;
             cboKhoa.Enabled = true;
@@ -81,8 +81,7 @@ namespace DoAn
                 lop.Khoa = cboKhoa.Text;
                 lop.GVChuNhiem = cboGv.Text;
                 lopXML.SuaLop(lop);
-                dgvClass.Rows.Clear();
-                lopXML.HienThiLop(dgvClass);
+                Reload();
             }
             if(check3 == true && txtTenLop.Text.Trim() != "")
             {

@@ -212,6 +212,7 @@
             this.dgvUser.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dgvUser.Size = new System.Drawing.Size(536, 147);
             this.dgvUser.TabIndex = 13;
+            this.dgvUser.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUser_CellClick);
             this.dgvUser.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.dgvUser_RowPostPaint);
             // 
             // Column6

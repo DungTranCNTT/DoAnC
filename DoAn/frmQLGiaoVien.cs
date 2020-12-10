@@ -20,7 +20,11 @@ namespace DoAn
         }
         GiaoVienXML giaoVienxml = new GiaoVienXML();
         GiaoVien giaoVien = new GiaoVien();
-
+        public void Reload()
+        {
+            dgvGiaoVien.Rows.Clear();
+            giaoVienxml.Reload(dgvGiaoVien);
+        }
         private void btnThem_Click(object sender, EventArgs e)
         {
             frmThemGiaoVien frmThemGiaovien = new frmThemGiaoVien();
@@ -46,12 +50,6 @@ namespace DoAn
         {
             Reload();
         }
-
-        public void Reload()
-        {
-            dgvGiaoVien.Rows.Clear();
-            giaoVienxml.HienThi(dgvGiaoVien);
-        }
         public static string SetValue1 = "";
         public static string SetValue2 = "";
         public static string SetValue3 = "";
@@ -62,7 +60,7 @@ namespace DoAn
         public static string SetValue8 = "";
         private void dgvSinhVien_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            frmSuaSinhVien frmSuaSinhVien = new frmSuaSinhVien();
+            frmSuaGiaoVien frmSuaGiaoVien = new frmSuaGiaoVien();
             if (dgvGiaoVien.CurrentRow.Cells[0].Value != null)
             {
                 SetValue1 = dgvGiaoVien.CurrentRow.Cells[0].Value.ToString();
@@ -80,7 +78,7 @@ namespace DoAn
                 SetValue6 = dgvGiaoVien.CurrentRow.Cells[5].Value.ToString();
                 SetValue7 = dgvGiaoVien.CurrentRow.Cells[6].Value.ToString();
                 SetValue8 = dgvGiaoVien.CurrentRow.Cells[7].Value.ToString();
-                frmSuaSinhVien.ShowDialog();
+                frmSuaGiaoVien.ShowDialog();
                 Reload();
             }
             else
@@ -97,7 +95,7 @@ namespace DoAn
             frmXoaGiaoVien frmXoa = new frmXoaGiaoVien();
             frmXoa.ShowDialog();
             dgvGiaoVien.Rows.Clear();
-            giaoVienxml.HienThi(dgvGiaoVien);
+            giaoVienxml.Reload(dgvGiaoVien);
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
