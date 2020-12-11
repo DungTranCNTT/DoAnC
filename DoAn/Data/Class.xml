@@ -6,4 +6,10 @@
     <GVChuNhiem>Son</GVChuNhiem>
     <Khoa>Test</Khoa>
   </class>
+  <class>
+    <TenLop>asd</TenLop>
+    <MaLop>18ct3</MaLop>
+    <GVChuNhiem>test</GVChuNhiem>
+    <Khoa>CNTT</Khoa>
+  </class>
 </profile>

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 using DoAn.Service;
 using DoAn.XML;
 
@@ -113,14 +114,35 @@ namespace DoAn
             cbType.Text = dgvUser.CurrentRow.Cells[3].Value.ToString();
             txtOwer.Text = dgvUser.CurrentRow.Cells[4].Value.ToString();
         }
-
+        public string users = "";
+        public void GetDataUser()
+        {
+            string fileName = @"..\..\Data\User.xml";
+            XDocument doc = XDocument.Load(fileName);
+            var selected_user = from x in doc.Descendants("users").Where
+                                (x => (String)x.Element("username") == txtTK.Text)
+                                select new
+                                {
+                                    XMLuser = x.Element("username").Value,
+                                };
+            foreach (var x in selected_user)
+            {
+                users = x.XMLuser;
+            }
+        }
         private void btnOk_Click(object sender, EventArgs e)
         {
+            GetDataUser();
             if (check1 == true)
             {
-                if (txtTK.Text.Trim() != "")
+                if (!String.IsNullOrEmpty(txtTK.Text) && !String.IsNullOrEmpty(txtMK.Text) && !String.IsNullOrEmpty(txtOwer.Text) && cbType.SelectedIndex != -1)
                 {
-                    
+                    if (users.ToUpper().Contains(txtTK.Text.ToUpper()))
+                    {
+                        MessageBox.Show("Tài khoản đã tồn tại", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                    else
+                    {
                         // gán dữ liệu
                         taiKhoan.TenDangNhap = txtTK.Text;
                         taiKhoan.MatKhau = txtMK.Text;
@@ -129,38 +151,43 @@ namespace DoAn
                         taiKhoan.Day = DateTime.Now.ToString("dd/mm/yy");
                         //gọi hàm thực hiện thêm tài khoản
                         taiKhoanXml.Them(taiKhoan);
-                        Reload() ;//load lại bảng 
-                    txtTK.Clear();
-                    txtMK.Clear();
-                    txtOwer.Clear();
-                    cbType.SelectedIndex = -1;
+                        Reload();//load lại bảng 
+                        txtTK.Clear();
+                        txtMK.Clear();
+                        txtOwer.Clear();
+                        cbType.SelectedIndex = -1;
+                    }
                 }
-            }
-            if (check2 == true)
-            {
-                if (txtTK.Text.Trim() != "")
+                else if (check2 == true)
                 {
+                    if (!String.IsNullOrEmpty(txtTK.Text) && !String.IsNullOrEmpty(txtMK.Text) && !String.IsNullOrEmpty(txtOwer.Text) && cbType.SelectedIndex != -1)
+                    {
 
-                    // gán dữ liệu
-                    taiKhoan.TenDangNhap = txtTK.Text;
-                    taiKhoan.MatKhau = txtMK.Text;
-                    taiKhoan.TrangThai = cbType.Text;
-                    taiKhoan.owner = txtOwer.Text;
-                    taiKhoan.Day = DateTime.Now.ToString("dd/mm/yy");
-                    //gọi hàm thực hiện thêm tài khoản
-                    taiKhoanXml.Sua(taiKhoan);
-                    dgvUser.Rows.Clear();
-                    taiKhoanXml.Reload(dgvUser);//load lại bảng 
+                        // gán dữ liệu
+                        taiKhoan.TenDangNhap = txtTK.Text;
+                        taiKhoan.MatKhau = txtMK.Text;
+                        taiKhoan.TrangThai = cbType.Text;
+                        taiKhoan.owner = txtOwer.Text;
+                        taiKhoan.Day = DateTime.Now.ToString("dd/mm/yy");
+                        //gọi hàm thực hiện thêm tài khoản
+                        taiKhoanXml.Sua(taiKhoan);
+                        dgvUser.Rows.Clear();
+                        taiKhoanXml.Reload(dgvUser);//load lại bảng 
+                    }
                 }
-            }
-            if (check3 == true)
-            {
-                if (txtTK.Text.Trim() != "")
+                else if (check3 == true)
                 {
+                    if (txtTK.Text.Trim() != "")
+                    {
 
-                    taiKhoan.TenDangNhap = txtTK.Text;
-                    taiKhoanXml.Xoa(taiKhoan);
-                    Reload();
+                        taiKhoan.TenDangNhap = txtTK.Text;
+                        taiKhoanXml.Xoa(taiKhoan);
+                        Reload();
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Mời nhập đầy đủ thông tin", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
         }

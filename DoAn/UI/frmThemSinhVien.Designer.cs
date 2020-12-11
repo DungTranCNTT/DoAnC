@@ -1,6 +1,6 @@
 ﻿namespace DoAn
 {
-    partial class frmThemGiaoVien
+    partial class frmThemSinhVien
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmThemGiaoVien));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmThemSinhVien));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -169,6 +169,7 @@
             this.txtSdt.Size = new System.Drawing.Size(169, 20);
             this.txtSdt.TabIndex = 8;
             this.txtSdt.TextChanged += new System.EventHandler(this.txtSdt_TextChanged);
+            this.txtSdt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSdt_KeyPress);
             // 
             // rbtNam
             // 
@@ -221,9 +222,9 @@
             this.label9.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(109, 11);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(171, 29);
+            this.label9.Size = new System.Drawing.Size(168, 29);
             this.label9.TabIndex = 0;
-            this.label9.Text = "Thêm Giáo Viên";
+            this.label9.Text = "Thêm Sinh Viên";
             // 
             // btnAdd
             // 
@@ -321,7 +322,7 @@
             this.panel3.Size = new System.Drawing.Size(362, 5);
             this.panel3.TabIndex = 27;
             // 
-            // frmThemGiaoVien
+            // frmThemSinhVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -351,8 +352,8 @@
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "frmThemGiaoVien";
-            this.Text = "frmThemGiaoVien";
+            this.Name = "frmThemSinhVien";
+            this.Text = "frmThemSinhVien";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmThemSinhVien_FormClosed);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();

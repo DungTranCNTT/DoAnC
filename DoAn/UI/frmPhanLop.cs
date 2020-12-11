@@ -66,34 +66,48 @@ namespace DoAn
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            sinhvien1.Msv = lblMsv.Text;
-            sinhvien1.Hoten = lblTen.Text;
-            sinhvien1.Ngaysinh = lblNgaySinh.Text;
-            sinhvien1.Gioitinh = lblGioiTinh.Text;
-            sinhvien1.Lop = cboLop.Text;
-            sinhvien1.Khoa = cboKhoa.Text;
-            sinhvien1.Diachi = lblDiaChi.Text;
-            sinhvien1.Que = lblQue.Text;
-            sinhvien1.Email = lblEmail.Text;
-            sinhvien1.Sdt = lblSdt.Text;
-            classxml.ThemLop(sinhvien1);
-            Reload();
+            if (cboLop.SelectedIndex != -1 && cboKhoa.SelectedIndex != -1)
+            {
+                sinhvien1.Msv = lblMsv.Text;
+                sinhvien1.Hoten = lblTen.Text;
+                sinhvien1.Ngaysinh = lblNgaySinh.Text;
+                sinhvien1.Gioitinh = lblGioiTinh.Text;
+                sinhvien1.Lop = cboLop.SelectedItem.ToString();
+                sinhvien1.Khoa = cboKhoa.SelectedItem.ToString();
+                sinhvien1.Diachi = lblDiaChi.Text;
+                sinhvien1.Que = lblQue.Text;
+                sinhvien1.Email = lblEmail.Text;
+                sinhvien1.Sdt = lblSdt.Text;
+                classxml.ThemLop(sinhvien1);
+                Reload();
+            }
+            else
+            {
+                MessageBox.Show("Chọn lớp và khoa muốn phân", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void btnSua_Click(object sender, EventArgs e)
         {
-            sinhvien1.Msv = lblMsv.Text;
-            sinhvien1.Hoten = lblTen.Text;
-            sinhvien1.Ngaysinh = lblNgaySinh.Text;
-            sinhvien1.Gioitinh = lblGioiTinh.Text;
-            sinhvien1.Lop = cboLop.Text;
-            sinhvien1.Khoa = cboKhoa.Text;
-            sinhvien1.Diachi = lblDiaChi.Text;
-            sinhvien1.Que = lblQue.Text;
-            sinhvien1.Email = lblEmail.Text;
-            sinhvien1.Sdt = lblSdt.Text;
-            classxml.ChuyenLop(sinhvien1);
-            Reload();
+            if(cboLop.SelectedIndex != -1 && cboKhoa.SelectedIndex != -1)
+            {
+                sinhvien1.Msv = lblMsv.Text;
+                sinhvien1.Hoten = lblTen.Text;
+                sinhvien1.Ngaysinh = lblNgaySinh.Text;
+                sinhvien1.Gioitinh = lblGioiTinh.Text;
+                sinhvien1.Lop = cboLop.SelectedItem.ToString();
+                sinhvien1.Khoa = cboKhoa.SelectedItem.ToString();
+                sinhvien1.Diachi = lblDiaChi.Text;
+                sinhvien1.Que = lblQue.Text;
+                sinhvien1.Email = lblEmail.Text;
+                sinhvien1.Sdt = lblSdt.Text;
+                classxml.ChuyenLop(sinhvien1);
+                Reload();
+            }
+            else
+            {
+                MessageBox.Show("Chọn lớp và khoa muốn chuyển","Thông Báo",MessageBoxButtons.OK,MessageBoxIcon.Warning);
+            }
         }
     }
 }

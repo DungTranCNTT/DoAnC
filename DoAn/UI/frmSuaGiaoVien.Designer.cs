@@ -1,6 +1,6 @@
 ﻿namespace DoAn
 {
-    partial class frmSuaSinhVien
+    partial class frmSuaGiaoVien
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSuaSinhVien));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSuaGiaoVien));
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.mtbNgaysinh = new System.Windows.Forms.MaskedTextBox();
@@ -152,11 +152,11 @@
             this.label9.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(96, 11);
+            this.label9.Location = new System.Drawing.Point(101, 11);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(253, 29);
+            this.label9.Size = new System.Drawing.Size(256, 29);
             this.label9.TabIndex = 0;
-            this.label9.Text = "Sửa Thông Tin Sinh Viên";
+            this.label9.Text = "Sửa Thông Tin Giáo Viên";
             // 
             // panel1
             // 
@@ -179,7 +179,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::DoAn.Properties.Resources.icons8_add_user_male_50;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 0);
+            this.pictureBox1.Location = new System.Drawing.Point(17, 0);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(89, 53);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -216,6 +216,7 @@
             this.txtSdt.Name = "txtSdt";
             this.txtSdt.Size = new System.Drawing.Size(169, 20);
             this.txtSdt.TabIndex = 42;
+            this.txtSdt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSdt_KeyPress);
             // 
             // txtEmail
             // 
@@ -337,11 +338,11 @@
             this.label8.ForeColor = System.Drawing.Color.Aqua;
             this.label8.Location = new System.Drawing.Point(37, 65);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(46, 23);
+            this.label8.Size = new System.Drawing.Size(49, 23);
             this.label8.TabIndex = 50;
-            this.label8.Text = "MSV";
+            this.label8.Text = "MGV";
             // 
-            // frmSuaSinhVien
+            // frmSuaGiaoVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -373,8 +374,8 @@
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "frmSuaSinhVien";
-            this.Text = "frmXoaSinhVien";
+            this.Name = "frmSuaGiaoVien";
+            this.Text = "frmXoaGiaoVien";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmSuaSinhVien_FormClosed);
             this.Load += new System.EventHandler(this.frmSuaSinhVien_Load);
             this.panel2.ResumeLayout(false);

@@ -42,25 +42,25 @@ namespace DoAn.XML
 
         public void TaoLop(Class taoClass)
         {
-            XmlNode lop = doc.CreateElement("class");
+                    XmlNode lop = doc.CreateElement("class");
 
-            XmlElement tenlop = doc.CreateElement("TenLop");
-            tenlop.InnerText = taoClass.TenLop.ToString();
-            lop.AppendChild(tenlop);
+                    XmlElement tenlop = doc.CreateElement("TenLop");
+                    tenlop.InnerText = taoClass.TenLop.ToString();
+                    lop.AppendChild(tenlop);
 
-            XmlElement malop = doc.CreateElement("MaLop");
-            malop.InnerText = taoClass.MaLop.ToString();
-            lop.AppendChild(malop);
+                    XmlElement malop = doc.CreateElement("MaLop");
+                    malop.InnerText = taoClass.MaLop.ToString();
+                    lop.AppendChild(malop);
 
-            XmlElement gvchunhiem = doc.CreateElement("GVChuNhiem");
-            gvchunhiem.InnerText = taoClass.GVChuNhiem.ToString();
-            lop.AppendChild(gvchunhiem);
+                    XmlElement gvchunhiem = doc.CreateElement("GVChuNhiem");
+                    gvchunhiem.InnerText = taoClass.GVChuNhiem.ToString();
+                    lop.AppendChild(gvchunhiem);
 
-            XmlElement khoa = doc.CreateElement("Khoa");
-            khoa.InnerText = taoClass.Khoa.ToString();
-            lop.AppendChild(khoa);
-            goc.AppendChild(lop);
-            doc.Save(fileName);
+                    XmlElement khoa = doc.CreateElement("Khoa");
+                    khoa.InnerText = taoClass.Khoa.ToString();
+                    lop.AppendChild(khoa);
+                    goc.AppendChild(lop);
+                    doc.Save(fileName);
         }
 
         public void SuaLop(Class suaClass)
@@ -170,7 +170,8 @@ namespace DoAn.XML
         public void ThemLop(SinhVien themLop)
         {
             XmlNode oldChild = goc1.SelectSingleNode("student[MSV ='" + themLop.Msv + "']");
-            if (oldChild != null)
+            XmlNode checkclass1 = goc1.SelectSingleNode("student[Lop ='" + themLop.Lop + "']");
+            if (checkclass1 == null)
             {
                 doc1.DocumentElement.RemoveChild(oldChild);
                 XmlNode student = doc1.CreateElement("student");
@@ -218,11 +219,16 @@ namespace DoAn.XML
                 goc1.AppendChild(student);
                 doc1.Save(fileName1);
             }
+            else
+            {
+                MessageBox.Show("Học sinh đã được phân lớp", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
         public void ChuyenLop(SinhVien chuyenLop)
         {
             XmlNode lopCu = goc1.SelectSingleNode("student[MSV ='" + chuyenLop.Msv + "']");
-            if (lopCu != null)
+            XmlNode checkClass = goc1.SelectSingleNode("student[Lop ='" + chuyenLop.Lop + "']");
+            if (checkClass != null)
             {
                 XmlNode lopMoi = doc1.CreateElement("student");
 
@@ -269,6 +275,12 @@ namespace DoAn.XML
                 //tạo xong nút user thêm vào gốc
                 goc1.ReplaceChild(lopMoi, lopCu);
                 doc1.Save(fileName1);
+
+                MessageBox.Show("Chuyển lớp thành công", "Thông Báo", MessageBoxButtons.OK);
+            }
+            else
+            {
+                MessageBox.Show("Sinh viên chưa được phân lớp hãy phân lớp trước", "Thông Báo", MessageBoxButtons.OK,MessageBoxIcon.Warning);
             }
         }
 

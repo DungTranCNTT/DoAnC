@@ -147,7 +147,7 @@ namespace DoAn.XML
             }
             else
             {
-                if (MessageBox.Show("Mã Sinh viên không tồn tại tạo mới?", "Lỗi", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                if (MessageBox.Show("Mã Giáo viên không tồn tại tạo mới?", "Lỗi", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     frmThemGiaoVien frmThem = new frmThemGiaoVien();
                     frmThem.ShowDialog();

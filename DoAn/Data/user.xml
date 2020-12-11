@@ -2,13 +2,15 @@
 <profile>
   <users>
     <username>admin</username>
-    <pwd>123456</pwd>
+    <pwd>1234567</pwd>
     <type>Admin</type>
     <owner>dung</owner>
     <day>24/26/20</day>
-    <Email>asd</Email>
-    <SDT>asd</SDT>
-    <SBM>1234567</SBM>
+    <Email>asd2@gmail.com</Email>
+    <SDT>
+    </SDT>
+    <SBM>
+    </SBM>
   </users>
   <users>
     <username>giaovien</username>
@@ -16,8 +18,7 @@
     <type>Giáo Viên</type>
     <owner>1234</owner>
     <day>10/58/20</day>
-    <Email>
-    </Email>
+    <Email>asd1@gmail.com</Email>
     <SDT>
     </SDT>
     <SBM>

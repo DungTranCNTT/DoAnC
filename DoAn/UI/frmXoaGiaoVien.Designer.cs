@@ -191,6 +191,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmXoaGiaoVien";
             this.Text = "frmXoaGiaoVien";
+            this.Load += new System.EventHandler(this.frmXoaGiaoVien_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

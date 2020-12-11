@@ -152,6 +152,7 @@
             this.txtSDT.Name = "txtSDT";
             this.txtSDT.Size = new System.Drawing.Size(169, 20);
             this.txtSDT.TabIndex = 3;
+            this.txtSDT.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSDT_KeyPress);
             // 
             // label4
             // 
@@ -171,6 +172,7 @@
             this.txtSn.Size = new System.Drawing.Size(169, 20);
             this.txtSn.TabIndex = 55;
             this.txtSn.UseSystemPasswordChar = true;
+            this.txtSn.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSn_KeyPress);
             // 
             // label2
             // 

@@ -1,6 +1,4 @@
-﻿using DoAn.Service;
-using DoAn.XML;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,12 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Linq;
-
+using DoAn.Service;
+using DoAn.XML;
 namespace DoAn
 {
-    public partial class frmCapNhapTT : Form
+    public partial class frmDoiMk : Form
     {
-        public frmCapNhapTT()
+        public frmDoiMk()
         {
             InitializeComponent();
         }
@@ -42,7 +41,7 @@ namespace DoAn
             string fileName = @"..\..\Data\user.xml";
             XDocument doc = XDocument.Load(fileName);
             var selected_user = from x in doc.Descendants("users").Where
-                                (x => (String)x.Element("username") == frmLogin.check2)
+                                (x => (String)x.Element("username") == txtUser.Text)
                                 select new
                                 {
                                     XMLuser = x.Element("username").Value,
@@ -59,23 +58,30 @@ namespace DoAn
                 owner = x.XMLowner;
                 day = x.XMLday;
             }
-            if (users.Contains(txtUser.Text))
+            if(users.Contains(txtUser.Text) && pass.Contains(txtPass.Text))
             {
-                taikhoan.TenDangNhap = txtUser.Text;
-                taikhoan.MatKhau = pass.ToString();
-                taikhoan.TrangThai = type.ToString();
-                taikhoan.owner = owner.ToString();
-                taikhoan.Day = day.ToString();
-                taikhoan.Email = txtEmail.Text;
-                taikhoan.Sdt = txtSDT.Text;
-                taikhoan.Sobimat = txtSn.Text;
-                taiKhoanXML.DoiMK(taikhoan);
-                MessageBox.Show("Cập nhập thông tin thành công");
+                if (pass.Contains(txtNewPass.Text))
+                {
+                    MessageBox.Show("Mật khẩu mới trùng với mật khẩu cũ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else
+                {
+                    taikhoan.TenDangNhap = users.ToString();
+                    taikhoan.MatKhau = txtNewPass.Text;
+                    taikhoan.TrangThai = type.ToString();
+                    taikhoan.owner = owner.ToString();
+                    taikhoan.Day = day.ToUpper();
+                    taiKhoanXML.DoiMK(taikhoan);
+                    MessageBox.Show("Đổi mật khẩu thành công", "Thông báo", MessageBoxButtons.OK);
+                    this.Close();
+                }
+                
             }
             else
             {
-                MessageBox.Show("Cập nhập thông tin không thành công");
+                MessageBox.Show("Sai tài khoản hoặc mật khẩu", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+
     }
 }

@@ -34,14 +34,26 @@ namespace DoAn
 
         private void btnDelete1_Click(object sender, EventArgs e)
         {
-            gv.Mgv = txtMsv.Text;
-
-            gvXML.Xoa(gv);
-            if (MessageBox.Show("Xóa thành công bạn muốn thoát?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (!String.IsNullOrEmpty(txtMsv.Text))
             {
-                frmXoaSinhVien xoa = new frmXoaSinhVien();
-                this.Close();
+                gv.Mgv = txtMsv.Text;
+
+                gvXML.Xoa(gv);
+                if (MessageBox.Show("Xóa thành công bạn muốn thoát?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    frmXoaSinhVien xoa = new frmXoaSinhVien();
+                    this.Close();
+                }
             }
+            else
+            {
+                MessageBox.Show("Mời nhập mã giáo viên cần xóa", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void frmXoaGiaoVien_Load(object sender, EventArgs e)
+        {
+            
         }
     }
 }

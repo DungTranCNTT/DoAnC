@@ -94,14 +94,14 @@ namespace DoAn
         {
             frmXoaGiaoVien frmXoa = new frmXoaGiaoVien();
             frmXoa.ShowDialog();
-            dgvGiaoVien.Rows.Clear();
-            giaoVienxml.Reload(dgvGiaoVien);
+            Reload();
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
             if (txtTim.Text.Trim() != "")
             {
+                Reload();
                 giaoVien.Mgv = txtTim.Text;
 
                 giaoVienxml.TimKiem(giaoVien, dgvGiaoVien);
